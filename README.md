@@ -6,7 +6,7 @@ YToke~ is an Open Source free karaoke app on Mac. Connect external microphone to
 
 YToke~ uses Youtube videos as source of MVs, enjoy millions of songs with/without vocal and free of ads.
 
-[<img src="Artwork/setup.png" align="center">](Artwork/setup.png)
+[<img src="Artwork/Setup.png" align="center">](Artwork/Setup.png)
 
 ## Download
 You can download the app on Github releases.
