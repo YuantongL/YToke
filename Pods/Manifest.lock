@@ -1,0 +1,26 @@
+PODS:
+  - SDWebImage (5.8.4):
+    - SDWebImage/Core (= 5.8.4)
+  - SDWebImage/Core (5.8.4)
+  - SwiftLint (0.39.2)
+  - XCDYouTubeKit (2.14.1)
+
+DEPENDENCIES:
+  - SDWebImage (~> 5.0)
+  - SwiftLint
+  - XCDYouTubeKit (~> 2.14.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SDWebImage
+    - SwiftLint
+    - XCDYouTubeKit
+
+SPEC CHECKSUMS:
+  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  XCDYouTubeKit: 5d50bbacdd9fedf26fb578bab901d946ff3d064c
+
+PODFILE CHECKSUM: 9eb836a7988c6f724d62a512dfe667d0df838c64
+
+COCOAPODS: 1.8.4

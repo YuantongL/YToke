@@ -1,0 +1,1237 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3960DC4A2D517EEE0B874F12 /* Pods_YToke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE2E24CFE8EFC77A6DA627D /* Pods_YToke.framework */; };
+		440044DD24D88F870090FDBB /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044DC24D88F870090FDBB /* SideBarViewController.swift */; };
+		440044E024D895B60090FDBB /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044DF24D895B60090FDBB /* NowPlayingViewController.swift */; };
+		440044E224D895C20090FDBB /* NowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044E124D895C20090FDBB /* NowPlayingViewModel.swift */; };
+		440044E424D895DA0090FDBB /* StandardNowPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044E324D895DA0090FDBB /* StandardNowPlayingViewModel.swift */; };
+		440044E624D8C5F30090FDBB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044E524D8C5F30090FDBB /* DependencyContainer.swift */; };
+		440044E824D8EB8C0090FDBB /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044E724D8EB8C0090FDBB /* TabView.swift */; };
+		440044EA24D9BAAE0090FDBB /* NSImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044E924D9BAAE0090FDBB /* NSImage+Extensions.swift */; };
+		440044EE24D9FA470090FDBB /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044ED24D9FA470090FDBB /* AddButton.swift */; };
+		440044F024DC7F590090FDBB /* AnimatedCycleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440044EF24DC7F590090FDBB /* AnimatedCycleTextView.swift */; };
+		441D076424BE5E0F00071B97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D076324BE5E0F00071B97 /* AppDelegate.swift */; };
+		441D076624BE5E0F00071B97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D076524BE5E0F00071B97 /* ViewController.swift */; };
+		441D076824BE5E1100071B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441D076724BE5E1100071B97 /* Assets.xcassets */; };
+		441D076B24BE5E1100071B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441D076924BE5E1100071B97 /* Main.storyboard */; };
+		441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D077624BE5E1200071B97 /* MyKTVTests.swift */; };
+		441D078724BF899800071B97 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D078624BF899800071B97 /* VideoViewController.swift */; };
+		446BA5DA24E307F0004EFA42 /* VideoListLoadingCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5D924E307F0004EFA42 /* VideoListLoadingCellItem.swift */; };
+		446BA5DC24E30806004EFA42 /* VideoListLoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5DB24E30806004EFA42 /* VideoListLoadingCellView.swift */; };
+		446BA5E124E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */; };
+		446BA5E324E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E224E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift */; };
+		446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */; };
+		446BA5E724E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */; };
+		446BA5E924E38947004EFA42 /* StandardMainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E824E38947004EFA42 /* StandardMainViewModelTests.swift */; };
+		446BA5EC24E38B9A004EFA42 /* MockXCDYoutubeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5EB24E38B9A004EFA42 /* MockXCDYoutubeClient.swift */; };
+		446BA5EE24E38C2D004EFA42 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5ED24E38C2D004EFA42 /* MockURLSession.swift */; };
+		446BA5F024E38C4B004EFA42 /* MockVideoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5EF24E38C4B004EFA42 /* MockVideoListProvider.swift */; };
+		446BA5F224E38C82004EFA42 /* MockVideoStreamingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F124E38C82004EFA42 /* MockVideoStreamingProvider.swift */; };
+		446BA5F424E38D89004EFA42 /* MockAudioMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F324E38D89004EFA42 /* MockAudioMixer.swift */; };
+		446BA5F624E38F98004EFA42 /* MockVideoStreamingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */; };
+		446BA5F824E38FFD004EFA42 /* MockVideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */; };
+		446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F924E39060004EFA42 /* MockVideoQueue.swift */; };
+		446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */; };
+		446BA5FE24E3940F004EFA42 /* MockMicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */; };
+		446BA60024E39FC3004EFA42 /* StandardDonationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FF24E39FC3004EFA42 /* StandardDonationViewModelTests.swift */; };
+		446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60124E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift */; };
+		446BA60424E42C9C004EFA42 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60324E42C9C004EFA42 /* WindowManager.swift */; };
+		446BA60624E42F02004EFA42 /* StandardWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60524E42F02004EFA42 /* StandardWindowManager.swift */; };
+		446BA60824E42FE3004EFA42 /* MockWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60724E42FE3004EFA42 /* MockWindowManager.swift */; };
+		446BA60B24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60A24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift */; };
+		446BA60D24E441D7004EFA42 /* StandardMixerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60C24E441D7004EFA42 /* StandardMixerViewModelTests.swift */; };
+		446BA60F24E443B8004EFA42 /* StandardVideoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60E24E443B8004EFA42 /* StandardVideoListViewModelTests.swift */; };
+		446BA61124E44B89004EFA42 /* StandardVideoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA61024E44B89004EFA42 /* StandardVideoViewModelTests.swift */; };
+		446BA61524EB6387004EFA42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 446BA61724EB6387004EFA42 /* Localizable.strings */; };
+		448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448392CF24EDF60800D8D32F /* VideoModelTests.swift */; };
+		448392D424EDFBCB00D8D32F /* MockInvidiosAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */; };
+		448392D624EDFEF700D8D32F /* MockVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D524EDFEF700D8D32F /* MockVideo.json */; };
+		449BF36E24C0B53A000A8712 /* MicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF36D24C0B53A000A8712 /* MicStreamer.swift */; };
+		449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37024C21298000A8712 /* VideoListViewController.swift */; };
+		449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37224C212A6000A8712 /* VideoListViewModel.swift */; };
+		449BF37524C60942000A8712 /* VideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37424C60942000A8712 /* VideoListRepository.swift */; };
+		449BF37824C60994000A8712 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37724C60994000A8712 /* Video.swift */; };
+		449BF37B24C60B38000A8712 /* VideoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37A24C60B38000A8712 /* VideoListProvider.swift */; };
+		449BF37F24C60CC2000A8712 /* StandardVideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37E24C60CC2000A8712 /* StandardVideoListRepository.swift */; };
+		449BF38124C60CDF000A8712 /* VideoStreamingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF38024C60CDF000A8712 /* VideoStreamingProvider.swift */; };
+		449BF38424C61023000A8712 /* XCDYoutubeVideoStreamingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF38324C61023000A8712 /* XCDYoutubeVideoStreamingProvider.swift */; };
+		449BF38724C61C89000A8712 /* VideoListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF38624C61C89000A8712 /* VideoListCellView.swift */; };
+		449BF38924C78AE0000A8712 /* StandardVideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF38824C78AE0000A8712 /* StandardVideoListViewModel.swift */; };
+		449BF38B24C78F9E000A8712 /* VideoListCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF38A24C78F9E000A8712 /* VideoListCellItem.swift */; };
+		449BF38D24C79108000A8712 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF38C24C79108000A8712 /* RatingView.swift */; };
+		449BF39424C8C689000A8712 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF39324C8C689000A8712 /* VideoViewModel.swift */; };
+		449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF39524C8C6FB000A8712 /* StandardVideoViewModel.swift */; };
+		449BF39D24C8C9BA000A8712 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF39C24C8C9BA000A8712 /* Notification+Extensions.swift */; };
+		449BF3A124CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3A024CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift */; };
+		449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3A624D095A0000A8712 /* MixerViewController.swift */; };
+		449BF3AA24D095C8000A8712 /* VideoQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3A924D095C8000A8712 /* VideoQueueViewController.swift */; };
+		449BF3AE24D0DD25000A8712 /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3AD24D0DD25000A8712 /* Mixer.swift */; };
+		449BF3B024D0E04B000A8712 /* AudioMixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3AF24D0E04B000A8712 /* AudioMixer.swift */; };
+		449BF3B224D10765000A8712 /* MixerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3B124D10765000A8712 /* MixerViewModel.swift */; };
+		449BF3B424D10856000A8712 /* StandardMixerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3B324D10856000A8712 /* StandardMixerViewModel.swift */; };
+		449BF3B624D1EB58000A8712 /* VideoQueueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3B524D1EB58000A8712 /* VideoQueueViewModel.swift */; };
+		449BF3B824D1EBBE000A8712 /* StandardVideoQueueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3B724D1EBBE000A8712 /* StandardVideoQueueViewModel.swift */; };
+		449BF3BA24D1F34A000A8712 /* VideoQueueCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3B924D1F34A000A8712 /* VideoQueueCellView.swift */; };
+		449BF3BE24D2563A000A8712 /* VideoQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3BD24D2563A000A8712 /* VideoQueue.swift */; };
+		449BF3C024D25690000A8712 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3BF24D25690000A8712 /* Queue.swift */; };
+		449BF3C624D3209B000A8712 /* VideoStreamingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3C524D3209B000A8712 /* VideoStreamingRepository.swift */; };
+		449BF3C824D3218F000A8712 /* StandardVideoStreamingRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3C724D3218F000A8712 /* StandardVideoStreamingRespository.swift */; };
+		449BF3CB24D46748000A8712 /* AVAudioEngineMicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3CA24D46748000A8712 /* AVAudioEngineMicStreamer.swift */; };
+		44A0CF1724EB990600B25887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44A0CF1924EB990600B25887 /* InfoPlist.strings */; };
+		44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0824E1822000D00A1B /* DonationView.swift */; };
+		44AB8C0B24E1824500D00A1B /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */; };
+		44AB8C0D24E1829700D00A1B /* StandardDonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */; };
+		44AB8C1024E1951100D00A1B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0F24E1951000D00A1B /* MainViewModel.swift */; };
+		44AB8C1224E1987B00D00A1B /* StandardMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C1124E1987B00D00A1B /* StandardMainViewModel.swift */; };
+		44B7A46B24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */; };
+		60FCCB6C0EE0748DAF3AB79D /* Pods_YTokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		441D077324BE5E1200071B97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 441D075824BE5E0F00071B97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 441D075F24BE5E0F00071B97;
+			remoteInfo = MyKTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AE27EE2DE356E482725A320 /* Pods-MyKTVTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKTVTests.release.xcconfig"; path = "Target Support Files/Pods-MyKTVTests/Pods-MyKTVTests.release.xcconfig"; sourceTree = "<group>"; };
+		440044DC24D88F870090FDBB /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		440044DF24D895B60090FDBB /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
+		440044E124D895C20090FDBB /* NowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewModel.swift; sourceTree = "<group>"; };
+		440044E324D895DA0090FDBB /* StandardNowPlayingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardNowPlayingViewModel.swift; sourceTree = "<group>"; };
+		440044E524D8C5F30090FDBB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		440044E724D8EB8C0090FDBB /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		440044E924D9BAAE0090FDBB /* NSImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Extensions.swift"; sourceTree = "<group>"; };
+		440044ED24D9FA470090FDBB /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		440044EF24DC7F590090FDBB /* AnimatedCycleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCycleTextView.swift; sourceTree = "<group>"; };
+		441D076024BE5E0F00071B97 /* YToke~.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YToke~.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		441D076324BE5E0F00071B97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		441D076524BE5E0F00071B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		441D076724BE5E1100071B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		441D076A24BE5E1100071B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		441D076D24BE5E1100071B97 /* MyKTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyKTV.entitlements; sourceTree = "<group>"; };
+		441D077224BE5E1200071B97 /* YTokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		441D077624BE5E1200071B97 /* MyKTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKTVTests.swift; sourceTree = "<group>"; };
+		441D077824BE5E1200071B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		441D078624BF899800071B97 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		446BA5D924E307F0004EFA42 /* VideoListLoadingCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListLoadingCellItem.swift; sourceTree = "<group>"; };
+		446BA5DB24E30806004EFA42 /* VideoListLoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListLoadingCellView.swift; sourceTree = "<group>"; };
+		446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCDYoutubeVideoStreamingProviderTests.swift; sourceTree = "<group>"; };
+		446BA5E224E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvidiousAPIVideoListProviderTests.swift; sourceTree = "<group>"; };
+		446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoListRepositoryTests.swift; sourceTree = "<group>"; };
+		446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStreamingRepositoryTests.swift; sourceTree = "<group>"; };
+		446BA5E824E38947004EFA42 /* StandardMainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMainViewModelTests.swift; sourceTree = "<group>"; };
+		446BA5EB24E38B9A004EFA42 /* MockXCDYoutubeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockXCDYoutubeClient.swift; sourceTree = "<group>"; };
+		446BA5ED24E38C2D004EFA42 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		446BA5EF24E38C4B004EFA42 /* MockVideoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoListProvider.swift; sourceTree = "<group>"; };
+		446BA5F124E38C82004EFA42 /* MockVideoStreamingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoStreamingProvider.swift; sourceTree = "<group>"; };
+		446BA5F324E38D89004EFA42 /* MockAudioMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioMixer.swift; sourceTree = "<group>"; };
+		446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoStreamingRepository.swift; sourceTree = "<group>"; };
+		446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoListRepository.swift; sourceTree = "<group>"; };
+		446BA5F924E39060004EFA42 /* MockVideoQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoQueue.swift; sourceTree = "<group>"; };
+		446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyContainer.swift; sourceTree = "<group>"; };
+		446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMicStreamer.swift; sourceTree = "<group>"; };
+		446BA5FF24E39FC3004EFA42 /* StandardDonationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDonationViewModelTests.swift; sourceTree = "<group>"; };
+		446BA60124E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardNowPlayingViewModelTests.swift; sourceTree = "<group>"; };
+		446BA60324E42C9C004EFA42 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		446BA60524E42F02004EFA42 /* StandardWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardWindowManager.swift; sourceTree = "<group>"; };
+		446BA60724E42FE3004EFA42 /* MockWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWindowManager.swift; sourceTree = "<group>"; };
+		446BA60A24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoQueueViewModelTests.swift; sourceTree = "<group>"; };
+		446BA60C24E441D7004EFA42 /* StandardMixerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMixerViewModelTests.swift; sourceTree = "<group>"; };
+		446BA60E24E443B8004EFA42 /* StandardVideoListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoListViewModelTests.swift; sourceTree = "<group>"; };
+		446BA61024E44B89004EFA42 /* StandardVideoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoViewModelTests.swift; sourceTree = "<group>"; };
+		446BA61624EB6387004EFA42 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		446BA61924EB64D9004EFA42 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		446BA61A24EB74B4004EFA42 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		446BA61D24EB75E5004EFA42 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		446BA61E24EB75E5004EFA42 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		446BA61F24EB75F6004EFA42 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		446BA62024EB75F6004EFA42 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		446BA62124EB7B0C004EFA42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		446BA62224EB7B0C004EFA42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		448392CF24EDF60800D8D32F /* VideoModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModelTests.swift; sourceTree = "<group>"; };
+		448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockInvidiosAPI.json; sourceTree = "<group>"; };
+		448392D524EDFEF700D8D32F /* MockVideo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockVideo.json; sourceTree = "<group>"; };
+		449BF36D24C0B53A000A8712 /* MicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicStreamer.swift; sourceTree = "<group>"; };
+		449BF37024C21298000A8712 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
+		449BF37224C212A6000A8712 /* VideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModel.swift; sourceTree = "<group>"; };
+		449BF37424C60942000A8712 /* VideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListRepository.swift; sourceTree = "<group>"; };
+		449BF37724C60994000A8712 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		449BF37A24C60B38000A8712 /* VideoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListProvider.swift; sourceTree = "<group>"; };
+		449BF37E24C60CC2000A8712 /* StandardVideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoListRepository.swift; sourceTree = "<group>"; };
+		449BF38024C60CDF000A8712 /* VideoStreamingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamingProvider.swift; sourceTree = "<group>"; };
+		449BF38324C61023000A8712 /* XCDYoutubeVideoStreamingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCDYoutubeVideoStreamingProvider.swift; sourceTree = "<group>"; };
+		449BF38624C61C89000A8712 /* VideoListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCellView.swift; sourceTree = "<group>"; };
+		449BF38824C78AE0000A8712 /* StandardVideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoListViewModel.swift; sourceTree = "<group>"; };
+		449BF38A24C78F9E000A8712 /* VideoListCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCellItem.swift; sourceTree = "<group>"; };
+		449BF38C24C79108000A8712 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		449BF39324C8C689000A8712 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		449BF39524C8C6FB000A8712 /* StandardVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoViewModel.swift; sourceTree = "<group>"; };
+		449BF39C24C8C9BA000A8712 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		449BF3A024CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvidiousAPIVideoListProvider.swift; sourceTree = "<group>"; };
+		449BF3A624D095A0000A8712 /* MixerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerViewController.swift; sourceTree = "<group>"; };
+		449BF3A924D095C8000A8712 /* VideoQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoQueueViewController.swift; sourceTree = "<group>"; };
+		449BF3AD24D0DD25000A8712 /* Mixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
+		449BF3AF24D0E04B000A8712 /* AudioMixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixer.swift; sourceTree = "<group>"; };
+		449BF3B124D10765000A8712 /* MixerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerViewModel.swift; sourceTree = "<group>"; };
+		449BF3B324D10856000A8712 /* StandardMixerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMixerViewModel.swift; sourceTree = "<group>"; };
+		449BF3B524D1EB58000A8712 /* VideoQueueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoQueueViewModel.swift; sourceTree = "<group>"; };
+		449BF3B724D1EBBE000A8712 /* StandardVideoQueueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoQueueViewModel.swift; sourceTree = "<group>"; };
+		449BF3B924D1F34A000A8712 /* VideoQueueCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoQueueCellView.swift; sourceTree = "<group>"; };
+		449BF3BD24D2563A000A8712 /* VideoQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoQueue.swift; sourceTree = "<group>"; };
+		449BF3BF24D25690000A8712 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		449BF3C524D3209B000A8712 /* VideoStreamingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamingRepository.swift; sourceTree = "<group>"; };
+		449BF3C724D3218F000A8712 /* StandardVideoStreamingRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStreamingRespository.swift; sourceTree = "<group>"; };
+		449BF3CA24D46748000A8712 /* AVAudioEngineMicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioEngineMicStreamer.swift; sourceTree = "<group>"; };
+		44A0CF1824EB990600B25887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44A0CF1A24EB991100B25887 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		44A0CF1B24EB991300B25887 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		44A0CF1C24EB999C00B25887 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AB8C0824E1822000D00A1B /* DonationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationView.swift; sourceTree = "<group>"; };
+		44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
+		44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDonationViewModel.swift; sourceTree = "<group>"; };
+		44AB8C0F24E1951000D00A1B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		44AB8C1124E1987B00D00A1B /* StandardMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMainViewModel.swift; sourceTree = "<group>"; };
+		44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+PropertyWrapper.swift"; sourceTree = "<group>"; };
+		44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69330839CF10D7D46339C6CC /* Pods-MyKTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKTV.release.xcconfig"; path = "Target Support Files/Pods-MyKTV/Pods-MyKTV.release.xcconfig"; sourceTree = "<group>"; };
+		924CAA4A5FC73FA7A234B78B /* Pods-YTokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTokeTests.debug.xcconfig"; path = "Target Support Files/Pods-YTokeTests/Pods-YTokeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EE2E24CFE8EFC77A6DA627D /* Pods_YToke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YToke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A145AB59AED94197662B2A76 /* Pods-MyKTVTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKTVTests.debug.xcconfig"; path = "Target Support Files/Pods-MyKTVTests/Pods-MyKTVTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC7D8F8051CBECD26E07EA1C /* Pods-YToke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YToke.debug.xcconfig"; path = "Target Support Files/Pods-YToke/Pods-YToke.debug.xcconfig"; sourceTree = "<group>"; };
+		BC81FB5868FD18C47E4A320C /* Pods-YToke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YToke.release.xcconfig"; path = "Target Support Files/Pods-YToke/Pods-YToke.release.xcconfig"; sourceTree = "<group>"; };
+		C0584E94DC66F28CE96C1150 /* Pods-YTokeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTokeTests.release.xcconfig"; path = "Target Support Files/Pods-YTokeTests/Pods-YTokeTests.release.xcconfig"; sourceTree = "<group>"; };
+		FCC92118EA6DE36BCD112807 /* Pods-MyKTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKTV.debug.xcconfig"; path = "Target Support Files/Pods-MyKTV/Pods-MyKTV.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		441D075D24BE5E0F00071B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3960DC4A2D517EEE0B874F12 /* Pods_YToke.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		441D076F24BE5E1200071B97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FCCB6C0EE0748DAF3AB79D /* Pods_YTokeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		258A330C1295486FA1B17161 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EE2E24CFE8EFC77A6DA627D /* Pods_YToke.framework */,
+				44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35521221921128956C473F4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCC92118EA6DE36BCD112807 /* Pods-MyKTV.debug.xcconfig */,
+				69330839CF10D7D46339C6CC /* Pods-MyKTV.release.xcconfig */,
+				A145AB59AED94197662B2A76 /* Pods-MyKTVTests.debug.xcconfig */,
+				3AE27EE2DE356E482725A320 /* Pods-MyKTVTests.release.xcconfig */,
+				AC7D8F8051CBECD26E07EA1C /* Pods-YToke.debug.xcconfig */,
+				BC81FB5868FD18C47E4A320C /* Pods-YToke.release.xcconfig */,
+				924CAA4A5FC73FA7A234B78B /* Pods-YTokeTests.debug.xcconfig */,
+				C0584E94DC66F28CE96C1150 /* Pods-YTokeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		440044DB24D88EBD0090FDBB /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3A824D095A8000A8712 /* VideoQueueView */,
+				449BF3A524D09587000A8712 /* MixerView */,
+				440044DC24D88F870090FDBB /* SideBarViewController.swift */,
+				440044E724D8EB8C0090FDBB /* TabView.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		440044DE24D895A10090FDBB /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				446BA60924E435F4004EFA42 /* WindowManager */,
+				440044DF24D895B60090FDBB /* NowPlayingViewController.swift */,
+				440044E124D895C20090FDBB /* NowPlayingViewModel.swift */,
+				440044E324D895DA0090FDBB /* StandardNowPlayingViewModel.swift */,
+			);
+			path = BottomBar;
+			sourceTree = "<group>";
+		};
+		441D075724BE5E0F00071B97 = {
+			isa = PBXGroup;
+			children = (
+				441D076224BE5E0F00071B97 /* YToke */,
+				441D077524BE5E1200071B97 /* YTokeTests */,
+				441D076124BE5E0F00071B97 /* Products */,
+				35521221921128956C473F4A /* Pods */,
+				258A330C1295486FA1B17161 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		441D076124BE5E0F00071B97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				441D076024BE5E0F00071B97 /* YToke~.app */,
+				441D077224BE5E1200071B97 /* YTokeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		441D076224BE5E0F00071B97 /* YToke */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3C324D31FC1000A8712 /* Data */,
+				449BF3C224D31FB7000A8712 /* Repository */,
+				449BF3C124D31FAF000A8712 /* View */,
+				449BF3AB24D0DCFD000A8712 /* Audio */,
+				449BF39B24C8C9AC000A8712 /* Extensions */,
+				441D076324BE5E0F00071B97 /* AppDelegate.swift */,
+				440044E524D8C5F30090FDBB /* DependencyContainer.swift */,
+				441D076724BE5E1100071B97 /* Assets.xcassets */,
+				441D076924BE5E1100071B97 /* Main.storyboard */,
+				44A0CF1C24EB999C00B25887 /* Info.plist */,
+				446BA61724EB6387004EFA42 /* Localizable.strings */,
+				44A0CF1924EB990600B25887 /* InfoPlist.strings */,
+				441D076D24BE5E1100071B97 /* MyKTV.entitlements */,
+			);
+			path = YToke;
+			sourceTree = "<group>";
+		};
+		441D077524BE5E1200071B97 /* YTokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5EA24E38B7C004EFA42 /* Mocks */,
+				446BA5DD24E33A8B004EFA42 /* Data */,
+				446BA5DF24E33A98004EFA42 /* Repository */,
+				446BA5DE24E33A91004EFA42 /* View */,
+				441D077624BE5E1200071B97 /* MyKTVTests.swift */,
+				441D077824BE5E1200071B97 /* Info.plist */,
+			);
+			path = YTokeTests;
+			sourceTree = "<group>";
+		};
+		446BA5D724E3078A004EFA42 /* VideoCell */ = {
+			isa = PBXGroup;
+			children = (
+				449BF38624C61C89000A8712 /* VideoListCellView.swift */,
+				449BF38A24C78F9E000A8712 /* VideoListCellItem.swift */,
+			);
+			path = VideoCell;
+			sourceTree = "<group>";
+		};
+		446BA5D824E307BF004EFA42 /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5D924E307F0004EFA42 /* VideoListLoadingCellItem.swift */,
+				446BA5DB24E30806004EFA42 /* VideoListLoadingCellView.swift */,
+			);
+			path = LoadingCell;
+			sourceTree = "<group>";
+		};
+		446BA5DD24E33A8B004EFA42 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */,
+				446BA5E224E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		446BA5DE24E33A91004EFA42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5E824E38947004EFA42 /* StandardMainViewModelTests.swift */,
+				446BA5FF24E39FC3004EFA42 /* StandardDonationViewModelTests.swift */,
+				446BA60124E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift */,
+				446BA60A24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift */,
+				446BA60C24E441D7004EFA42 /* StandardMixerViewModelTests.swift */,
+				446BA60E24E443B8004EFA42 /* StandardVideoListViewModelTests.swift */,
+				446BA61024E44B89004EFA42 /* StandardVideoViewModelTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		446BA5DF24E33A98004EFA42 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				448392CF24EDF60800D8D32F /* VideoModelTests.swift */,
+				446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */,
+				446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		446BA5EA24E38B7C004EFA42 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				448392D224EDFBCB00D8D32F /* MockNetworkResponse */,
+				446BA5EB24E38B9A004EFA42 /* MockXCDYoutubeClient.swift */,
+				446BA5ED24E38C2D004EFA42 /* MockURLSession.swift */,
+				446BA5EF24E38C4B004EFA42 /* MockVideoListProvider.swift */,
+				446BA5F124E38C82004EFA42 /* MockVideoStreamingProvider.swift */,
+				446BA5F324E38D89004EFA42 /* MockAudioMixer.swift */,
+				446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */,
+				446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */,
+				446BA5F924E39060004EFA42 /* MockVideoQueue.swift */,
+				446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */,
+				446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */,
+				446BA60724E42FE3004EFA42 /* MockWindowManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		446BA60924E435F4004EFA42 /* WindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				446BA60324E42C9C004EFA42 /* WindowManager.swift */,
+				446BA60524E42F02004EFA42 /* StandardWindowManager.swift */,
+			);
+			path = WindowManager;
+			sourceTree = "<group>";
+		};
+		448392D224EDFBCB00D8D32F /* MockNetworkResponse */ = {
+			isa = PBXGroup;
+			children = (
+				448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */,
+				448392D524EDFEF700D8D32F /* MockVideo.json */,
+			);
+			path = MockNetworkResponse;
+			sourceTree = "<group>";
+		};
+		449BF36F24C21256000A8712 /* VideoList */ = {
+			isa = PBXGroup;
+			children = (
+				449BF39124C8B3B8000A8712 /* ViewModels */,
+				449BF39024C8B3A7000A8712 /* Views */,
+			);
+			path = VideoList;
+			sourceTree = "<group>";
+		};
+		449BF37624C60952000A8712 /* VideoListRepository */ = {
+			isa = PBXGroup;
+			children = (
+				449BF37424C60942000A8712 /* VideoListRepository.swift */,
+				449BF37E24C60CC2000A8712 /* StandardVideoListRepository.swift */,
+				449BF37724C60994000A8712 /* Video.swift */,
+			);
+			path = VideoListRepository;
+			sourceTree = "<group>";
+		};
+		449BF37924C60B27000A8712 /* VideoListProvider */ = {
+			isa = PBXGroup;
+			children = (
+				449BF37A24C60B38000A8712 /* VideoListProvider.swift */,
+				449BF3A024CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift */,
+			);
+			path = VideoListProvider;
+			sourceTree = "<group>";
+		};
+		449BF38224C60CE5000A8712 /* VideoStreamingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				449BF38024C60CDF000A8712 /* VideoStreamingProvider.swift */,
+				449BF38324C61023000A8712 /* XCDYoutubeVideoStreamingProvider.swift */,
+			);
+			path = VideoStreamingProvider;
+			sourceTree = "<group>";
+		};
+		449BF38524C61A93000A8712 /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				449BF39A24C8C72C000A8712 /* ViewModels */,
+				449BF39924C8C723000A8712 /* Views */,
+			);
+			path = VideoView;
+			sourceTree = "<group>";
+		};
+		449BF39024C8B3A7000A8712 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5D824E307BF004EFA42 /* LoadingCell */,
+				446BA5D724E3078A004EFA42 /* VideoCell */,
+				449BF39224C8B3C5000A8712 /* Components */,
+				449BF37024C21298000A8712 /* VideoListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		449BF39124C8B3B8000A8712 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				449BF37224C212A6000A8712 /* VideoListViewModel.swift */,
+				449BF38824C78AE0000A8712 /* StandardVideoListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		449BF39224C8B3C5000A8712 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				449BF38C24C79108000A8712 /* RatingView.swift */,
+				440044ED24D9FA470090FDBB /* AddButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		449BF39924C8C723000A8712 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				441D078624BF899800071B97 /* VideoViewController.swift */,
+				440044EF24DC7F590090FDBB /* AnimatedCycleTextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		449BF39A24C8C72C000A8712 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3BC24D2562D000A8712 /* Queue */,
+				449BF39324C8C689000A8712 /* VideoViewModel.swift */,
+				449BF39524C8C6FB000A8712 /* StandardVideoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		449BF39B24C8C9AC000A8712 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				449BF39C24C8C9BA000A8712 /* Notification+Extensions.swift */,
+				440044E924D9BAAE0090FDBB /* NSImage+Extensions.swift */,
+				44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		449BF3A524D09587000A8712 /* MixerView */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3A624D095A0000A8712 /* MixerViewController.swift */,
+				449BF3B124D10765000A8712 /* MixerViewModel.swift */,
+				449BF3B324D10856000A8712 /* StandardMixerViewModel.swift */,
+			);
+			path = MixerView;
+			sourceTree = "<group>";
+		};
+		449BF3A824D095A8000A8712 /* VideoQueueView */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3A924D095C8000A8712 /* VideoQueueViewController.swift */,
+				449BF3B924D1F34A000A8712 /* VideoQueueCellView.swift */,
+				449BF3B524D1EB58000A8712 /* VideoQueueViewModel.swift */,
+				449BF3B724D1EBBE000A8712 /* StandardVideoQueueViewModel.swift */,
+			);
+			path = VideoQueueView;
+			sourceTree = "<group>";
+		};
+		449BF3AB24D0DCFD000A8712 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3C924D46730000A8712 /* MicStreamer */,
+				449BF3AC24D0DD18000A8712 /* Mixer */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		449BF3AC24D0DD18000A8712 /* Mixer */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3AD24D0DD25000A8712 /* Mixer.swift */,
+				449BF3AF24D0E04B000A8712 /* AudioMixer.swift */,
+			);
+			path = Mixer;
+			sourceTree = "<group>";
+		};
+		449BF3BC24D2562D000A8712 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3BF24D25690000A8712 /* Queue.swift */,
+				449BF3BD24D2563A000A8712 /* VideoQueue.swift */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		449BF3C124D31FAF000A8712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44AB8C0E24E194F700D00A1B /* MainViewController */,
+				44AB8C0724E181DA00D00A1B /* Donation */,
+				440044DE24D895A10090FDBB /* BottomBar */,
+				440044DB24D88EBD0090FDBB /* SideBar */,
+				449BF36F24C21256000A8712 /* VideoList */,
+				449BF38524C61A93000A8712 /* VideoView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		449BF3C224D31FB7000A8712 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3C424D31FDB000A8712 /* VideoDetailsRepository */,
+				449BF37624C60952000A8712 /* VideoListRepository */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		449BF3C324D31FC1000A8712 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				449BF38224C60CE5000A8712 /* VideoStreamingProvider */,
+				449BF37924C60B27000A8712 /* VideoListProvider */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		449BF3C424D31FDB000A8712 /* VideoDetailsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				449BF3C524D3209B000A8712 /* VideoStreamingRepository.swift */,
+				449BF3C724D3218F000A8712 /* StandardVideoStreamingRespository.swift */,
+			);
+			path = VideoDetailsRepository;
+			sourceTree = "<group>";
+		};
+		449BF3C924D46730000A8712 /* MicStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				449BF36D24C0B53A000A8712 /* MicStreamer.swift */,
+				449BF3CA24D46748000A8712 /* AVAudioEngineMicStreamer.swift */,
+			);
+			path = MicStreamer;
+			sourceTree = "<group>";
+		};
+		44AB8C0724E181DA00D00A1B /* Donation */ = {
+			isa = PBXGroup;
+			children = (
+				44AB8C0824E1822000D00A1B /* DonationView.swift */,
+				44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */,
+				44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */,
+			);
+			path = Donation;
+			sourceTree = "<group>";
+		};
+		44AB8C0E24E194F700D00A1B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				441D076524BE5E0F00071B97 /* ViewController.swift */,
+				44AB8C0F24E1951000D00A1B /* MainViewModel.swift */,
+				44AB8C1124E1987B00D00A1B /* StandardMainViewModel.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		441D075F24BE5E0F00071B97 /* YToke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 441D077B24BE5E1200071B97 /* Build configuration list for PBXNativeTarget "YToke" */;
+			buildPhases = (
+				610F258FA76A02D4EADB4F58 /* [CP] Check Pods Manifest.lock */,
+				441D075C24BE5E0F00071B97 /* Sources */,
+				441D075D24BE5E0F00071B97 /* Frameworks */,
+				441D075E24BE5E0F00071B97 /* Resources */,
+				441D079024BFE91700071B97 /* Swiftlint */,
+				E1055048B5C03753025D4D05 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YToke;
+			productName = MyKTV;
+			productReference = 441D076024BE5E0F00071B97 /* YToke~.app */;
+			productType = "com.apple.product-type.application";
+		};
+		441D077124BE5E1200071B97 /* YTokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 441D077E24BE5E1200071B97 /* Build configuration list for PBXNativeTarget "YTokeTests" */;
+			buildPhases = (
+				0D6CDF9E7B519646F490C69B /* [CP] Check Pods Manifest.lock */,
+				441D076E24BE5E1200071B97 /* Sources */,
+				441D076F24BE5E1200071B97 /* Frameworks */,
+				441D077024BE5E1200071B97 /* Resources */,
+				E6646FB51D72A92C7DC7647C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				441D077424BE5E1200071B97 /* PBXTargetDependency */,
+			);
+			name = YTokeTests;
+			productName = MyKTVTests;
+			productReference = 441D077224BE5E1200071B97 /* YTokeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		441D075824BE5E0F00071B97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = TestOrganization;
+				TargetAttributes = {
+					441D075F24BE5E0F00071B97 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					441D077124BE5E1200071B97 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 441D075F24BE5E0F00071B97;
+					};
+				};
+			};
+			buildConfigurationList = 441D075B24BE5E0F00071B97 /* Build configuration list for PBXProject "YToke" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				ko,
+				ja,
+				"zh-Hant",
+			);
+			mainGroup = 441D075724BE5E0F00071B97;
+			productRefGroup = 441D076124BE5E0F00071B97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				441D075F24BE5E0F00071B97 /* YToke */,
+				441D077124BE5E1200071B97 /* YTokeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		441D075E24BE5E0F00071B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				441D076824BE5E1100071B97 /* Assets.xcassets in Resources */,
+				446BA61524EB6387004EFA42 /* Localizable.strings in Resources */,
+				441D076B24BE5E1100071B97 /* Main.storyboard in Resources */,
+				44A0CF1724EB990600B25887 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		441D077024BE5E1200071B97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				448392D424EDFBCB00D8D32F /* MockInvidiosAPI.json in Resources */,
+				448392D624EDFEF700D8D32F /* MockVideo.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D6CDF9E7B519646F490C69B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YTokeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		441D079024BFE91700071B97 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		610F258FA76A02D4EADB4F58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YToke-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1055048B5C03753025D4D05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YToke/Pods-YToke-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YToke/Pods-YToke-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YToke/Pods-YToke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6646FB51D72A92C7DC7647C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YTokeTests/Pods-YTokeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YTokeTests/Pods-YTokeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YTokeTests/Pods-YTokeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		441D075C24BE5E0F00071B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BF3CB24D46748000A8712 /* AVAudioEngineMicStreamer.swift in Sources */,
+				449BF3A124CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift in Sources */,
+				449BF3B424D10856000A8712 /* StandardMixerViewModel.swift in Sources */,
+				449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */,
+				449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */,
+				449BF38924C78AE0000A8712 /* StandardVideoListViewModel.swift in Sources */,
+				449BF3B624D1EB58000A8712 /* VideoQueueViewModel.swift in Sources */,
+				446BA5DC24E30806004EFA42 /* VideoListLoadingCellView.swift in Sources */,
+				440044F024DC7F590090FDBB /* AnimatedCycleTextView.swift in Sources */,
+				449BF38424C61023000A8712 /* XCDYoutubeVideoStreamingProvider.swift in Sources */,
+				449BF3C824D3218F000A8712 /* StandardVideoStreamingRespository.swift in Sources */,
+				449BF3AA24D095C8000A8712 /* VideoQueueViewController.swift in Sources */,
+				440044E224D895C20090FDBB /* NowPlayingViewModel.swift in Sources */,
+				449BF38124C60CDF000A8712 /* VideoStreamingProvider.swift in Sources */,
+				446BA60624E42F02004EFA42 /* StandardWindowManager.swift in Sources */,
+				449BF3BE24D2563A000A8712 /* VideoQueue.swift in Sources */,
+				449BF38B24C78F9E000A8712 /* VideoListCellItem.swift in Sources */,
+				449BF3C624D3209B000A8712 /* VideoStreamingRepository.swift in Sources */,
+				446BA60424E42C9C004EFA42 /* WindowManager.swift in Sources */,
+				440044EA24D9BAAE0090FDBB /* NSImage+Extensions.swift in Sources */,
+				449BF39D24C8C9BA000A8712 /* Notification+Extensions.swift in Sources */,
+				449BF36E24C0B53A000A8712 /* MicStreamer.swift in Sources */,
+				449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */,
+				440044E424D895DA0090FDBB /* StandardNowPlayingViewModel.swift in Sources */,
+				449BF39424C8C689000A8712 /* VideoViewModel.swift in Sources */,
+				449BF3B024D0E04B000A8712 /* AudioMixer.swift in Sources */,
+				449BF3AE24D0DD25000A8712 /* Mixer.swift in Sources */,
+				440044DD24D88F870090FDBB /* SideBarViewController.swift in Sources */,
+				449BF37524C60942000A8712 /* VideoListRepository.swift in Sources */,
+				440044E624D8C5F30090FDBB /* DependencyContainer.swift in Sources */,
+				44B7A46B24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift in Sources */,
+				449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */,
+				44AB8C1224E1987B00D00A1B /* StandardMainViewModel.swift in Sources */,
+				449BF38724C61C89000A8712 /* VideoListCellView.swift in Sources */,
+				449BF3BA24D1F34A000A8712 /* VideoQueueCellView.swift in Sources */,
+				449BF37B24C60B38000A8712 /* VideoListProvider.swift in Sources */,
+				441D078724BF899800071B97 /* VideoViewController.swift in Sources */,
+				449BF38D24C79108000A8712 /* RatingView.swift in Sources */,
+				449BF3C024D25690000A8712 /* Queue.swift in Sources */,
+				440044E824D8EB8C0090FDBB /* TabView.swift in Sources */,
+				446BA5DA24E307F0004EFA42 /* VideoListLoadingCellItem.swift in Sources */,
+				44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */,
+				449BF3B224D10765000A8712 /* MixerViewModel.swift in Sources */,
+				449BF37F24C60CC2000A8712 /* StandardVideoListRepository.swift in Sources */,
+				44AB8C0D24E1829700D00A1B /* StandardDonationViewModel.swift in Sources */,
+				449BF37824C60994000A8712 /* Video.swift in Sources */,
+				441D076624BE5E0F00071B97 /* ViewController.swift in Sources */,
+				441D076424BE5E0F00071B97 /* AppDelegate.swift in Sources */,
+				440044EE24D9FA470090FDBB /* AddButton.swift in Sources */,
+				440044E024D895B60090FDBB /* NowPlayingViewController.swift in Sources */,
+				44AB8C0B24E1824500D00A1B /* DonationViewModel.swift in Sources */,
+				449BF3B824D1EBBE000A8712 /* StandardVideoQueueViewModel.swift in Sources */,
+				44AB8C1024E1951100D00A1B /* MainViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		441D076E24BE5E1200071B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				446BA60824E42FE3004EFA42 /* MockWindowManager.swift in Sources */,
+				446BA5F424E38D89004EFA42 /* MockAudioMixer.swift in Sources */,
+				446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */,
+				446BA5EE24E38C2D004EFA42 /* MockURLSession.swift in Sources */,
+				446BA60D24E441D7004EFA42 /* StandardMixerViewModelTests.swift in Sources */,
+				446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */,
+				446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */,
+				446BA5EC24E38B9A004EFA42 /* MockXCDYoutubeClient.swift in Sources */,
+				446BA5FE24E3940F004EFA42 /* MockMicStreamer.swift in Sources */,
+				446BA61124E44B89004EFA42 /* StandardVideoViewModelTests.swift in Sources */,
+				446BA60F24E443B8004EFA42 /* StandardVideoListViewModelTests.swift in Sources */,
+				448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */,
+				446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */,
+				446BA60B24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift in Sources */,
+				446BA5F624E38F98004EFA42 /* MockVideoStreamingRepository.swift in Sources */,
+				446BA5F024E38C4B004EFA42 /* MockVideoListProvider.swift in Sources */,
+				441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */,
+				446BA5E124E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift in Sources */,
+				446BA5F824E38FFD004EFA42 /* MockVideoListRepository.swift in Sources */,
+				446BA5E324E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift in Sources */,
+				446BA5E924E38947004EFA42 /* StandardMainViewModelTests.swift in Sources */,
+				446BA5F224E38C82004EFA42 /* MockVideoStreamingProvider.swift in Sources */,
+				446BA5E724E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift in Sources */,
+				446BA60024E39FC3004EFA42 /* StandardDonationViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		441D077424BE5E1200071B97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 441D075F24BE5E0F00071B97 /* YToke */;
+			targetProxy = 441D077324BE5E1200071B97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		441D076924BE5E1100071B97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				441D076A24BE5E1100071B97 /* Base */,
+				446BA61A24EB74B4004EFA42 /* zh-Hans */,
+				446BA61D24EB75E5004EFA42 /* ko */,
+				446BA61F24EB75F6004EFA42 /* ja */,
+				446BA62124EB7B0C004EFA42 /* zh-Hant */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		446BA61724EB6387004EFA42 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				446BA61624EB6387004EFA42 /* en */,
+				446BA61924EB64D9004EFA42 /* zh-Hans */,
+				446BA61E24EB75E5004EFA42 /* ko */,
+				446BA62024EB75F6004EFA42 /* ja */,
+				446BA62224EB7B0C004EFA42 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		44A0CF1924EB990600B25887 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44A0CF1824EB990600B25887 /* en */,
+				44A0CF1A24EB991100B25887 /* zh-Hans */,
+				44A0CF1B24EB991300B25887 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		441D077924BE5E1200071B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = YToke/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		441D077A24BE5E1200071B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = YToke/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		441D077C24BE5E1200071B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC7D8F8051CBECD26E07EA1C /* Pods-YToke.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YToke/YToke.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XP69FP6Q2K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
+				PRODUCT_MODULE_NAME = YToke;
+				PRODUCT_NAME = "YToke~";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		441D077D24BE5E1200071B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC81FB5868FD18C47E4A320C /* Pods-YToke.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YToke/YToke.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XP69FP6Q2K;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
+				PRODUCT_MODULE_NAME = YToke;
+				PRODUCT_NAME = "YToke~";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		441D077F24BE5E1200071B97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 924CAA4A5FC73FA7A234B78B /* Pods-YTokeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XP69FP6Q2K;
+				INFOPLIST_FILE = YTokeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = LYT.YTokeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YToke~.app/Contents/MacOS/YToke~";
+			};
+			name = Debug;
+		};
+		441D078024BE5E1200071B97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0584E94DC66F28CE96C1150 /* Pods-YTokeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = XP69FP6Q2K;
+				INFOPLIST_FILE = YTokeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_BUNDLE_IDENTIFIER = LYT.YTokeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YToke~.app/Contents/MacOS/YToke~";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		441D075B24BE5E0F00071B97 /* Build configuration list for PBXProject "YToke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				441D077924BE5E1200071B97 /* Debug */,
+				441D077A24BE5E1200071B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		441D077B24BE5E1200071B97 /* Build configuration list for PBXNativeTarget "YToke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				441D077C24BE5E1200071B97 /* Debug */,
+				441D077D24BE5E1200071B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		441D077E24BE5E1200071B97 /* Build configuration list for PBXNativeTarget "YTokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				441D077F24BE5E1200071B97 /* Debug */,
+				441D078024BE5E1200071B97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 441D075824BE5E0F00071B97 /* Project object */;
+}

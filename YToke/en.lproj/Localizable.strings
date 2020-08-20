@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  YToke
+
+  Created by Lyt on 2020/8/17.
+  Copyright © 2020 TestOrganization. All rights reserved.
+*/
+
+"app_name" = "YToke~";
+
+"now_playing" = "Now playing";
+
+"skip" = "Skip";
+
+"support_us" = "Support us";
+
+"donation_disclaimer" = "YToke~ is a free to use, open source software.\n\nIf you enjoy singing with us, you are welcome to leave a donation. Your love keeps us bring more features to the app. Please use the button below to donate.";
+
+"thank_you_with_exclaimation_mark" = "Thank you!";
+
+"no_song_in_queue" = "No song in queue";
+
+"video_volume" = "Video volume";
+
+"microphone_volume" = "Microphone Volume";
+
+"microphone_stream" = "Microphone Stream";
+
+"queue" = "Queue";
+
+"mixer" = "Mixer";
+
+"search_for_a_song" = "Search for a song";
+
+"search" = "Search";
+
+"start_by_search_a_song" = "Start by search a song";
+
+"error_view_text" = "An error occured, please try again later.";
+
+"cycle_text_title" = "Current playing: %@,       next: %@";

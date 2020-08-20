@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  YToke
+
+  Created by Lyt on 2020/8/17.
+  Copyright © 2020 TestOrganization. All rights reserved.
+*/
+
+"app_name" = "YToke~";
+
+"now_playing" = "지금 재생 중";
+
+"skip" = "건너 뛰기";
+
+"support_us" = "당신의 도움이 필요합니다";
+
+"donation_disclaimer" = "YToke~는 무료로 사용할 수있는 오픈 소스 소프트웨어입니다. \n\n우리와 함께 노래하는 것을 좋아하신다면 기부를 남겨 주시기 바랍니다. 귀하의 사랑은 앱에 더 많은 기능을 제공합니다. 기부하려면 아래 버튼을 사용하세요.";
+
+"thank_you_with_exclaimation_mark" = "감사합니다!";
+
+"no_song_in_queue" = "대기열에 노래가 없습니다.";
+
+"video_volume" = "비디오 볼륨";
+
+"microphone_volume" = "마이크 볼륨";
+
+"microphone_stream" = "마이크 스트림";
+
+"queue" = "열";
+
+"mixer" = "믹서";
+
+"search_for_a_song" = "노래 검색";
+
+"search" = "찾다";
+
+"start_by_search_a_song" = "노래 검색으로 시작";
+
+"error_view_text" = "오류가 발생했습니다. 잠시 후 다시 시도 해주세요.";
+
+"cycle_text_title" = "현재 재생: %@,      다음: %@";

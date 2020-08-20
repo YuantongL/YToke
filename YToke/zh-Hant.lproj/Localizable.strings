@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  YToke
+
+  Created by Lyt on 2020/8/17.
+  Copyright © 2020 TestOrganization. All rights reserved.
+*/
+
+"app_name" = "YT卡啦OK~";
+
+"now_playing" = "正在播放";
+
+"skip" = "切歌";
+
+"support_us" = "支持我們";
+
+"donation_disclaimer" = "YT卡啦OK〜是免費使用的開源軟件。\n\n如果您喜歡和我們一起唱歌，歡迎您捐贈。您的愛使我們不斷為應用程序帶來更多功能。請使用下面的按鈕捐贈。";
+
+"thank_you_with_exclaimation_mark" = "謝謝！";
+
+"no_song_in_queue" = "隊列中沒有歌曲";
+
+"video_volume" = "影片音量";
+
+"microphone_volume" = "麥克風音量";
+
+"microphone_stream" = "麥克風流";
+
+"queue" = "隊列";
+
+"mixer" = "混合器";
+
+"search_for_a_song" = "搜索歌曲";
+
+"search" = "搜索";
+
+"start_by_search_a_song" = "從搜索歌曲開始";
+
+"error_view_text" = "發生了一個錯誤。請稍後重試。";
+
+"cycle_text_title" = "當前播放：％@，    下一個播放：％@";

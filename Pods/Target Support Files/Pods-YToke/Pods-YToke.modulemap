@@ -1,0 +1,6 @@
+framework module Pods_YToke {
+  umbrella header "Pods-YToke-umbrella.h"
+
+  export *
+  module * { export * }
+}
