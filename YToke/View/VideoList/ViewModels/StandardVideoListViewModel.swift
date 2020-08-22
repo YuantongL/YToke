@@ -71,6 +71,8 @@ final class StandardVideoListViewModel: VideoListViewModel {
     }
     
     private func fetchVideoList(keyword: String) {
+        shouldFetchFollowingPages = false
+        currentPage = 1
         lastSearchedKeyword = keyword
         videos = []
         isLoading = true
@@ -78,6 +80,7 @@ final class StandardVideoListViewModel: VideoListViewModel {
         
         videolistRepository.fetch(name: keyword, page: 1) { [weak self] result in
             self?.isLoading = false
+            self?.shouldFetchFollowingPages = true
             switch result {
             case .success(let videos):
                 self?.videos = videos.map {

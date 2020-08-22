@@ -67,4 +67,12 @@ final class StandardVideoListViewModelTests: XCTestCase {
         XCTAssertEqual(dependencyContainer.mockVideoListRepository.numOfFetchCalled, 2)
         XCTAssertEqual(dependencyContainer.mockVideoListRepository.fetchParamPage, 2)
     }
+    
+    func test_onScrollToBottom_SHOULD_notFetchWhenFetching() {
+        dependencyContainer.mockVideoListRepository.result = nil
+        viewModel.onTapSearch(keyword: "Keyword")
+        viewModel.onScrollToBottom()
+        XCTAssertEqual(dependencyContainer.mockVideoListRepository.numOfFetchCalled, 1)
+        XCTAssertEqual(dependencyContainer.mockVideoListRepository.fetchParamPage, 1)
+    }
 }

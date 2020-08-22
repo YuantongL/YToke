@@ -15,11 +15,13 @@ final class MockVideoListRepository: VideoListRepository {
     var numOfFetchCalled = 0
     var fetchParamName: String?
     var fetchParamPage: Int?
-    var result: VideoListResult = .success([])
+    var result: VideoListResult? = .success([])
     func fetch(name: String, page: Int, onCompletion: @escaping (VideoListResult) -> Void) {
         fetchParamName = name
         fetchParamPage = page
         numOfFetchCalled += 1
-        onCompletion(result)
+        if let result = result {
+            onCompletion(result)
+        }
     }
 }
