@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>YToke~</title>
+        <item>
+            <title>0.1.2</title>
+            <pubDate>Mon, 24 Aug 2020 23:24:46 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Added in-app update support.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/raw/test-sparkle/YToke~0.1.2.dmg"
+                sparkle:version="0.1.2"
+                sparkle:shortVersionString="0.1.2"
+                sparkle:edSignature="wa3MQdniYewcj3Wo70na5tHgpwcz51mJbUw0WBHWJEJZKl2rRqSTsNDUq0kiQGAIq7gov+Dxu70Ip9s40LQBBA=="
+                length="6661689"
+                type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
