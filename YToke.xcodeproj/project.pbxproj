@@ -120,7 +120,6 @@
 		441D076524BE5E0F00071B97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		441D076724BE5E1100071B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441D076A24BE5E1100071B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		441D076D24BE5E1100071B97 /* MyKTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyKTV.entitlements; sourceTree = "<group>"; };
 		441D077224BE5E1200071B97 /* YTokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		441D077624BE5E1200071B97 /* MyKTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKTVTests.swift; sourceTree = "<group>"; };
 		441D077824BE5E1200071B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,6 +162,7 @@
 		448392CF24EDF60800D8D32F /* VideoModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModelTests.swift; sourceTree = "<group>"; };
 		448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockInvidiosAPI.json; sourceTree = "<group>"; };
 		448392D524EDFEF700D8D32F /* MockVideo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockVideo.json; sourceTree = "<group>"; };
+		448392D724F5938800D8D32F /* YToke.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = YToke.entitlements; sourceTree = "<group>"; };
 		449BF36D24C0B53A000A8712 /* MicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicStreamer.swift; sourceTree = "<group>"; };
 		449BF37024C21298000A8712 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		449BF37224C212A6000A8712 /* VideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModel.swift; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 				44A0CF1C24EB999C00B25887 /* Info.plist */,
 				446BA61724EB6387004EFA42 /* Localizable.strings */,
 				44A0CF1924EB990600B25887 /* InfoPlist.strings */,
-				441D076D24BE5E1100071B97 /* MyKTV.entitlements */,
+				448392D724F5938800D8D32F /* YToke.entitlements */,
 			);
 			path = YToke;
 			sourceTree = "<group>";
@@ -1116,6 +1116,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.1.2;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1123,6 +1124,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";
@@ -1139,6 +1141,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.1.2;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1146,6 +1149,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";

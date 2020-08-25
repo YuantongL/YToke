@@ -6,6 +6,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'YToke' do
+  pod 'Sparkle'
   pod "XCDYouTubeKit", "~> 2.14.1"
   pod 'SwiftLint'
   pod 'SDWebImage', '~> 5.0'
