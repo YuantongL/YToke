@@ -43,7 +43,7 @@
 	<key>SUEnableAutomaticChecks</key>
 	<string>YES</string>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/YuantongL/YToke/test-sparkle/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/YuantongL/YToke/master/Sparkle/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>rr2aKC7YtVPybWxM4+OAWq6qelDfOg/lPlN21NsIrUM=</string>
 </dict>

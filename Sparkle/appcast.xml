@@ -2,6 +2,26 @@
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>YToke~</title>
+
+        <item>
+            <title>0.1.3</title>
+            <pubDate>Mon, 24 Aug 2020 23:24:46 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Fixed the bug of unable to find new update</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.1.3/YToke.0.1.3.dmg"
+                sparkle:version="0.1.3"
+                sparkle:shortVersionString="0.1.3"
+                sparkle:edSignature="xZ58gSisG6SRL6OL6dgzoX9acKXi07PcDyBOnFa4hAm/j54EWF+wgRXlUEgGcOiVn2iNJrV9WS8sYFJpI/75Dw=="
+                length="6661446"
+                type="application/octet-stream"/>
+        </item>
+
         <item>
             <title>0.1.2</title>
             <pubDate>Mon, 24 Aug 2020 23:24:46 -0400</pubDate>
