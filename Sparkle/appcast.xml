@@ -4,6 +4,26 @@
         <title>YToke~</title>
 
         <item>
+            <title>0.1.4</title>
+            <pubDate>Sun, 30 Aug 2020 12:38:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Better handling of microphone permission.</li>
+                    <li>Fixed the issue that the app does not ask for microphone permission during launch.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.1.4/YToke.0.1.4.dmg"
+                sparkle:version="0.1.4"
+                sparkle:shortVersionString="0.1.4"
+                sparkle:edSignature="N+1u+lKtu10MLr1KYLl0J8dBUt9LmgyMExlYGiEDwIh2WdkqJ3gn8/iBKWnfOgUUxqlOe4/bw8rtOlZrAO9QAA=="
+                length="6689605"
+                type="application/octet-stream"/>
+        </item>
+
+        <item>
             <title>0.1.3</title>
             <pubDate>Mon, 24 Aug 2020 23:24:46 -0400</pubDate>
             <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
