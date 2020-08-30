@@ -6,6 +6,7 @@
 //  Copyright © 2020 TestOrganization. All rights reserved.
 //
 
+import AppKit
 import Foundation
 
 final class StandardMainViewModel: MainViewModel {
@@ -34,6 +35,10 @@ final class StandardMainViewModel: MainViewModel {
         dependencyContainer.micStreamer
     }()
     
+    private var songPlayed: Int = 0
+    private var firstDonationViewShown = false
+    private var secondDonationViewShown = false
+    
     init(dependencyContainer: DependencyContainer = StandardDependencyContainer()) {
         self.dependencyContainer = dependencyContainer
         
@@ -56,13 +61,25 @@ final class StandardMainViewModel: MainViewModel {
         audioMixer.unsubscribe(token: token)
     }
     
+    // MARK: - Mic Streaming
+    
     func onAppear() {
-        micStreamer.startStreaming()
+        micStreamer.startStreaming { [weak self] result in
+            if case .failure(let error) = result {
+                switch error {
+                case AVAudioEngineMicStreamerError.permissionNotGranted:
+                    let message = NSLocalizedString("permission_request_microphone",
+                                                    // swiftlint:disable:next line_length
+                                                    comment: "If you are willing to use Microphone, please head to System Settings and grant YToke~ microphone permission")
+                    self?.dependencyContainer.repo.alertManager.show(message: message)
+                default:
+                    self?.dependencyContainer.repo.alertManager.show(error: error)
+                }
+            }
+        }
     }
-        
-    private var songPlayed: Int = 0
-    private var firstDonationViewShown = false
-    private var secondDonationViewShown = false
+    
+    // MARK: - Sponsorship Window
     
     // Show support view when they have singed 10 songs and added a new song after that
     @objc private func onNewSongPlay() {

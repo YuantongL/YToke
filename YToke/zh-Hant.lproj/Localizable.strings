@@ -39,3 +39,11 @@
 "error_view_text" = "發生了一個錯誤。請稍後重試。";
 
 "cycle_text_title" = "當前播放：％@，    下一個播放：％@";
+
+"ok" = "好";
+
+"permission_request_microphone" = "如果您想使用麥克風，請轉到系統設置並授予YToke〜麥克風權限";
+
+"go_to_settings" = "前往設置";
+
+"audio_permission_information" = "YToke〜無法訪問麥克風。 如果要使用麥克風流，請進入系統設置菜單並授予麥克風訪問權限";

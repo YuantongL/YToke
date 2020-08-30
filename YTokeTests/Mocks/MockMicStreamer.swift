@@ -27,8 +27,10 @@ final class MockMicStreamer: MicStreamer {
     }
     
     var numOfStartStreamingCalled = 0
-    func startStreaming() {
+    var startStreamingResult: Result<Void, Error> = .success(())
+    func startStreaming(completion: @escaping (Result<Void, Error>) -> Void) {
         numOfStartStreamingCalled += 1
+        completion(startStreamingResult)
     }
     
     var numOfStopStreamingCalled = 0

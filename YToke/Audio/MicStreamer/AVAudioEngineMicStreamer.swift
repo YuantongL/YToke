@@ -9,9 +9,13 @@
 import AVFoundation
 import Foundation
 
+enum AVAudioEngineMicStreamerError: Error {
+    case permissionNotGranted
+}
+
 final class AVAudioEngineMicStreamer: MicStreamer {
     
-    var isEnabled: Bool = true
+    var isEnabled: Bool = false
     
     /// The audio volume set in scale of 0 - 1
     var volume: Float = 0 {
@@ -24,10 +28,11 @@ final class AVAudioEngineMicStreamer: MicStreamer {
     
     private let audioEngine = AVAudioEngine()
     private let volumeEffect = AVAudioUnitEQ()
+    private let privacyPermissionRepository: PrivacyPermissionRepository
     
-    init() {
+    init(privacyPermissionRepository: PrivacyPermissionRepository) {
+        self.privacyPermissionRepository = privacyPermissionRepository
         volumeEffect.globalGain = volume
-        
         prepareToStartStreaming()
     }
     
@@ -45,12 +50,30 @@ final class AVAudioEngineMicStreamer: MicStreamer {
         audioEngine.prepare()
     }
     
-    func startStreaming() {
+    func startStreaming(completion: @escaping (Result<Void, Error>) -> Void) {
+        switch privacyPermissionRepository.status(of: .audio) {
+        case .granted:
+            startAudioEngineSteraming(completion: completion)
+        case .notGranted:
+            completion(.failure(AVAudioEngineMicStreamerError.permissionNotGranted))
+        case .notDetermined:
+            privacyPermissionRepository.askForPermission(.audio) { [weak self] isGranted in
+                if isGranted {
+                    self?.startAudioEngineSteraming(completion: completion)
+                } else {
+                    completion(.failure(AVAudioEngineMicStreamerError.permissionNotGranted))
+                }
+            }
+        }
+    }
+    
+    private func startAudioEngineSteraming(completion: @escaping (Result<Void, Error>) -> Void) {
         do {
             try audioEngine.start()
             isEnabled = true
+            completion(.success(Void()))
         } catch {
-            isEnabled = false
+            completion(.failure(error))
         }
     }
     

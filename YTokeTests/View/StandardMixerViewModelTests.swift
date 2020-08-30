@@ -33,6 +33,27 @@ final class StandardMixerViewModelTests: XCTestCase {
         XCTAssertEqual(dependencyContainer.mockAudioMixer.numOfValueCalled, 2)
     }
     
+    func test_onAppear_SHOULD_setToggleState() {
+        dependencyContainer.mockMicStreamer.isEnabled = true
+        dependencyContainer.mockPrivacyPermissionRepository.statusResult = .granted
+        viewModel.onAppear()
+        XCTAssertEqual(viewModel.toggleState, true)
+    }
+    
+    func test_onAppear_SHOULD_setToggleState_micIsNotEnabled() {
+        dependencyContainer.mockMicStreamer.isEnabled = false
+        dependencyContainer.mockPrivacyPermissionRepository.statusResult = .granted
+        viewModel.onAppear()
+        XCTAssertEqual(viewModel.toggleState, false)
+    }
+    
+    func test_onAppear_SHOULD_setToggleState_noPermission() {
+        dependencyContainer.mockMicStreamer.isEnabled = true
+        dependencyContainer.mockPrivacyPermissionRepository.statusResult = .notGranted
+        viewModel.onAppear()
+        XCTAssertEqual(viewModel.toggleState, false)
+    }
+    
     func test_setVideoVolume_SHOULD_setMixer() {
         viewModel.setVideoVolume(to: 98)
         XCTAssertEqual(dependencyContainer.mockAudioMixer.numOfSetChanelCalled, 1)
@@ -46,6 +67,13 @@ final class StandardMixerViewModelTests: XCTestCase {
     func test_toggle_SHOULD_startMicSteramer() {
         viewModel.setToggleState(state: true)
         XCTAssertEqual(dependencyContainer.mockMicStreamer.numOfStartStreamingCalled, 1)
+    }
+    
+    func test_startMicStreamer_SHOULD_showAlertIfFailed() {
+        // swiftlint:disable:next line_length
+        dependencyContainer.mockMicStreamer.startStreamingResult = .failure(AVAudioEngineMicStreamerError.permissionNotGranted)
+        viewModel.setToggleState(state: true)
+        XCTAssertEqual(dependencyContainer.mockPopupAlertManager.numOfShowMessageCalled, 1)
     }
     
     func test_toggle_SHOULD_stopMicSteramer() {
