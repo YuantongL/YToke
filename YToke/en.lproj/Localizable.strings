@@ -39,3 +39,11 @@
 "error_view_text" = "An error occured, please try again later.";
 
 "cycle_text_title" = "Current playing: %@,       next: %@";
+
+"ok" = "OK";
+
+"permission_request_microphone" = "If you are willing to use Microphone, please head to System Settings and grant YToke~ microphone permission";
+
+"go_to_settings" = "Go to Settings";
+
+"audio_permission_information" = "YToke~ does not have microphone access. If you want to use microphone stream, please go to system Settings menu and grant microphone access";

@@ -10,7 +10,11 @@ import Cocoa
 
 final class MixerViewController: NSViewController {
     
-    private let viewModel: MixerViewModel
+    private var viewModel: MixerViewModel
+    
+    private lazy var audioPermissionView: AudioPermissionInformationView = {
+        AudioPermissionInformationView(viewModel: viewModel.permissionInformationViewModel)
+    }()
     
     private lazy var videoVolumeText: NSTextField = {
         NSTextField(labelWithString: NSLocalizedString("video_volume", comment: "Video Volume"))
@@ -74,10 +78,18 @@ final class MixerViewController: NSViewController {
     }
     
     private func setupLayout() {
+        view.addSubview(audioPermissionView)
+        audioPermissionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            audioPermissionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            audioPermissionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 32),
+            audioPermissionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+        
         view.addSubview(videoVolumeText)
         videoVolumeText.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            videoVolumeText.topAnchor.constraint(equalTo: view.topAnchor, constant: 32),
+            videoVolumeText.topAnchor.constraint(equalTo: audioPermissionView.bottomAnchor, constant: 32),
             videoVolumeText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             videoVolumeText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
@@ -120,6 +132,10 @@ final class MixerViewController: NSViewController {
         videoVolumeSlider.doubleValue = Double(viewModel.videoVolume)
         micVolumeSlider.doubleValue = Double(viewModel.voiceVolume)
         toggle.state = viewModel.toggleState ? .on : .off
+        audioPermissionView.isHidden = viewModel.isPermissionInformationHidden
+        viewModel.onToggleStateChange = { [weak self] isToggled in
+            self?.toggle.state = isToggled ? .on : .off
+        }
     }
     
     @objc private func onVideoVolumnChange(sender: Any) {

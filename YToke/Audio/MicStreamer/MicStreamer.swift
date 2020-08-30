@@ -11,6 +11,6 @@ import Foundation
 protocol MicStreamer {
     var isEnabled: Bool { get }
     var volume: Float { get set }
-    func startStreaming()
+    func startStreaming(completion: @escaping (Result<Void, Error>) -> Void)
     func stopStreaming()
 }

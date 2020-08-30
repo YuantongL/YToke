@@ -90,6 +90,26 @@
 		44AB8C0D24E1829700D00A1B /* StandardDonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */; };
 		44AB8C1024E1951100D00A1B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0F24E1951000D00A1B /* MainViewModel.swift */; };
 		44AB8C1224E1987B00D00A1B /* StandardMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C1124E1987B00D00A1B /* StandardMainViewModel.swift */; };
+		44B140DF24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140DE24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift */; };
+		44B140E124FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140E024FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift */; };
+		44B140E424FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140E324FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift */; };
+		44B140E624FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140E524FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift */; };
+		44B140E824FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140E724FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift */; };
+		44B140EB24FB2F6800A9DEDC /* StandardDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140EA24FB2F6800A9DEDC /* StandardDependencyContainer.swift */; };
+		44B140EE24FB368200A9DEDC /* PopUpAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140ED24FB368200A9DEDC /* PopUpAlertManager.swift */; };
+		44B140F024FB36C300A9DEDC /* StandardPopUpAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140EF24FB36C300A9DEDC /* StandardPopUpAlertManager.swift */; };
+		44B140F324FB441A00A9DEDC /* AudioPermissionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F224FB441A00A9DEDC /* AudioPermissionInformationView.swift */; };
+		44B140F524FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F424FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift */; };
+		44B140F724FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F624FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift */; };
+		44B140FA24FB488F00A9DEDC /* SystemNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F924FB488F00A9DEDC /* SystemNavigator.swift */; };
+		44B140FC24FB48B300A9DEDC /* MacOSSystemNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140FB24FB48B300A9DEDC /* MacOSSystemNavigator.swift */; };
+		44B140FE24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */; };
+		44B1410024FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */; };
+		44B1410224FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */; };
+		44B1410424FB5C3400A9DEDC /* MockPopUpAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410324FB5C3400A9DEDC /* MockPopUpAlertManager.swift */; };
+		44B1410624FB5C8100A9DEDC /* MockSystemNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */; };
+		44B1410824FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410724FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift */; };
+		44B1410B24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410A24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift */; };
 		44B7A46B24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */; };
 		60FCCB6C0EE0748DAF3AB79D /* Pods_YTokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */; };
 /* End PBXBuildFile section */
@@ -203,6 +223,26 @@
 		44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDonationViewModel.swift; sourceTree = "<group>"; };
 		44AB8C0F24E1951000D00A1B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		44AB8C1124E1987B00D00A1B /* StandardMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMainViewModel.swift; sourceTree = "<group>"; };
+		44B140DE24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPermissionRepository.swift; sourceTree = "<group>"; };
+		44B140E024FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardPrivacyPermissionRepository.swift; sourceTree = "<group>"; };
+		44B140E324FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPrivacyPermissionProvider.swift; sourceTree = "<group>"; };
+		44B140E524FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSAVPrivacyPermissionProvider.swift; sourceTree = "<group>"; };
+		44B140E724FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAuthorizationStatus+Extensions.swift"; sourceTree = "<group>"; };
+		44B140EA24FB2F6800A9DEDC /* StandardDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDependencyContainer.swift; sourceTree = "<group>"; };
+		44B140ED24FB368200A9DEDC /* PopUpAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAlertManager.swift; sourceTree = "<group>"; };
+		44B140EF24FB36C300A9DEDC /* StandardPopUpAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardPopUpAlertManager.swift; sourceTree = "<group>"; };
+		44B140F224FB441A00A9DEDC /* AudioPermissionInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPermissionInformationView.swift; sourceTree = "<group>"; };
+		44B140F424FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPermissionInformationViewModel.swift; sourceTree = "<group>"; };
+		44B140F624FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAudioPermissionInfoViewModel.swift; sourceTree = "<group>"; };
+		44B140F924FB488F00A9DEDC /* SystemNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNavigator.swift; sourceTree = "<group>"; };
+		44B140FB24FB48B300A9DEDC /* MacOSSystemNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSSystemNavigator.swift; sourceTree = "<group>"; };
+		44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardPrivacyPermissionRepositoryTests.swift; sourceTree = "<group>"; };
+		44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAVPrivacyPermissionProvider.swift; sourceTree = "<group>"; };
+		44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrivacyPermissionRepository.swift; sourceTree = "<group>"; };
+		44B1410324FB5C3400A9DEDC /* MockPopUpAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPopUpAlertManager.swift; sourceTree = "<group>"; };
+		44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSystemNavigator.swift; sourceTree = "<group>"; };
+		44B1410724FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAudioPermissionInfoViewModelTests.swift; sourceTree = "<group>"; };
+		44B1410A24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVaudioEngineMicStreamerTests.swift; sourceTree = "<group>"; };
 		44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+PropertyWrapper.swift"; sourceTree = "<group>"; };
 		44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69330839CF10D7D46339C6CC /* Pods-MyKTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKTV.release.xcconfig"; path = "Target Support Files/Pods-MyKTV/Pods-MyKTV.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,13 +344,13 @@
 		441D076224BE5E0F00071B97 /* YToke */ = {
 			isa = PBXGroup;
 			children = (
+				44B140E924FB2F5500A9DEDC /* DependencyContainer */,
 				449BF3C324D31FC1000A8712 /* Data */,
 				449BF3C224D31FB7000A8712 /* Repository */,
 				449BF3C124D31FAF000A8712 /* View */,
 				449BF3AB24D0DCFD000A8712 /* Audio */,
 				449BF39B24C8C9AC000A8712 /* Extensions */,
 				441D076324BE5E0F00071B97 /* AppDelegate.swift */,
-				440044E524D8C5F30090FDBB /* DependencyContainer.swift */,
 				441D076724BE5E1100071B97 /* Assets.xcassets */,
 				441D076924BE5E1100071B97 /* Main.storyboard */,
 				44A0CF1C24EB999C00B25887 /* Info.plist */,
@@ -324,6 +364,7 @@
 		441D077524BE5E1200071B97 /* YTokeTests */ = {
 			isa = PBXGroup;
 			children = (
+				44B1410924FC072000A9DEDC /* Audio */,
 				446BA5EA24E38B7C004EFA42 /* Mocks */,
 				446BA5DD24E33A8B004EFA42 /* Data */,
 				446BA5DF24E33A98004EFA42 /* Repository */,
@@ -371,6 +412,7 @@
 				446BA60C24E441D7004EFA42 /* StandardMixerViewModelTests.swift */,
 				446BA60E24E443B8004EFA42 /* StandardVideoListViewModelTests.swift */,
 				446BA61024E44B89004EFA42 /* StandardVideoViewModelTests.swift */,
+				44B1410724FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +423,7 @@
 				448392CF24EDF60800D8D32F /* VideoModelTests.swift */,
 				446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */,
 				446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */,
+				44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -399,7 +442,11 @@
 				446BA5F924E39060004EFA42 /* MockVideoQueue.swift */,
 				446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */,
 				446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */,
+				44B1410324FB5C3400A9DEDC /* MockPopUpAlertManager.swift */,
+				44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */,
+				44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */,
 				446BA60724E42FE3004EFA42 /* MockWindowManager.swift */,
+				44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -529,6 +576,7 @@
 		449BF3A524D09587000A8712 /* MixerView */ = {
 			isa = PBXGroup;
 			children = (
+				44B140F124FB43F100A9DEDC /* AudioPermissionInformationView */,
 				449BF3A624D095A0000A8712 /* MixerViewController.swift */,
 				449BF3B124D10765000A8712 /* MixerViewModel.swift */,
 				449BF3B324D10856000A8712 /* StandardMixerViewModel.swift */,
@@ -590,6 +638,9 @@
 		449BF3C224D31FB7000A8712 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				44B140F824FB488000A9DEDC /* SystemNavigator */,
+				44B140EC24FB366F00A9DEDC /* PopUpAlert */,
+				44B140DD24FAC15000A9DEDC /* PrivacyPermission */,
 				449BF3C424D31FDB000A8712 /* VideoDetailsRepository */,
 				449BF37624C60952000A8712 /* VideoListRepository */,
 			);
@@ -599,6 +650,7 @@
 		449BF3C324D31FC1000A8712 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				44B140E224FAC33700A9DEDC /* AVPrivacyPermissionProvider */,
 				449BF38224C60CE5000A8712 /* VideoStreamingProvider */,
 				449BF37924C60B27000A8712 /* VideoListProvider */,
 			);
@@ -641,6 +693,70 @@
 				44AB8C1124E1987B00D00A1B /* StandardMainViewModel.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		44B140DD24FAC15000A9DEDC /* PrivacyPermission */ = {
+			isa = PBXGroup;
+			children = (
+				44B140DE24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift */,
+				44B140E024FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift */,
+			);
+			path = PrivacyPermission;
+			sourceTree = "<group>";
+		};
+		44B140E224FAC33700A9DEDC /* AVPrivacyPermissionProvider */ = {
+			isa = PBXGroup;
+			children = (
+				44B140E324FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift */,
+				44B140E524FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift */,
+				44B140E724FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift */,
+			);
+			path = AVPrivacyPermissionProvider;
+			sourceTree = "<group>";
+		};
+		44B140E924FB2F5500A9DEDC /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				440044E524D8C5F30090FDBB /* DependencyContainer.swift */,
+				44B140EA24FB2F6800A9DEDC /* StandardDependencyContainer.swift */,
+			);
+			path = DependencyContainer;
+			sourceTree = "<group>";
+		};
+		44B140EC24FB366F00A9DEDC /* PopUpAlert */ = {
+			isa = PBXGroup;
+			children = (
+				44B140ED24FB368200A9DEDC /* PopUpAlertManager.swift */,
+				44B140EF24FB36C300A9DEDC /* StandardPopUpAlertManager.swift */,
+			);
+			path = PopUpAlert;
+			sourceTree = "<group>";
+		};
+		44B140F124FB43F100A9DEDC /* AudioPermissionInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				44B140F224FB441A00A9DEDC /* AudioPermissionInformationView.swift */,
+				44B140F424FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift */,
+				44B140F624FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift */,
+			);
+			path = AudioPermissionInformationView;
+			sourceTree = "<group>";
+		};
+		44B140F824FB488000A9DEDC /* SystemNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				44B140F924FB488F00A9DEDC /* SystemNavigator.swift */,
+				44B140FB24FB48B300A9DEDC /* MacOSSystemNavigator.swift */,
+			);
+			path = SystemNavigator;
+			sourceTree = "<group>";
+		};
+		44B1410924FC072000A9DEDC /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				44B1410A24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -860,6 +976,7 @@
 				449BF3B424D10856000A8712 /* StandardMixerViewModel.swift in Sources */,
 				449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */,
 				449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */,
+				44B140EE24FB368200A9DEDC /* PopUpAlertManager.swift in Sources */,
 				449BF38924C78AE0000A8712 /* StandardVideoListViewModel.swift in Sources */,
 				449BF3B624D1EB58000A8712 /* VideoQueueViewModel.swift in Sources */,
 				446BA5DC24E30806004EFA42 /* VideoListLoadingCellView.swift in Sources */,
@@ -870,7 +987,11 @@
 				440044E224D895C20090FDBB /* NowPlayingViewModel.swift in Sources */,
 				449BF38124C60CDF000A8712 /* VideoStreamingProvider.swift in Sources */,
 				446BA60624E42F02004EFA42 /* StandardWindowManager.swift in Sources */,
+				44B140FA24FB488F00A9DEDC /* SystemNavigator.swift in Sources */,
+				44B140EB24FB2F6800A9DEDC /* StandardDependencyContainer.swift in Sources */,
+				44B140E624FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift in Sources */,
 				449BF3BE24D2563A000A8712 /* VideoQueue.swift in Sources */,
+				44B140F324FB441A00A9DEDC /* AudioPermissionInformationView.swift in Sources */,
 				449BF38B24C78F9E000A8712 /* VideoListCellItem.swift in Sources */,
 				449BF3C624D3209B000A8712 /* VideoStreamingRepository.swift in Sources */,
 				446BA60424E42C9C004EFA42 /* WindowManager.swift in Sources */,
@@ -878,24 +999,32 @@
 				449BF39D24C8C9BA000A8712 /* Notification+Extensions.swift in Sources */,
 				449BF36E24C0B53A000A8712 /* MicStreamer.swift in Sources */,
 				449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */,
+				44B140DF24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift in Sources */,
 				440044E424D895DA0090FDBB /* StandardNowPlayingViewModel.swift in Sources */,
+				44B140F524FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift in Sources */,
 				449BF39424C8C689000A8712 /* VideoViewModel.swift in Sources */,
+				44B140E124FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift in Sources */,
 				449BF3B024D0E04B000A8712 /* AudioMixer.swift in Sources */,
 				449BF3AE24D0DD25000A8712 /* Mixer.swift in Sources */,
 				440044DD24D88F870090FDBB /* SideBarViewController.swift in Sources */,
 				449BF37524C60942000A8712 /* VideoListRepository.swift in Sources */,
+				44B140E424FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift in Sources */,
 				440044E624D8C5F30090FDBB /* DependencyContainer.swift in Sources */,
 				44B7A46B24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift in Sources */,
 				449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */,
+				44B140E824FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift in Sources */,
 				44AB8C1224E1987B00D00A1B /* StandardMainViewModel.swift in Sources */,
+				44B140F724FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift in Sources */,
 				449BF38724C61C89000A8712 /* VideoListCellView.swift in Sources */,
 				449BF3BA24D1F34A000A8712 /* VideoQueueCellView.swift in Sources */,
+				44B140FC24FB48B300A9DEDC /* MacOSSystemNavigator.swift in Sources */,
 				449BF37B24C60B38000A8712 /* VideoListProvider.swift in Sources */,
 				441D078724BF899800071B97 /* VideoViewController.swift in Sources */,
 				449BF38D24C79108000A8712 /* RatingView.swift in Sources */,
 				449BF3C024D25690000A8712 /* Queue.swift in Sources */,
 				440044E824D8EB8C0090FDBB /* TabView.swift in Sources */,
 				446BA5DA24E307F0004EFA42 /* VideoListLoadingCellItem.swift in Sources */,
+				44B140F024FB36C300A9DEDC /* StandardPopUpAlertManager.swift in Sources */,
 				44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */,
 				449BF3B224D10765000A8712 /* MixerViewModel.swift in Sources */,
 				449BF37F24C60CC2000A8712 /* StandardVideoListRepository.swift in Sources */,
@@ -916,9 +1045,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				446BA60824E42FE3004EFA42 /* MockWindowManager.swift in Sources */,
+				44B1410B24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift in Sources */,
 				446BA5F424E38D89004EFA42 /* MockAudioMixer.swift in Sources */,
+				44B1410424FB5C3400A9DEDC /* MockPopUpAlertManager.swift in Sources */,
 				446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */,
+				44B140FE24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift in Sources */,
 				446BA5EE24E38C2D004EFA42 /* MockURLSession.swift in Sources */,
+				44B1410224FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift in Sources */,
 				446BA60D24E441D7004EFA42 /* StandardMixerViewModelTests.swift in Sources */,
 				446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */,
 				446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */,
@@ -929,7 +1062,10 @@
 				448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */,
 				446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */,
 				446BA60B24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift in Sources */,
+				44B1410024FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift in Sources */,
 				446BA5F624E38F98004EFA42 /* MockVideoStreamingRepository.swift in Sources */,
+				44B1410824FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift in Sources */,
+				44B1410624FB5C8100A9DEDC /* MockSystemNavigator.swift in Sources */,
 				446BA5F024E38C4B004EFA42 /* MockVideoListProvider.swift in Sources */,
 				441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */,
 				446BA5E124E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift in Sources */,
@@ -1116,7 +1252,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.1.3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1124,7 +1260,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";
@@ -1141,7 +1277,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0.1.3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1149,7 +1285,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.3;
+				MARKETING_VERSION = 0.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";

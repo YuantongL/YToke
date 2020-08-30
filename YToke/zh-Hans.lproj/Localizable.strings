@@ -39,3 +39,11 @@
 "error_view_text" = "发生了错误，请稍后重试。";
 
 "cycle_text_title" = "正在播放: %@,       下一首: %@";
+
+"ok" = "好";
+
+"permission_request_microphone" = "如果您想使用麦克风，请转到系统设置并授予YToke〜麦克风权限";
+
+"go_to_settings" = "前往设置";
+
+"audio_permission_information" = "YToke〜无法访问麦克风。 如果要使用麦克风流，请进入系统设置菜单并授予麦克风访问权限";

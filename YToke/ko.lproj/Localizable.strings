@@ -39,3 +39,11 @@
 "error_view_text" = "오류가 발생했습니다. 잠시 후 다시 시도 해주세요.";
 
 "cycle_text_title" = "현재 재생: %@,      다음: %@";
+
+"ok" = "확인";
+
+"permission_request_microphone" = "마이크를 사용하려면 시스템 설정으로 이동하여 YToke ~ 마이크 권한을 부여하세요.";
+
+"go_to_settings" = "설정으로 바로 가기";
+
+"audio_permission_information" = "YToke ~는 마이크 액세스 권한이 없습니다. 마이크 스트림을 사용하려면 시스템 설정 메뉴로 이동하여 마이크 액세스 권한을 부여하세요.";
