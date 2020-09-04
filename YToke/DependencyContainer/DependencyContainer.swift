@@ -28,4 +28,5 @@ protocol DependencyContainer {
     var audioMixer: AudioMixer { get }
     var videoQueue: VideoQueue { get }
     var micStreamer: MicStreamer { get }
+    var audioDeviceManager: AudioDevicesManager { get }
 }

@@ -39,6 +39,8 @@ final class StandardMainViewModel: MainViewModel {
     private var firstDonationViewShown = false
     private var secondDonationViewShown = false
     
+    private let audioDeviceManager = MacOSAudioDevicesManager()
+    
     init(dependencyContainer: DependencyContainer = StandardDependencyContainer()) {
         self.dependencyContainer = dependencyContainer
         
@@ -59,24 +61,6 @@ final class StandardMainViewModel: MainViewModel {
             return
         }
         audioMixer.unsubscribe(token: token)
-    }
-    
-    // MARK: - Mic Streaming
-    
-    func onAppear() {
-        micStreamer.startStreaming { [weak self] result in
-            if case .failure(let error) = result {
-                switch error {
-                case AVAudioEngineMicStreamerError.permissionNotGranted:
-                    let message = NSLocalizedString("permission_request_microphone",
-                                                    // swiftlint:disable:next line_length
-                                                    comment: "If you are willing to use Microphone, please head to System Settings and grant YToke~ microphone permission")
-                    self?.dependencyContainer.repo.alertManager.show(message: message)
-                default:
-                    self?.dependencyContainer.repo.alertManager.show(error: error)
-                }
-            }
-        }
     }
     
     // MARK: - Sponsorship Window

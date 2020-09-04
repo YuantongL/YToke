@@ -21,6 +21,7 @@ struct StandardDependencyContainer: DependencyContainer {
     let micStreamer: MicStreamer
     
     let audioMixer = AudioMixer()
+    let audioDeviceManager: AudioDevicesManager = MacOSAudioDevicesManager()
     let videoQueue = VideoQueue()
     
     init() {
@@ -36,6 +37,7 @@ struct StandardDependencyContainer: DependencyContainer {
                                    alertManager: StandardPopUpAlertManager(),
                                    systemNavigator: MacOSSystemNavigator())
         
+        //micStreamer = AudioKitMicStreamer()
         micStreamer = AVAudioEngineMicStreamer(privacyPermissionRepository: repo.privacyPermissionRepository)
     }
     
