@@ -1,5 +1,5 @@
 //
-//  MacOSAudioDevicesManager.swift
+//  MacOSAudioDevicesProvider.swift
 //  YToke
 //
 //  Created by Lyt on 8/31/20.
@@ -11,20 +11,9 @@ import AVFoundation
 import Foundation
 import AppKit
 
-enum MacOSAudioDevicesManagerError: Error {
-    case unableToCreateAggregateDevice
-    case unableToDestroyAggregrateDevice
-}
-
-final class MacOSAudioDevicesManager: AudioDevicesManager {
-    
-    private var aggregateDeviceSubDevices: [AudioDevice] = []
+final class MacOSAudioDevicesProvider: AudioDevicesProvider {
     
     var onInputDevicesChange: (() -> Void)?
-    
-    private var defaultAggregateDeviceUID = "YToke.AggregateDevice.ID"
-    private var defaultAggregateDeviceName = "YToke Multi-Input Device"
-    private var currentAggregateDeviceID: AudioDeviceID?
     
     private var defaultAudioInputDevice: AudioDeviceID? {
         var audioInputDeviceId: AudioDeviceID = 0
@@ -117,71 +106,16 @@ final class MacOSAudioDevicesManager: AudioDevicesManager {
                 guard let uid = macOSDevice.uid else {
                     return nil
                 }
-                let isDefaultDevice = macOSDevice.audioDeviceID == defaultAudioInputDevice
-                let aggregateContainsDevice = aggregateDeviceSubDevices.map { $0.uid }.contains(uid)
                 return AudioDevice(id: macOSDevice.audioDeviceID,
                                    uid: uid,
                                    name: macOSDevice.name,
-                                   isOn: isDefaultDevice || aggregateContainsDevice)
+                                   isOn: macOSDevice.audioDeviceID == defaultAudioInputDevice)
         }
     }
     
     /// All input devices not including aggregate device
     func inputDevices() -> [AudioDevice] {
-        let result = allInputDevices()
-            .filter { $0.uid != defaultAggregateDeviceUID }
-        return result
-    }
-    
-    func deleteExistingAggregateDevice() {
-        guard let existingDeviceID = getDevices()
-            .first(where: { $0.uid == defaultAggregateDeviceUID })?.audioDeviceID else {
-            return
-        }
-        
-        let statusCode = AudioHardwareDestroyAggregateDevice(existingDeviceID)
-        guard statusCode == 0 else {
-            // TODO: Log
-            print(statusCode)
-            return
-        }
-        
-        aggregateDeviceSubDevices = []
-    }
-    
-    func createAggregateDevice(with devices: [AudioDevice]) throws -> AudioDevice {        
-        guard let firstDevice = devices.first else {
-            throw MacOSAudioDevicesManagerError.unableToCreateAggregateDevice
-        }
-        
-        let subDevicesList: [[String: Any]] = devices.map { device in
-            [kAudioSubDeviceUIDKey: device.uid as CFString,
-             kAudioSubDeviceDriftCompensationKey: 1]
-        }
-        
-        let desc: [String: Any] = [
-            kAudioAggregateDeviceNameKey: defaultAggregateDeviceName,
-            kAudioAggregateDeviceUIDKey: defaultAggregateDeviceUID,
-            kAudioAggregateDeviceSubDeviceListKey: subDevicesList,
-            kAudioAggregateDeviceMasterSubDeviceKey: firstDevice.uid,
-            kAudioAggregateDeviceClockDeviceKey: firstDevice.uid
-            // TODO: Uncomment
-            //kAudioAggregateDeviceIsPrivateKey: 1
-        ]
-
-        var aggregateDeviceId: AudioDeviceID = 0
-        let status = AudioHardwareCreateAggregateDevice(desc as CFDictionary, &aggregateDeviceId)
-        guard status == 0 else {
-            throw MacOSAudioDevicesManagerError.unableToCreateAggregateDevice
-        }
-        currentAggregateDeviceID = aggregateDeviceId
-        
-        aggregateDeviceSubDevices = devices
-        
-        return AudioDevice(id: aggregateDeviceId,
-                           uid: defaultAggregateDeviceUID,
-                           name: defaultAggregateDeviceName,
-                           isOn: false)
+        allInputDevices()
     }
     
     func setDeviceAsDefaultInput(_ device: AudioDevice) throws {

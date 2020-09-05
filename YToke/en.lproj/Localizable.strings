@@ -47,3 +47,5 @@
 "go_to_settings" = "Go to Settings";
 
 "audio_permission_information" = "YToke~ does not have microphone access. If you want to use microphone stream, please go to system Settings menu and grant microphone access";
+
+"select_input_device" = "Select input device";

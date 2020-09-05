@@ -47,3 +47,5 @@
 "go_to_settings" = "前往设置";
 
 "audio_permission_information" = "YToke〜无法访问麦克风。 如果要使用麦克风流，请进入系统设置菜单并授予麦克风访问权限";
+
+"select_input_device" = "选择输入设备";

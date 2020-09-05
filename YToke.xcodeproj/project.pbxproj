@@ -39,7 +39,7 @@
 		446BA5F824E38FFD004EFA42 /* MockVideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */; };
 		446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5F924E39060004EFA42 /* MockVideoQueue.swift */; };
 		446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */; };
-		446BA5FE24E3940F004EFA42 /* MockMicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */; };
+		446BA5FE24E3940F004EFA42 /* MicrophoneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FD24E3940F004EFA42 /* MicrophoneProvider.swift */; };
 		446BA60024E39FC3004EFA42 /* StandardDonationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5FF24E39FC3004EFA42 /* StandardDonationViewModelTests.swift */; };
 		446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60124E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift */; };
 		446BA60424E42C9C004EFA42 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60324E42C9C004EFA42 /* WindowManager.swift */; };
@@ -50,12 +50,12 @@
 		446BA60F24E443B8004EFA42 /* StandardVideoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA60E24E443B8004EFA42 /* StandardVideoListViewModelTests.swift */; };
 		446BA61124E44B89004EFA42 /* StandardVideoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA61024E44B89004EFA42 /* StandardVideoViewModelTests.swift */; };
 		446BA61524EB6387004EFA42 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 446BA61724EB6387004EFA42 /* Localizable.strings */; };
-		446DBBF224FF432A00601B0D /* AudioInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DBBF124FF432A00601B0D /* AudioInputManager.swift */; };
-		446DBBF424FF43CE00601B0D /* CoreAudioInputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DBBF324FF43CE00601B0D /* CoreAudioInputManager.swift */; };
+		446DBBF224FF432A00601B0D /* AudioInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DBBF124FF432A00601B0D /* AudioInputRepository.swift */; };
+		446DBBF424FF43CE00601B0D /* CoreAudioInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DBBF324FF43CE00601B0D /* CoreAudioInputRepository.swift */; };
 		448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448392CF24EDF60800D8D32F /* VideoModelTests.swift */; };
 		448392D424EDFBCB00D8D32F /* MockInvidiosAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */; };
 		448392D624EDFEF700D8D32F /* MockVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D524EDFEF700D8D32F /* MockVideo.json */; };
-		449BF36E24C0B53A000A8712 /* MicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF36D24C0B53A000A8712 /* MicStreamer.swift */; };
+		449BF36E24C0B53A000A8712 /* MicrophoneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF36D24C0B53A000A8712 /* MicrophoneProvider.swift */; };
 		449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37024C21298000A8712 /* VideoListViewController.swift */; };
 		449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37224C212A6000A8712 /* VideoListViewModel.swift */; };
 		449BF37524C60942000A8712 /* VideoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37424C60942000A8712 /* VideoListRepository.swift */; };
@@ -85,9 +85,13 @@
 		449BF3C024D25690000A8712 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3BF24D25690000A8712 /* Queue.swift */; };
 		449BF3C624D3209B000A8712 /* VideoStreamingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3C524D3209B000A8712 /* VideoStreamingRepository.swift */; };
 		449BF3C824D3218F000A8712 /* StandardVideoStreamingRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3C724D3218F000A8712 /* StandardVideoStreamingRespository.swift */; };
-		449BF3CB24D46748000A8712 /* AVAudioEngineMicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3CA24D46748000A8712 /* AVAudioEngineMicStreamer.swift */; };
+		449BF3CB24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3CA24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift */; };
 		44A0CF1724EB990600B25887 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44A0CF1924EB990600B25887 /* InfoPlist.strings */; };
-		44A7563325015F6900108A00 /* AudioKitMicStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A7563225015F6900108A00 /* AudioKitMicStreamer.swift */; };
+		44AA2D1E2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D1D2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift */; };
+		44AA2D20250326910010F5B7 /* AudioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D1F250326910010F5B7 /* AudioDevice.swift */; };
+		44AA2D22250328410010F5B7 /* MockAudioInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */; };
+		44AA2D2425032D120010F5B7 /* AudioDevicesProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D2325032D120010F5B7 /* AudioDevicesProviderError.swift */; };
+		44AA2D26250332A00010F5B7 /* MockAudioDevicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */; };
 		44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0824E1822000D00A1B /* DonationView.swift */; };
 		44AB8C0B24E1824500D00A1B /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */; };
 		44AB8C0D24E1829700D00A1B /* StandardDonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */; };
@@ -100,7 +104,7 @@
 		44B140E824FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140E724FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift */; };
 		44B140EB24FB2F6800A9DEDC /* StandardDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140EA24FB2F6800A9DEDC /* StandardDependencyContainer.swift */; };
 		44B140EE24FB368200A9DEDC /* PopUpAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140ED24FB368200A9DEDC /* PopUpAlertManager.swift */; };
-		44B140F024FB36C300A9DEDC /* StandardPopUpAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140EF24FB36C300A9DEDC /* StandardPopUpAlertManager.swift */; };
+		44B140F024FB36C300A9DEDC /* StandardPopUpAlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140EF24FB36C300A9DEDC /* StandardPopUpAlertProvider.swift */; };
 		44B140F324FB441A00A9DEDC /* AudioPermissionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F224FB441A00A9DEDC /* AudioPermissionInformationView.swift */; };
 		44B140F524FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F424FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift */; };
 		44B140F724FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140F624FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift */; };
@@ -109,12 +113,11 @@
 		44B140FE24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */; };
 		44B1410024FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */; };
 		44B1410224FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */; };
-		44B1410424FB5C3400A9DEDC /* MockPopUpAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410324FB5C3400A9DEDC /* MockPopUpAlertManager.swift */; };
+		44B1410424FB5C3400A9DEDC /* MockPopUpAlertProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410324FB5C3400A9DEDC /* MockPopUpAlertProvider.swift */; };
 		44B1410624FB5C8100A9DEDC /* MockSystemNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */; };
 		44B1410824FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410724FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift */; };
-		44B1410B24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410A24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift */; };
-		44B1410E24FD53F200A9DEDC /* AudioDevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410D24FD53F200A9DEDC /* AudioDevicesManager.swift */; };
-		44B1411024FD540000A9DEDC /* MacOSAudioDevicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410F24FD540000A9DEDC /* MacOSAudioDevicesManager.swift */; };
+		44B1410E24FD53F200A9DEDC /* AudioDevicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410D24FD53F200A9DEDC /* AudioDevicesProvider.swift */; };
+		44B1411024FD540000A9DEDC /* MacOSAudioDevicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1410F24FD540000A9DEDC /* MacOSAudioDevicesProvider.swift */; };
 		44B1411324FD983B00A9DEDC /* AudioDevicesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1411224FD983B00A9DEDC /* AudioDevicesListView.swift */; };
 		44B1411524FD984700A9DEDC /* AudioDevicesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1411424FD984700A9DEDC /* AudioDevicesListViewModel.swift */; };
 		44B1411724FD985500A9DEDC /* StandardAudioDevicesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1411624FD985500A9DEDC /* StandardAudioDevicesListViewModel.swift */; };
@@ -170,7 +173,7 @@
 		446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoListRepository.swift; sourceTree = "<group>"; };
 		446BA5F924E39060004EFA42 /* MockVideoQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoQueue.swift; sourceTree = "<group>"; };
 		446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyContainer.swift; sourceTree = "<group>"; };
-		446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMicStreamer.swift; sourceTree = "<group>"; };
+		446BA5FD24E3940F004EFA42 /* MicrophoneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneProvider.swift; sourceTree = "<group>"; };
 		446BA5FF24E39FC3004EFA42 /* StandardDonationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDonationViewModelTests.swift; sourceTree = "<group>"; };
 		446BA60124E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardNowPlayingViewModelTests.swift; sourceTree = "<group>"; };
 		446BA60324E42C9C004EFA42 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
@@ -189,13 +192,13 @@
 		446BA62024EB75F6004EFA42 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		446BA62124EB7B0C004EFA42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		446BA62224EB7B0C004EFA42 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		446DBBF124FF432A00601B0D /* AudioInputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputManager.swift; sourceTree = "<group>"; };
-		446DBBF324FF43CE00601B0D /* CoreAudioInputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioInputManager.swift; sourceTree = "<group>"; };
+		446DBBF124FF432A00601B0D /* AudioInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputRepository.swift; sourceTree = "<group>"; };
+		446DBBF324FF43CE00601B0D /* CoreAudioInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioInputRepository.swift; sourceTree = "<group>"; };
 		448392CF24EDF60800D8D32F /* VideoModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModelTests.swift; sourceTree = "<group>"; };
 		448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockInvidiosAPI.json; sourceTree = "<group>"; };
 		448392D524EDFEF700D8D32F /* MockVideo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockVideo.json; sourceTree = "<group>"; };
 		448392D724F5938800D8D32F /* YToke.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = YToke.entitlements; sourceTree = "<group>"; };
-		449BF36D24C0B53A000A8712 /* MicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicStreamer.swift; sourceTree = "<group>"; };
+		449BF36D24C0B53A000A8712 /* MicrophoneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneProvider.swift; sourceTree = "<group>"; };
 		449BF37024C21298000A8712 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		449BF37224C212A6000A8712 /* VideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModel.swift; sourceTree = "<group>"; };
 		449BF37424C60942000A8712 /* VideoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListRepository.swift; sourceTree = "<group>"; };
@@ -225,12 +228,16 @@
 		449BF3BF24D25690000A8712 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		449BF3C524D3209B000A8712 /* VideoStreamingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamingRepository.swift; sourceTree = "<group>"; };
 		449BF3C724D3218F000A8712 /* StandardVideoStreamingRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStreamingRespository.swift; sourceTree = "<group>"; };
-		449BF3CA24D46748000A8712 /* AVAudioEngineMicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioEngineMicStreamer.swift; sourceTree = "<group>"; };
+		449BF3CA24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioEngineMicrophoneProvider.swift; sourceTree = "<group>"; };
 		44A0CF1824EB990600B25887 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		44A0CF1A24EB991100B25887 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44A0CF1B24EB991300B25887 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		44A0CF1C24EB999C00B25887 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44A7563225015F6900108A00 /* AudioKitMicStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioKitMicStreamer.swift; sourceTree = "<group>"; };
+		44AA2D1D2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAudioDevicesListViewModelTests.swift; sourceTree = "<group>"; };
+		44AA2D1F250326910010F5B7 /* AudioDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevice.swift; sourceTree = "<group>"; };
+		44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioInputRepository.swift; sourceTree = "<group>"; };
+		44AA2D2325032D120010F5B7 /* AudioDevicesProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesProviderError.swift; sourceTree = "<group>"; };
+		44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioDevicesProvider.swift; sourceTree = "<group>"; };
 		44AB8C0824E1822000D00A1B /* DonationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationView.swift; sourceTree = "<group>"; };
 		44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
 		44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDonationViewModel.swift; sourceTree = "<group>"; };
@@ -243,7 +250,7 @@
 		44B140E724FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAuthorizationStatus+Extensions.swift"; sourceTree = "<group>"; };
 		44B140EA24FB2F6800A9DEDC /* StandardDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDependencyContainer.swift; sourceTree = "<group>"; };
 		44B140ED24FB368200A9DEDC /* PopUpAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAlertManager.swift; sourceTree = "<group>"; };
-		44B140EF24FB36C300A9DEDC /* StandardPopUpAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardPopUpAlertManager.swift; sourceTree = "<group>"; };
+		44B140EF24FB36C300A9DEDC /* StandardPopUpAlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardPopUpAlertProvider.swift; sourceTree = "<group>"; };
 		44B140F224FB441A00A9DEDC /* AudioPermissionInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPermissionInformationView.swift; sourceTree = "<group>"; };
 		44B140F424FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPermissionInformationViewModel.swift; sourceTree = "<group>"; };
 		44B140F624FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAudioPermissionInfoViewModel.swift; sourceTree = "<group>"; };
@@ -252,12 +259,11 @@
 		44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardPrivacyPermissionRepositoryTests.swift; sourceTree = "<group>"; };
 		44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAVPrivacyPermissionProvider.swift; sourceTree = "<group>"; };
 		44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPrivacyPermissionRepository.swift; sourceTree = "<group>"; };
-		44B1410324FB5C3400A9DEDC /* MockPopUpAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPopUpAlertManager.swift; sourceTree = "<group>"; };
+		44B1410324FB5C3400A9DEDC /* MockPopUpAlertProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPopUpAlertProvider.swift; sourceTree = "<group>"; };
 		44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSystemNavigator.swift; sourceTree = "<group>"; };
 		44B1410724FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAudioPermissionInfoViewModelTests.swift; sourceTree = "<group>"; };
-		44B1410A24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVaudioEngineMicStreamerTests.swift; sourceTree = "<group>"; };
-		44B1410D24FD53F200A9DEDC /* AudioDevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesManager.swift; sourceTree = "<group>"; };
-		44B1410F24FD540000A9DEDC /* MacOSAudioDevicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSAudioDevicesManager.swift; sourceTree = "<group>"; };
+		44B1410D24FD53F200A9DEDC /* AudioDevicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesProvider.swift; sourceTree = "<group>"; };
+		44B1410F24FD540000A9DEDC /* MacOSAudioDevicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSAudioDevicesProvider.swift; sourceTree = "<group>"; };
 		44B1411224FD983B00A9DEDC /* AudioDevicesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesListView.swift; sourceTree = "<group>"; };
 		44B1411424FD984700A9DEDC /* AudioDevicesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesListViewModel.swift; sourceTree = "<group>"; };
 		44B1411624FD985500A9DEDC /* StandardAudioDevicesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAudioDevicesListViewModel.swift; sourceTree = "<group>"; };
@@ -384,7 +390,6 @@
 		441D077524BE5E1200071B97 /* YTokeTests */ = {
 			isa = PBXGroup;
 			children = (
-				44B1410924FC072000A9DEDC /* Audio */,
 				446BA5EA24E38B7C004EFA42 /* Mocks */,
 				446BA5DD24E33A8B004EFA42 /* Data */,
 				446BA5DF24E33A98004EFA42 /* Repository */,
@@ -433,6 +438,7 @@
 				446BA60E24E443B8004EFA42 /* StandardVideoListViewModelTests.swift */,
 				446BA61024E44B89004EFA42 /* StandardVideoViewModelTests.swift */,
 				44B1410724FB604700A9DEDC /* StandardAudioPermissionInfoViewModelTests.swift */,
+				44AA2D1D2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,13 +466,15 @@
 				446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */,
 				446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */,
 				446BA5F924E39060004EFA42 /* MockVideoQueue.swift */,
-				446BA5FD24E3940F004EFA42 /* MockMicStreamer.swift */,
+				446BA5FD24E3940F004EFA42 /* MicrophoneProvider.swift */,
 				446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */,
-				44B1410324FB5C3400A9DEDC /* MockPopUpAlertManager.swift */,
+				44B1410324FB5C3400A9DEDC /* MockPopUpAlertProvider.swift */,
 				44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */,
 				44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */,
 				446BA60724E42FE3004EFA42 /* MockWindowManager.swift */,
 				44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */,
+				44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */,
+				44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -483,8 +491,8 @@
 		446DBBF024FF431100601B0D /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				446DBBF124FF432A00601B0D /* AudioInputManager.swift */,
-				446DBBF324FF43CE00601B0D /* CoreAudioInputManager.swift */,
+				446DBBF124FF432A00601B0D /* AudioInputRepository.swift */,
+				446DBBF324FF43CE00601B0D /* CoreAudioInputRepository.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -669,7 +677,6 @@
 			children = (
 				446DBBF024FF431100601B0D /* Audio */,
 				44B140F824FB488000A9DEDC /* SystemNavigator */,
-				44B140EC24FB366F00A9DEDC /* PopUpAlert */,
 				44B140DD24FAC15000A9DEDC /* PrivacyPermission */,
 				449BF3C424D31FDB000A8712 /* VideoDetailsRepository */,
 				449BF37624C60952000A8712 /* VideoListRepository */,
@@ -680,6 +687,7 @@
 		449BF3C324D31FC1000A8712 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				44B140EC24FB366F00A9DEDC /* PopUpAlert */,
 				44B1410C24FD53DB00A9DEDC /* AudioDevices */,
 				449BF3C924D46730000A8712 /* MicStreamer */,
 				44B140E224FAC33700A9DEDC /* AVPrivacyPermissionProvider */,
@@ -701,9 +709,8 @@
 		449BF3C924D46730000A8712 /* MicStreamer */ = {
 			isa = PBXGroup;
 			children = (
-				449BF36D24C0B53A000A8712 /* MicStreamer.swift */,
-				449BF3CA24D46748000A8712 /* AVAudioEngineMicStreamer.swift */,
-				44A7563225015F6900108A00 /* AudioKitMicStreamer.swift */,
+				449BF36D24C0B53A000A8712 /* MicrophoneProvider.swift */,
+				449BF3CA24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift */,
 			);
 			path = MicStreamer;
 			sourceTree = "<group>";
@@ -760,7 +767,7 @@
 			isa = PBXGroup;
 			children = (
 				44B140ED24FB368200A9DEDC /* PopUpAlertManager.swift */,
-				44B140EF24FB36C300A9DEDC /* StandardPopUpAlertManager.swift */,
+				44B140EF24FB36C300A9DEDC /* StandardPopUpAlertProvider.swift */,
 			);
 			path = PopUpAlert;
 			sourceTree = "<group>";
@@ -784,20 +791,14 @@
 			path = SystemNavigator;
 			sourceTree = "<group>";
 		};
-		44B1410924FC072000A9DEDC /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				44B1410A24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
 		44B1410C24FD53DB00A9DEDC /* AudioDevices */ = {
 			isa = PBXGroup;
 			children = (
-				44B1410D24FD53F200A9DEDC /* AudioDevicesManager.swift */,
-				44B1410F24FD540000A9DEDC /* MacOSAudioDevicesManager.swift */,
+				44AA2D1F250326910010F5B7 /* AudioDevice.swift */,
 				44B1411D24FED85B00A9DEDC /* MacOSAudioDevice.swift */,
+				44B1410D24FD53F200A9DEDC /* AudioDevicesProvider.swift */,
+				44B1410F24FD540000A9DEDC /* MacOSAudioDevicesProvider.swift */,
+				44AA2D2325032D120010F5B7 /* AudioDevicesProviderError.swift */,
 			);
 			path = AudioDevices;
 			sourceTree = "<group>";
@@ -1025,7 +1026,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449BF3CB24D46748000A8712 /* AVAudioEngineMicStreamer.swift in Sources */,
+				449BF3CB24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift in Sources */,
 				449BF3A124CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift in Sources */,
 				449BF3B424D10856000A8712 /* StandardMixerViewModel.swift in Sources */,
 				449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */,
@@ -1041,7 +1042,7 @@
 				449BF3AA24D095C8000A8712 /* VideoQueueViewController.swift in Sources */,
 				440044E224D895C20090FDBB /* NowPlayingViewModel.swift in Sources */,
 				449BF38124C60CDF000A8712 /* VideoStreamingProvider.swift in Sources */,
-				44B1410E24FD53F200A9DEDC /* AudioDevicesManager.swift in Sources */,
+				44B1410E24FD53F200A9DEDC /* AudioDevicesProvider.swift in Sources */,
 				446BA60624E42F02004EFA42 /* StandardWindowManager.swift in Sources */,
 				44B140FA24FB488F00A9DEDC /* SystemNavigator.swift in Sources */,
 				44B140EB24FB2F6800A9DEDC /* StandardDependencyContainer.swift in Sources */,
@@ -1054,11 +1055,13 @@
 				446BA60424E42C9C004EFA42 /* WindowManager.swift in Sources */,
 				440044EA24D9BAAE0090FDBB /* NSImage+Extensions.swift in Sources */,
 				449BF39D24C8C9BA000A8712 /* Notification+Extensions.swift in Sources */,
-				449BF36E24C0B53A000A8712 /* MicStreamer.swift in Sources */,
+				449BF36E24C0B53A000A8712 /* MicrophoneProvider.swift in Sources */,
 				449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */,
 				44B140DF24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift in Sources */,
 				440044E424D895DA0090FDBB /* StandardNowPlayingViewModel.swift in Sources */,
+				44AA2D2425032D120010F5B7 /* AudioDevicesProviderError.swift in Sources */,
 				44B140F524FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift in Sources */,
+				44AA2D20250326910010F5B7 /* AudioDevice.swift in Sources */,
 				44B1411724FD985500A9DEDC /* StandardAudioDevicesListViewModel.swift in Sources */,
 				449BF39424C8C689000A8712 /* VideoViewModel.swift in Sources */,
 				44B140E124FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift in Sources */,
@@ -1072,23 +1075,22 @@
 				449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */,
 				44B140E824FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift in Sources */,
 				44AB8C1224E1987B00D00A1B /* StandardMainViewModel.swift in Sources */,
-				446DBBF424FF43CE00601B0D /* CoreAudioInputManager.swift in Sources */,
+				446DBBF424FF43CE00601B0D /* CoreAudioInputRepository.swift in Sources */,
 				44B140F724FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift in Sources */,
 				449BF38724C61C89000A8712 /* VideoListCellView.swift in Sources */,
 				449BF3BA24D1F34A000A8712 /* VideoQueueCellView.swift in Sources */,
 				44B140FC24FB48B300A9DEDC /* MacOSSystemNavigator.swift in Sources */,
 				449BF37B24C60B38000A8712 /* VideoListProvider.swift in Sources */,
 				441D078724BF899800071B97 /* VideoViewController.swift in Sources */,
-				44A7563325015F6900108A00 /* AudioKitMicStreamer.swift in Sources */,
 				449BF38D24C79108000A8712 /* RatingView.swift in Sources */,
 				449BF3C024D25690000A8712 /* Queue.swift in Sources */,
 				440044E824D8EB8C0090FDBB /* TabView.swift in Sources */,
 				446BA5DA24E307F0004EFA42 /* VideoListLoadingCellItem.swift in Sources */,
 				44B1411524FD984700A9DEDC /* AudioDevicesListViewModel.swift in Sources */,
-				44B140F024FB36C300A9DEDC /* StandardPopUpAlertManager.swift in Sources */,
-				446DBBF224FF432A00601B0D /* AudioInputManager.swift in Sources */,
+				44B140F024FB36C300A9DEDC /* StandardPopUpAlertProvider.swift in Sources */,
+				446DBBF224FF432A00601B0D /* AudioInputRepository.swift in Sources */,
 				44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */,
-				44B1411024FD540000A9DEDC /* MacOSAudioDevicesManager.swift in Sources */,
+				44B1411024FD540000A9DEDC /* MacOSAudioDevicesProvider.swift in Sources */,
 				449BF3B224D10765000A8712 /* MixerViewModel.swift in Sources */,
 				449BF37F24C60CC2000A8712 /* StandardVideoListRepository.swift in Sources */,
 				44AB8C0D24E1829700D00A1B /* StandardDonationViewModel.swift in Sources */,
@@ -1109,22 +1111,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				446BA60824E42FE3004EFA42 /* MockWindowManager.swift in Sources */,
-				44B1410B24FC073B00A9DEDC /* AVaudioEngineMicStreamerTests.swift in Sources */,
 				446BA5F424E38D89004EFA42 /* MockAudioMixer.swift in Sources */,
-				44B1410424FB5C3400A9DEDC /* MockPopUpAlertManager.swift in Sources */,
+				44B1410424FB5C3400A9DEDC /* MockPopUpAlertProvider.swift in Sources */,
 				446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */,
 				44B140FE24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift in Sources */,
 				446BA5EE24E38C2D004EFA42 /* MockURLSession.swift in Sources */,
 				44B1410224FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift in Sources */,
+				44AA2D1E2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift in Sources */,
 				446BA60D24E441D7004EFA42 /* StandardMixerViewModelTests.swift in Sources */,
 				446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */,
 				446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */,
+				44AA2D22250328410010F5B7 /* MockAudioInputRepository.swift in Sources */,
 				446BA5EC24E38B9A004EFA42 /* MockXCDYoutubeClient.swift in Sources */,
-				446BA5FE24E3940F004EFA42 /* MockMicStreamer.swift in Sources */,
+				446BA5FE24E3940F004EFA42 /* MicrophoneProvider.swift in Sources */,
 				446BA61124E44B89004EFA42 /* StandardVideoViewModelTests.swift in Sources */,
 				446BA60F24E443B8004EFA42 /* StandardVideoListViewModelTests.swift in Sources */,
 				448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */,
 				446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */,
+				44AA2D26250332A00010F5B7 /* MockAudioDevicesProvider.swift in Sources */,
 				446BA60B24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift in Sources */,
 				44B1410024FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift in Sources */,
 				446BA5F624E38F98004EFA42 /* MockVideoStreamingRepository.swift in Sources */,
@@ -1324,7 +1328,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.4;
+				MARKETING_VERSION = 0.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";
@@ -1349,7 +1353,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.4;
+				MARKETING_VERSION = 0.1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";

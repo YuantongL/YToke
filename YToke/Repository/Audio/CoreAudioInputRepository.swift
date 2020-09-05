@@ -1,5 +1,5 @@
 //
-//  CoreAudioInputManager.swift
+//  CoreAudioInputRepository.swift
 //  YToke
 //
 //  Created by Lyt on 9/1/20.
@@ -8,35 +8,47 @@
 
 import Foundation
 
-final class CoreAudioInputManager: AudioInputManager {
+final class CoreAudioInputRepository: AudioInputRepository {
     
-    private var cachedSelectedDevices: [AudioDevice] = []
+    private var currentSelectedDevice: AudioDevice?
     
-    private var devicesManager: AudioDevicesManager
-    private let micStreamer: MicStreamer
-    private let alertManager: PopUpAlertManager
+    private var devicesManager: AudioDevicesProvider
+    private let microphoneProvider: MicrophoneProvider
+    private let alertProvider: PopUpAlertProvider
     private let privacyPermissionRepository: PrivacyPermissionRepository
     
-    init(devicesManager: AudioDevicesManager,
-         micStreamer: MicStreamer,
-         alertManager: PopUpAlertManager,
+    init(devicesManager: AudioDevicesProvider,
+         microphoneProvider: MicrophoneProvider,
+         alertProvider: PopUpAlertProvider,
+         // TODO: Move this to a provider
          privacyPermissionRepository: PrivacyPermissionRepository) {
-        self.alertManager = alertManager
+        self.alertProvider = alertProvider
         self.devicesManager = devicesManager
-        self.micStreamer = micStreamer
+        self.microphoneProvider = microphoneProvider
         self.privacyPermissionRepository = privacyPermissionRepository
         
-        //devicesManager.deleteExistingAggregateDevice()
-        
         // Set default input as the initial input device
-//        cachedSelectedDevices = devicesManager.inputDevices().filter { $0.isOn }
-//        setActiveDevices(cachedSelectedDevices) { [weak self] result in
-//            if case .failure(let error) = result {
-//                self?.handleError(error)
-//            }
-//        }
+        if let initialDevice = devicesManager.inputDevices().first(where: { $0.isOn }) {
+            setActiveDevices(initialDevice) { [weak self] result in
+                if case .failure(let error) = result {
+                    self?.handleError(error)
+                }
+            }
+        }
         
         self.devicesManager.onInputDevicesChange = { [weak self] in
+            // If the current selected device is unplugged, default to the first input device
+            if let currentSelectedDevice = self?.currentSelectedDevice {
+                let newDevicesList = devicesManager.inputDevices()
+                if !newDevicesList.contains(currentSelectedDevice), let firstDevice = newDevicesList.first {
+                    self?.setActiveDevices(firstDevice) { result in
+                        if case .success = result {
+                            self?.currentSelectedDevice = firstDevice
+                        }
+                    }
+                }
+            }
+            
             self?.handleInputDeviceChange()
         }
     }
@@ -49,31 +61,23 @@ final class CoreAudioInputManager: AudioInputManager {
         NotificationCenter.default.post(name: .audioInputDevicesChanged, object: nil)
     }
     
-    func setActiveDevices(_ devices: [AudioDevice], completion: @escaping (Result<Void, Error>) -> Void) {
+    func setActiveDevices(_ device: AudioDevice, completion: @escaping (Result<Void, Error>) -> Void) {
         checkForAudioPermission { [weak self] error in
             if let error = error {
                 self?.handleError(error)
+                completion(.failure(error))
             } else {
                 do {
-                    try self?.createAggregateDeviceThenStream(devices: devices)
+                    try self?.devicesManager.setDeviceAsDefaultInput(device)
+                    try self?.microphoneProvider.startStreaming()
+                    self?.currentSelectedDevice = device
+                    completion(.success(()))
                 } catch {
                     self?.handleError(error)
                     completion(.failure(error))
                 }
             }
         }
-    }
-    
-    private func createAggregateDeviceThenStream(devices: [AudioDevice]) throws {
-//        devicesManager.deleteExistingAggregateDevice()
-//        guard !devices.isEmpty else {
-//            return
-//        }
-//        guard let aggregrateDevice = try? devicesManager.createAggregateDevice(with: devices) else {
-//            throw AudioInputManagerError.unableToStream
-//        }
-//        try devicesManager.setDeviceAsDefaultInput(aggregrateDevice)
-        try micStreamer.startStreaming()
     }
     
     private func checkForAudioPermission(completion: @escaping (Error?) -> Void) {
@@ -98,9 +102,9 @@ final class CoreAudioInputManager: AudioInputManager {
             let message = NSLocalizedString("permission_request_microphone",
             // swiftlint:disable:next line_length
             comment: "If you are willing to use Microphone, please head to System Settings and grant YToke~ microphone permission")
-            alertManager.show(message: message)
+            alertProvider.show(message: message)
         } else {
-            alertManager.show(error: error)
+            alertProvider.show(error: error)
         }
     }
 }

@@ -13,12 +13,12 @@ enum AudioInputManagerError: Error {
     case unableToStream
 }
 
-protocol AudioInputManager {
+protocol AudioInputRepository {
     
     /// A list of audio input devices to select with their status
     func devices() -> [AudioDevice]
     
     /// Set devices as input device by giving a list of devices
-    func setActiveDevices(_: [AudioDevice], completion: @escaping (Result<Void, Error>) -> Void)
+    func setActiveDevices(_: AudioDevice, completion: @escaping (Result<Void, Error>) -> Void)
     
 }

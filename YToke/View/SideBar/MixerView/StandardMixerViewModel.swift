@@ -14,9 +14,11 @@ final class StandardMixerViewModel: MixerViewModel {
     var isPermissionInformationHidden: Bool {
         privacyPermissionRepository.status(of: .audio) == .granted
     }
+    
     var isAudioDevicesListHidden: Bool {
         !(privacyPermissionRepository.status(of: .audio) == .granted)
     }
+    
     var isMicrophoneVolumeControlHidden: Bool {
         !(privacyPermissionRepository.status(of: .audio) == .granted)
     }
@@ -24,11 +26,7 @@ final class StandardMixerViewModel: MixerViewModel {
     let permissionInformationViewModel: AudioPermissionInformationViewModel
     let audioDevicesListViewModel: AudioDevicesListViewModel
     
-    // TODO: These can be removed
     private let mixer: AudioMixer
-    private let audioDeviceManager: AudioDevicesManager
-    private let micStreamer: MicStreamer
-    private let alertManager: PopUpAlertManager
     private let privacyPermissionRepository: PrivacyPermissionRepository
     
     var videoVolume: Float = 100
@@ -39,19 +37,11 @@ final class StandardMixerViewModel: MixerViewModel {
     
     init(dependencyContainer: DependencyContainer) {
         mixer = dependencyContainer.audioMixer
-        audioDeviceManager = dependencyContainer.audioDeviceManager
-        micStreamer = dependencyContainer.micStreamer
-        alertManager = dependencyContainer.repo.alertManager
         let systemNavigator = dependencyContainer.repo.systemNavigator
         permissionInformationViewModel = StandardAudioPermissionInfoViewModel(systemNavigator: systemNavigator)
         privacyPermissionRepository = dependencyContainer.repo.privacyPermissionRepository
-        
-        let audioInputManager = CoreAudioInputManager(devicesManager: audioDeviceManager,
-                                                      micStreamer: micStreamer,
-                                                      alertManager: alertManager,
-                                                      privacyPermissionRepository: privacyPermissionRepository)
-//        let audioInputManager = AudioKitAudioInputManager()
-        audioDevicesListViewModel = StandardAudioDevicesListViewModel(audioInputManager: audioInputManager)
+        let audioInputRepository = dependencyContainer.repo.audioInputRepository
+        audioDevicesListViewModel = StandardAudioDevicesListViewModel(audioInputRepository: audioInputRepository)
     }
     
     func onAppear() {

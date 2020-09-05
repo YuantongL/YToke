@@ -10,28 +10,20 @@ import Foundation
 
 final class StandardAudioDevicesListViewModel: AudioDevicesListViewModel {
     
-    var items: [AudioDevice: Bool] {
+    var items: [AudioDevice] {
         didSet {
             onItemsUpdate?()
         }
     }
     var onItemsUpdate: (() -> Void)?
-    private let audioInputManager: AudioInputManager
+    private let audioInputRepository: AudioInputRepository
     
     private var audioObserver: NSObjectProtocol?
     
-    init(audioInputManager: AudioInputManager) {
-        self.audioInputManager = audioInputManager
+    init(audioInputRepository: AudioInputRepository) {
+        self.audioInputRepository = audioInputRepository
         
-        var tempDevices: [AudioDevice: Bool] = [:]
-        for device in audioInputManager.devices() {
-            if device.isOn {
-                tempDevices[device] = true
-            } else {
-                tempDevices[device] = false
-            }
-        }
-        items = tempDevices
+        items = audioInputRepository.devices()
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onSystemDeviceChange),
@@ -43,28 +35,29 @@ final class StandardAudioDevicesListViewModel: AudioDevicesListViewModel {
         NotificationCenter.default.removeObserver(self, name: .audioInputDevicesChanged, object: nil)
     }
     
-    @objc private func onSystemDeviceChange() {
-        let updatedDevices = audioInputManager.devices()
-        var tempDevices: [AudioDevice: Bool] = [:]
-        for device in updatedDevices {
-            if items.keys.contains(device) {
-                tempDevices[device] = items[device]
-            } else {
-                tempDevices[device] = false
-            }
+    private func resetDevicesList() {
+        let updatedList = audioInputRepository.devices()
+        var result: [AudioDevice] = []
+        for updatedItem in updatedList where items.contains(updatedItem) {
+            result.append(updatedItem)
         }
-        items = tempDevices
+        for unlistedItem in updatedList where !items.contains(unlistedItem) {
+            result.append(unlistedItem)
+        }
+        items = result
+    }
+    
+    @objc private func onSystemDeviceChange() {
+        resetDevicesList()
     }
     
     func onDeviceStateChange(device: AudioDevice, isToggled: Bool) {
-        items[device] = isToggled
-        let selectedDevices = items.filter { isOn -> Bool in
-            isOn.value
+        guard isToggled else {
+            resetDevicesList()
+            return
         }
-        audioInputManager.setActiveDevices(Array(selectedDevices.keys)) { result in
-            if case .failure = result {
-                // TODO: Untoggle
-            }
+        audioInputRepository.setActiveDevices(device) { [weak self] _ in
+            self?.resetDevicesList()
         }
     }
 }

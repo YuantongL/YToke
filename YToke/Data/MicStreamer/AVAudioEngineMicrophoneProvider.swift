@@ -1,5 +1,5 @@
 //
-//  AVAudioEngineMicStreamer.swift
+//  AVAudioEngineMicrophoneProvider.swift
 //  YToke
 //
 //  Created by Lyt on 2020/7/31.
@@ -9,7 +9,7 @@
 import AVFoundation
 import Foundation
 
-final class AVAudioEngineMicStreamer: MicStreamer {
+final class AVAudioEngineMicrophoneProvider: MicrophoneProvider {
     
     var isEnabled: Bool {
         audioEngine?.isRunning ?? false
@@ -25,12 +25,9 @@ final class AVAudioEngineMicStreamer: MicStreamer {
     
     private var audioEngine: AVAudioEngine?
     private var volumeEffect: AVAudioUnitEQ?
-    private let privacyPermissionRepository: PrivacyPermissionRepository
     private var currentAggregateDeviceId: AudioDeviceID?
     
-    init(privacyPermissionRepository: PrivacyPermissionRepository) {
-        self.privacyPermissionRepository = privacyPermissionRepository
-    }
+    init() {}
     
     private func prepareToStream() {
         audioEngine = AVAudioEngine()

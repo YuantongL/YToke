@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AudioDevicesListViewModel {
-    var items: [AudioDevice: Bool] { get }
+    var items: [AudioDevice] { get }
     var onItemsUpdate: (() -> Void)? { get set }
     
     func onDeviceStateChange(device: AudioDevice, isToggled: Bool)

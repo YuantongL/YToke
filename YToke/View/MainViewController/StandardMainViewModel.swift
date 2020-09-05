@@ -31,15 +31,16 @@ final class StandardMainViewModel: MainViewModel {
         dependencyContainer.audioMixer
     }()
     
-    private lazy var micStreamer: MicStreamer = {
-        dependencyContainer.micStreamer
+    // TODO: Provider should not appear in viewModel, fix this
+    private lazy var microphoneProvider: MicrophoneProvider = {
+        dependencyContainer.data.microphoneProvider
     }()
     
     private var songPlayed: Int = 0
     private var firstDonationViewShown = false
     private var secondDonationViewShown = false
     
-    private let audioDeviceManager = MacOSAudioDevicesManager()
+    private let audioDeviceManager = MacOSAudioDevicesProvider()
     
     init(dependencyContainer: DependencyContainer = StandardDependencyContainer()) {
         self.dependencyContainer = dependencyContainer
@@ -49,7 +50,7 @@ final class StandardMainViewModel: MainViewModel {
                 return
             }
             
-            self?.micStreamer.volume = updatedVoiceVolume
+            self?.microphoneProvider.volume = updatedVoiceVolume
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(onNewSongPlay), name: .queuePop, object: nil)

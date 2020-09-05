@@ -17,18 +17,20 @@ final class MockDependencyContainer: DependencyContainer {
     
     var audioMixer: AudioMixer = MockAudioMixer()
     var videoQueue: VideoQueue = MockVideoQueue()
-    var micStreamer: MicStreamer = MockMicStreamer()
     
     init() {
         data = DataContainer(videoStreamingProvider: MockVideoStreamingProvider(),
                              videoListProvider: MockVideoListProvider(),
-                             avPrivacyPermissionProvider: MockAVPrivacyPermissionProvider())
+                             avPrivacyPermissionProvider: MockAVPrivacyPermissionProvider(),
+                             popUpAlertProvider: MockPopUpAlertProvider(),
+                             audioDevicesProvider: MockAudioDevicesProvider(),
+                             microphoneProvider: MockMicrophoneProvider())
         
         repo = RepositoryContainer(videoStreamingRepository: MockVideoStreamingRepository(),
                                    videoListRepository: MockVideoListRepository(),
                                    privacyPermissionRepository: MockPrivacyPermissionRepository(),
-                                   alertManager: MockPopUpAlertManager(),
-                                   systemNavigator: MockSystemNavigator())
+                                   systemNavigator: MockSystemNavigator(),
+                                   audioInputRepository: MockAudioInputRepository())
     }
 }
 
@@ -62,11 +64,11 @@ extension MockDependencyContainer {
         videoQueue as! MockVideoQueue
     }
     
-    var mockMicStreamer: MockMicStreamer {
-        micStreamer as! MockMicStreamer
+    var mockMicrophoneProvider: MockMicrophoneProvider {
+        data.microphoneProvider as! MockMicrophoneProvider
     }
     
-    var mockPopupAlertManager: MockPopUpAlertManager {
-        repo.alertManager as! MockPopUpAlertManager
+    var alertProvider: MockPopUpAlertProvider {
+        data.popUpAlertProvider as! MockPopUpAlertProvider
     }
 }

@@ -13,15 +13,16 @@ struct StandardDependencyContainer: DependencyContainer {
     let data: DataContainer = {
         DataContainer(videoStreamingProvider: XCDYoutubeVideoStreamingProvider(),
                       videoListProvider: InvidiousAPIVideoListProvider(),
-                      avPrivacyPermissionProvider: MacOSAVPrivacyPermissionProvider())
+                      avPrivacyPermissionProvider: MacOSAVPrivacyPermissionProvider(),
+                      popUpAlertProvider: StandardPopUpAlertProvider(),
+                      audioDevicesProvider: MacOSAudioDevicesProvider(),
+                      microphoneProvider: AVAudioEngineMicrophoneProvider())
     }()
 
     let repo: RepositoryContainer
     
-    let micStreamer: MicStreamer
-    
     let audioMixer = AudioMixer()
-    let audioDeviceManager: AudioDevicesManager = MacOSAudioDevicesManager()
+    let audioDeviceManager: AudioDevicesProvider = MacOSAudioDevicesProvider()
     let videoQueue = VideoQueue()
     
     init() {
@@ -31,14 +32,15 @@ struct StandardDependencyContainer: DependencyContainer {
         
         // swiftlint:disable:next line_length
         let privacyPermissionRepository = StandardPrivacyPermissionRepository(avPrivacyPermissionProvider: data.avPrivacyPermissionProvider)
+        let audioInputRepository = CoreAudioInputRepository(devicesManager: data.audioDevicesProvider,
+                                                            microphoneProvider: data.microphoneProvider,
+                                                            alertProvider: data.popUpAlertProvider,
+                                                            privacyPermissionRepository: privacyPermissionRepository)
         repo = RepositoryContainer(videoStreamingRepository: videoStreamingRepository,
                                    videoListRepository: videoListRepository,
                                    privacyPermissionRepository: privacyPermissionRepository,
-                                   alertManager: StandardPopUpAlertManager(),
-                                   systemNavigator: MacOSSystemNavigator())
-        
-        //micStreamer = AudioKitMicStreamer()
-        micStreamer = AVAudioEngineMicStreamer(privacyPermissionRepository: repo.privacyPermissionRepository)
+                                   systemNavigator: MacOSSystemNavigator(),
+                                   audioInputRepository: audioInputRepository)
     }
     
 }

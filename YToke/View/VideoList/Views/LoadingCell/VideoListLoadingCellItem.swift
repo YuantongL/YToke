@@ -18,5 +18,4 @@ final class VideoListLoadingCellItem: NSCollectionViewItem {
          cellView = newView
          view = newView
      }
-    
 }

@@ -1,5 +1,5 @@
 //
-//  PopUpAlertManager.swift
+//  PopUpAlertProvider.swift
 //  YToke
 //
 //  Created by Lyt on 8/29/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PopUpAlertManager {
+protocol PopUpAlertProvider {
     func show(error: Error)
     func show(message: String)
 }

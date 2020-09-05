@@ -16,8 +16,8 @@ final class AudioDevicesListView: NSView {
     private var viewModel: AudioDevicesListViewModel
     
     private lazy var introView: NSTextField = {
-        // TODO: localize
-        NSTextField(labelWithString: "Select input device")
+        NSTextField(labelWithString: NSLocalizedString("select_input_device",
+                                                       comment: "Select input device"))
     }()
     
     private lazy var tableView: NSTableView = {
@@ -64,7 +64,6 @@ final class AudioDevicesListView: NSView {
     
     private func setupBinding() {
         let column = NSTableColumn(identifier: deviceCellIdentifier)
-        column.headerCell.stringValue = "Select input device"
         tableView.addTableColumn(column)
         
         viewModel.onItemsUpdate = { [weak self] in
@@ -83,14 +82,13 @@ extension AudioDevicesListView: NSTableViewDataSource {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let view = tableView.makeView(withIdentifier: deviceCellIdentifier,
                                       owner: self) as? AudioDevicesListCellView ?? AudioDevicesListCellView()
-        let items = Array(viewModel.items)
-        guard items.count > row else {
+        
+        guard viewModel.items.count > row else {
             return nil
         }
-        
 
-        view.configure(audioDevice: items[row].0,
-                       isOn: items[row].1,
+        view.configure(audioDevice: viewModel.items[row],
+                       isOn: viewModel.items[row].isOn,
                        onToggleStateChange: { [weak self] device, state in
                         self?.viewModel.onDeviceStateChange(device: device, isToggled: state)
         })

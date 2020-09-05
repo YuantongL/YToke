@@ -1,5 +1,5 @@
 //
-//  MicStreamer.swift
+//  MicrophoneProvider.swift
 //  YToke
 //
 //  Created by Lyt on 2020/7/16.
@@ -8,12 +8,7 @@
 
 import Foundation
 
-//enum MicStreamerSource {
-//    case actualDevice(AudioDevice)
-//    case aggregateDevice(AudioDevice)
-//}
-
-protocol MicStreamer {
+protocol MicrophoneProvider {
     
     /// Is microphone streaming currently enabled
     var isEnabled: Bool { get }
@@ -21,9 +16,10 @@ protocol MicStreamer {
     /// The audio volume set in scale of 0 - 1
     var volume: Float { get set }
     
-    /// Start microphone stream with a system default audio input, you can also call this method to switch streaming devices
+    /// Start microphone stream with a system default audio input
     func startStreaming() throws
     
     /// Stops microphone streaming
     func stopStreaming()
+    
 }
