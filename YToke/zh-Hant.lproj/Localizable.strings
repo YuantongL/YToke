@@ -47,3 +47,5 @@
 "go_to_settings" = "前往設置";
 
 "audio_permission_information" = "YToke〜無法訪問麥克風。 如果要使用麥克風流，請進入系統設置菜單並授予麥克風訪問權限";
+
+"select_input_device" = "選擇輸入設備";

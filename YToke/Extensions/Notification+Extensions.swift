@@ -24,4 +24,7 @@ extension Notification.Name {
     
     /// A song is deleted
     static let deleteSong = Notification.Name(rawValue: "delete-song")
+    
+    /// System's audio input devices changed
+    static let audioInputDevicesChanged = Notification.Name(rawValue: "audio-input-devices-change")
 }

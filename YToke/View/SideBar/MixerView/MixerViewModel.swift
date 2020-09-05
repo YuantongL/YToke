@@ -13,18 +13,18 @@ protocol MixerViewModel {
     var isPermissionInformationHidden: Bool { get }
     var permissionInformationViewModel: AudioPermissionInformationViewModel { get }
     
-    var toggleState: Bool { get }
-    var onToggleStateChange: ((Bool) -> Void)? { get set }
+    var isAudioDevicesListHidden: Bool { get }
+    var audioDevicesListViewModel: AudioDevicesListViewModel { get }
     
     var videoVolume: Float { get }
     var onVideoVolumeChange: ((Float) -> Void)? { get set }
     
     var voiceVolume: Float { get }
     var onVoiceVolumeChange: ((Float) -> Void)? { get set }
+    var isMicrophoneVolumeControlHidden: Bool { get }
     
     func onAppear()
     
     func setVideoVolume(to: Float)
     func setVoiceVolume(to: Float)
-    func setToggleState(state: Bool)
 }

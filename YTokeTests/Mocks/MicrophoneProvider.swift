@@ -1,5 +1,5 @@
 //
-//  MockMicStreamer.swift
+//  MicrophoneProvider.swift
 //  YTokeTests
 //
 //  Created by Lyt on 2020/8/11.
@@ -10,7 +10,7 @@ import Foundation
 
 @testable import YToke
 
-final class MockMicStreamer: MicStreamer {
+final class MockMicrophoneProvider: MicrophoneProvider {
     
     var numOfIsEnabledSet = 0
     var isEnabled: Bool = false {
@@ -28,9 +28,11 @@ final class MockMicStreamer: MicStreamer {
     
     var numOfStartStreamingCalled = 0
     var startStreamingResult: Result<Void, Error> = .success(())
-    func startStreaming(completion: @escaping (Result<Void, Error>) -> Void) {
+    func startStreaming() throws {
         numOfStartStreamingCalled += 1
-        completion(startStreamingResult)
+        if case .failure(let error) = startStreamingResult {
+            throw error
+        }
     }
     
     var numOfStopStreamingCalled = 0

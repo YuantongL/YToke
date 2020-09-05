@@ -1,5 +1,5 @@
 //
-//  StandardPopUpAlertManager.swift
+//  StandardPopUpAlertProvider.swift
 //  YToke
 //
 //  Created by Lyt on 8/29/20.
@@ -9,7 +9,7 @@
 import AppKit
 import Foundation
 
-final class StandardPopUpAlertManager: PopUpAlertManager {
+final class StandardPopUpAlertProvider: PopUpAlertProvider {
     
     private var isRunningTest: Bool {
         ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil

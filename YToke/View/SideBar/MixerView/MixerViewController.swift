@@ -30,6 +30,11 @@ final class MixerViewController: NSViewController {
         return slider
     }()
     
+    private lazy var audioDevicesListView: AudioDevicesListView = {
+        let view = AudioDevicesListView(viewModel: viewModel.audioDevicesListViewModel)
+        return view
+    }()
+    
     private lazy var micVolumeText: NSTextField = {
         NSTextField(labelWithString: NSLocalizedString("microphone_volume", comment: "Microphone Volume"))
     }()
@@ -44,12 +49,19 @@ final class MixerViewController: NSViewController {
         return slider
     }()
     
-    private lazy var toggle: NSButton = {
-        let title = NSLocalizedString("microphone_stream", comment: "Microphone Stream")
-        let toggle = NSButton(checkboxWithTitle: title,
-                              target: self,
-                              action: #selector(onToggleTapped))
-        return toggle
+    private lazy var stackView: NSStackView = {
+        let stackView = NSStackView(views: [
+            audioPermissionView,
+            audioDevicesListView,
+            videoVolumeText,
+            videoVolumeSlider,
+            micVolumeText,
+            micVolumeSlider
+        ])
+        stackView.alignment = .top
+        stackView.distribution = .equalSpacing
+        stackView.orientation = .vertical
+        return stackView
     }()
     
     init(viewModel: MixerViewModel) {
@@ -78,64 +90,23 @@ final class MixerViewController: NSViewController {
     }
     
     private func setupLayout() {
-        view.addSubview(audioPermissionView)
-        audioPermissionView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            audioPermissionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            audioPermissionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 32),
-            audioPermissionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
-        view.addSubview(videoVolumeText)
-        videoVolumeText.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            videoVolumeText.topAnchor.constraint(equalTo: audioPermissionView.bottomAnchor, constant: 32),
-            videoVolumeText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            videoVolumeText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
-        view.addSubview(videoVolumeSlider)
-        videoVolumeSlider.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            videoVolumeSlider.topAnchor.constraint(equalTo: videoVolumeText.bottomAnchor, constant: 8),
-            videoVolumeSlider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            videoVolumeSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
-        view.addSubview(micVolumeText)
-        micVolumeText.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            micVolumeText.topAnchor.constraint(equalTo: videoVolumeSlider.bottomAnchor, constant: 32),
-            micVolumeText.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            micVolumeText.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
-        view.addSubview(micVolumeSlider)
-        micVolumeSlider.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            micVolumeSlider.topAnchor.constraint(equalTo: micVolumeText.bottomAnchor, constant: 8),
-            micVolumeSlider.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            micVolumeSlider.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
-        view.addSubview(toggle)
-        toggle.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            toggle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            toggle.topAnchor.constraint(equalTo: micVolumeSlider.bottomAnchor, constant: 32),
-            toggle.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -16),
-            toggle.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor)
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 32),
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -32)
         ])
     }
     
     private func setupBinding() {
         videoVolumeSlider.doubleValue = Double(viewModel.videoVolume)
         micVolumeSlider.doubleValue = Double(viewModel.voiceVolume)
-        toggle.state = viewModel.toggleState ? .on : .off
         audioPermissionView.isHidden = viewModel.isPermissionInformationHidden
-        viewModel.onToggleStateChange = { [weak self] isToggled in
-            self?.toggle.state = isToggled ? .on : .off
-        }
+        audioDevicesListView.isHidden = viewModel.isAudioDevicesListHidden
+        micVolumeSlider.isHidden = viewModel.isMicrophoneVolumeControlHidden
+        micVolumeText.isHidden = viewModel.isMicrophoneVolumeControlHidden
     }
     
     @objc private func onVideoVolumnChange(sender: Any) {
@@ -152,10 +123,5 @@ final class MixerViewController: NSViewController {
         }
         let value = slider.floatValue
         viewModel.setVoiceVolume(to: value)
-    }
-    
-    @objc private func onToggleTapped() {
-        let isEnabled = toggle.state == .on
-        viewModel.setToggleState(state: isEnabled)
     }
 }

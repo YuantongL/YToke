@@ -1,5 +1,5 @@
 //
-//  MockPopUpAlertManager.swift
+//  MockPopUpAlertProvider.swift
 //  YTokeTests
 //
 //  Created by Lyt on 8/30/20.
@@ -9,7 +9,7 @@
 import Foundation
 @testable import YToke
 
-final class MockPopUpAlertManager: PopUpAlertManager {
+final class MockPopUpAlertProvider: PopUpAlertProvider {
     
     var numOfShowErrorCalled = 0
     func show(error: Error) {

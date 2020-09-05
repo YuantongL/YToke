@@ -19,10 +19,6 @@ final class ViewController: NSViewController {
         setupBinding()
     }
     
-    override func viewDidAppear() {
-        viewModel.onAppear()
-    }
-    
     private func setupBinding() {
         viewModel.onPresentDonationView = { [weak self] viewModel in
             let viewController = NSViewController()

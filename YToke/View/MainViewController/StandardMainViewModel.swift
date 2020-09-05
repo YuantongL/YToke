@@ -31,13 +31,16 @@ final class StandardMainViewModel: MainViewModel {
         dependencyContainer.audioMixer
     }()
     
-    private lazy var micStreamer: MicStreamer = {
-        dependencyContainer.micStreamer
+    // TODO: Provider should not appear in viewModel, fix this
+    private lazy var microphoneProvider: MicrophoneProvider = {
+        dependencyContainer.data.microphoneProvider
     }()
     
     private var songPlayed: Int = 0
     private var firstDonationViewShown = false
     private var secondDonationViewShown = false
+    
+    private let audioDeviceManager = MacOSAudioDevicesProvider()
     
     init(dependencyContainer: DependencyContainer = StandardDependencyContainer()) {
         self.dependencyContainer = dependencyContainer
@@ -47,7 +50,7 @@ final class StandardMainViewModel: MainViewModel {
                 return
             }
             
-            self?.micStreamer.volume = updatedVoiceVolume
+            self?.microphoneProvider.volume = updatedVoiceVolume
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(onNewSongPlay), name: .queuePop, object: nil)
@@ -59,24 +62,6 @@ final class StandardMainViewModel: MainViewModel {
             return
         }
         audioMixer.unsubscribe(token: token)
-    }
-    
-    // MARK: - Mic Streaming
-    
-    func onAppear() {
-        micStreamer.startStreaming { [weak self] result in
-            if case .failure(let error) = result {
-                switch error {
-                case AVAudioEngineMicStreamerError.permissionNotGranted:
-                    let message = NSLocalizedString("permission_request_microphone",
-                                                    // swiftlint:disable:next line_length
-                                                    comment: "If you are willing to use Microphone, please head to System Settings and grant YToke~ microphone permission")
-                    self?.dependencyContainer.repo.alertManager.show(message: message)
-                default:
-                    self?.dependencyContainer.repo.alertManager.show(error: error)
-                }
-            }
-        }
     }
     
     // MARK: - Sponsorship Window

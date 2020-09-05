@@ -14,6 +14,4 @@ protocol MainViewModel {
     var dependencyContainer: DependencyContainer { get }
     
     var onPresentDonationView: ((DonationViewModel) -> Void)? { get set }
-    
-    func onAppear()
 }

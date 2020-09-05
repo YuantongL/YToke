@@ -32,28 +32,10 @@ final class StandardMainViewModelTests: XCTestCase {
         XCTAssertEqual(mockDependencyContainer.mockAudioMixer.numOfSubscribeChangesCalled, 1)
     }
     
-    func test_mixerVolumeChange_SHOULD_setStreamer() {
+    func test_mixerVolumeChange_SHOULD_setMicrophone() {
         mockDependencyContainer.mockAudioMixer.onSubscribeChanges = [AudioChanel.voice: 100]
         _ = StandardMainViewModel(dependencyContainer: mockDependencyContainer)
-        XCTAssertEqual(mockDependencyContainer.mockMicStreamer.numOfVolumeSet, 1)
-    }
-    
-    func test_onAppear_SHOULD_startMicStreaming() {
-        viewModel.onAppear()
-        XCTAssertEqual(mockDependencyContainer.mockMicStreamer.numOfStartStreamingCalled, 1)
-    }
-    
-    func test_onAppear_micFailed_SHOULD_notShowAlert() {
-        mockDependencyContainer.mockMicStreamer.startStreamingResult = .success(())
-        viewModel.onAppear()
-        XCTAssertEqual(mockDependencyContainer.mockPopupAlertManager.numOfShowMessageCalled, 0)
-    }
-    
-    func test_onAppear_micFailed_SHOULD_showAlert() {
-        // swiftlint:disable:next line_length
-        mockDependencyContainer.mockMicStreamer.startStreamingResult = .failure(AVAudioEngineMicStreamerError.permissionNotGranted)
-        viewModel.onAppear()
-        XCTAssertEqual(mockDependencyContainer.mockPopupAlertManager.numOfShowMessageCalled, 1)
+        XCTAssertEqual(mockDependencyContainer.mockMicrophoneProvider.numOfVolumeSet, 1)
     }
     
     func test_SHOULD_NOT_showFirstDonationView_ON_10thSong() {
