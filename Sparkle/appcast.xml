@@ -4,6 +4,25 @@
         <title>YToke~</title>
 
         <item>
+            <title>0.1.5</title>
+            <pubDate>Fri, 4 Sep 2020 23:21:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>User will be able to select which microphone he will stream from on the side panel.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.1.5/YToke.0.1.5.dmg"
+                sparkle:version="0.1.5"
+                sparkle:shortVersionString="0.1.5"
+                sparkle:edSignature="W8rigtguGY8mBXCHbKXGnZGVla1GPZvkChOCyzI/+D5F1EVuhSQwN2hqpICmFyH5S8YJRy8T9eINsvWxRfPsDg=="
+                length="6711151"
+                type="application/octet-stream"/>
+        </item>
+
+        <item>
             <title>0.1.4</title>
             <pubDate>Sun, 30 Aug 2020 12:38:00 -0400</pubDate>
             <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
