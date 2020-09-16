@@ -61,7 +61,11 @@ final class StandaredNowPlayingViewModelTests: XCTestCase {
         viewModel.image = { imageURL in
             imageResult = imageURL
         }
-        let info = ["PopedVideo": Video(id: "ID", title: expectedTitle, thumbnail: expectedURL)]
+        let info = ["PopedVideo": Video(id: "ID",
+                                        title: expectedTitle,
+                                        thumbnail: expectedURL,
+                                        percentageFinished: 0.5,
+                                        tag: [])]
         NotificationCenter.default.post(name: .queuePop, object: nil, userInfo: info)
         
         guard let titleResultUnwarp = titleResult, let imageResultUnwarp = imageResult else {

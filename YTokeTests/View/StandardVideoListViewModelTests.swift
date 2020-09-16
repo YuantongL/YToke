@@ -45,13 +45,21 @@ final class StandardVideoListViewModelTests: XCTestCase {
     }
     
     func test_onTapAddVideo_SHOULD_addToQueue() {
-        let video = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        let video = Video(id: "ID",
+                          title: "TITLE",
+                          thumbnail: nil,
+                          percentageFinished: 0.5,
+                          tag: [])
         viewModel.onTapAddVideo(video)
         XCTAssertEqual(dependencyContainer.mockVideoQueue.numOfAddCalled, 1)
     }
     
     func test_onTapAddVideo_SHOULD_updateVideoList() {
-        let video = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        let video = Video(id: "ID",
+                          title: "TITLE",
+                          thumbnail: nil,
+                          percentageFinished: 0.5,
+                          tag: [])
         var numOfOnUpdateCalled = 0
         viewModel.onUpdate = {
             numOfOnUpdateCalled += 1

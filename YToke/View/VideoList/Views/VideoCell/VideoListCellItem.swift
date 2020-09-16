@@ -23,10 +23,7 @@ final class VideoListCellItem: NSCollectionViewItem {
         super.viewDidLoad()
     }
     
-    func configure(title: String, imageURL: URL?, isAdded: Bool, onAddVideoTap: (() -> Void)?) {
-        cellView?.configure(title: title,
-                            imageURL: imageURL,
-                            isAdded: isAdded,
-                            onAddButtonTap: onAddVideoTap)
+    func configure(_ config: VideoListCellConfig) {
+        cellView?.configure(config)
     }
 }

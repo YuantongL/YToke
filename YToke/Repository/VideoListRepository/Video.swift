@@ -12,6 +12,8 @@ struct Video: Codable {
     let id: String
     let title: String
     let thumbnail: URL?
+    let percentageFinished: Float?
+    let tag: [VideoTag]?
 }
 
 extension Video: Equatable {

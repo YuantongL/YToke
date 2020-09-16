@@ -14,12 +14,21 @@ final class MockURLSession: URLSession {
     var response: URLResponse?
     var data: Data?
     var error: Error?
+    var httpBody: Data?
     
     override func dataTask(with request: URLRequest,
                            completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         numOfDataTaskCalled += 1
         requestURL = request.url
+        httpBody = request.httpBody
         completionHandler(data, response, error)
+        return URLSessionDataTaskMock {}
+    }
+    
+    override func dataTask(with request: URLRequest) -> URLSessionDataTask {
+        numOfDataTaskCalled += 1
+        requestURL = request.url
+        httpBody = request.httpBody
         return URLSessionDataTaskMock {}
     }
     

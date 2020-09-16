@@ -49,3 +49,15 @@
 "audio_permission_information" = "YToke〜無法訪問麥克風。 如果要使用麥克風流，請進入系統設置菜單並授予麥克風訪問權限";
 
 "select_input_device" = "選擇輸入設備";
+
+"no_vocal" = "沒有原唱";
+
+"has_vocal" = "有原唱";
+
+"has_vocal_question" = "這部影片有歌手的演唱嗎？";
+
+"yes" = "是";
+
+"no" = "否";
+
+"percentage_finished" = "%.1f%%的人唱完了這首歌";

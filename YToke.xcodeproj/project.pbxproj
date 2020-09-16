@@ -23,10 +23,15 @@
 		441D076B24BE5E1100071B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441D076924BE5E1100071B97 /* Main.storyboard */; };
 		441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D077624BE5E1200071B97 /* MyKTVTests.swift */; };
 		441D078724BF899800071B97 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D078624BF899800071B97 /* VideoViewController.swift */; };
+		445AE4852511845300149319 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE4842511845300149319 /* TagsView.swift */; };
+		445AE489251272B900149319 /* MockVideoStatsMutationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE488251272B900149319 /* MockVideoStatsMutationProvider.swift */; };
+		445AE48B2512731900149319 /* MockVideoStatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE48A2512731900149319 /* MockVideoStatsRepository.swift */; };
+		445AE48D2512790A00149319 /* YTokeBackendVideoListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE48C2512790A00149319 /* YTokeBackendVideoListProviderTests.swift */; };
+		445AE48F25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE48E25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift */; };
+		445AE491251281AF00149319 /* StandardVideoStatsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE490251281AF00149319 /* StandardVideoStatsRepositoryTests.swift */; };
 		446BA5DA24E307F0004EFA42 /* VideoListLoadingCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5D924E307F0004EFA42 /* VideoListLoadingCellItem.swift */; };
 		446BA5DC24E30806004EFA42 /* VideoListLoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5DB24E30806004EFA42 /* VideoListLoadingCellView.swift */; };
 		446BA5E124E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */; };
-		446BA5E324E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E224E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift */; };
 		446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */; };
 		446BA5E724E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */; };
 		446BA5E924E38947004EFA42 /* StandardMainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446BA5E824E38947004EFA42 /* StandardMainViewModelTests.swift */; };
@@ -53,8 +58,15 @@
 		446DBBF224FF432A00601B0D /* AudioInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DBBF124FF432A00601B0D /* AudioInputRepository.swift */; };
 		446DBBF424FF43CE00601B0D /* CoreAudioInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446DBBF324FF43CE00601B0D /* CoreAudioInputRepository.swift */; };
 		448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448392CF24EDF60800D8D32F /* VideoModelTests.swift */; };
-		448392D424EDFBCB00D8D32F /* MockInvidiosAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */; };
+		448392D424EDFBCB00D8D32F /* MockYTokeBackendAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D324EDFBCB00D8D32F /* MockYTokeBackendAPI.json */; };
 		448392D624EDFEF700D8D32F /* MockVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 448392D524EDFEF700D8D32F /* MockVideo.json */; };
+		448B1505250FF3C300C9B66B /* YTokeBackendVideoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B1504250FF3C300C9B66B /* YTokeBackendVideoListProvider.swift */; };
+		448B1507250FF4D300C9B66B /* VideoTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B1506250FF4D300C9B66B /* VideoTag.swift */; };
+		448B1509251015F400C9B66B /* VideoStatsMutationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B1508251015F400C9B66B /* VideoStatsMutationProvider.swift */; };
+		448B150C2510163300C9B66B /* StandardVideoStatsMutationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B150B2510163300C9B66B /* StandardVideoStatsMutationProvider.swift */; };
+		448B150F251016D900C9B66B /* VideoStatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B150E251016D900C9B66B /* VideoStatsRepository.swift */; };
+		448B15112510178800C9B66B /* StandardVideoStatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B15102510178800C9B66B /* StandardVideoStatsRepository.swift */; };
+		448B151525103DAA00C9B66B /* DualChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448B151425103DAA00C9B66B /* DualChoiceView.swift */; };
 		449BF36E24C0B53A000A8712 /* MicrophoneProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF36D24C0B53A000A8712 /* MicrophoneProvider.swift */; };
 		449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37024C21298000A8712 /* VideoListViewController.swift */; };
 		449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF37224C212A6000A8712 /* VideoListViewModel.swift */; };
@@ -71,7 +83,6 @@
 		449BF39424C8C689000A8712 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF39324C8C689000A8712 /* VideoViewModel.swift */; };
 		449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF39524C8C6FB000A8712 /* StandardVideoViewModel.swift */; };
 		449BF39D24C8C9BA000A8712 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF39C24C8C9BA000A8712 /* Notification+Extensions.swift */; };
-		449BF3A124CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3A024CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift */; };
 		449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3A624D095A0000A8712 /* MixerViewController.swift */; };
 		449BF3AA24D095C8000A8712 /* VideoQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3A924D095C8000A8712 /* VideoQueueViewController.swift */; };
 		449BF3AE24D0DD25000A8712 /* Mixer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449BF3AD24D0DD25000A8712 /* Mixer.swift */; };
@@ -124,6 +135,7 @@
 		44B1411B24FD9DD000A9DEDC /* AudioDevicesListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1411A24FD9DD000A9DEDC /* AudioDevicesListCellView.swift */; };
 		44B1411E24FED85B00A9DEDC /* MacOSAudioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B1411D24FED85B00A9DEDC /* MacOSAudioDevice.swift */; };
 		44B7A46B24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */; };
+		44BF67CA25117DB900A9E71B /* TagPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BF67C925117DB900A9E71B /* TagPill.swift */; };
 		60FCCB6C0EE0748DAF3AB79D /* Pods_YTokeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,10 +169,15 @@
 		441D077624BE5E1200071B97 /* MyKTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKTVTests.swift; sourceTree = "<group>"; };
 		441D077824BE5E1200071B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		441D078624BF899800071B97 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		445AE4842511845300149319 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		445AE488251272B900149319 /* MockVideoStatsMutationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoStatsMutationProvider.swift; sourceTree = "<group>"; };
+		445AE48A2512731900149319 /* MockVideoStatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoStatsRepository.swift; sourceTree = "<group>"; };
+		445AE48C2512790A00149319 /* YTokeBackendVideoListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTokeBackendVideoListProviderTests.swift; sourceTree = "<group>"; };
+		445AE48E25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStatsMutationProviderTests.swift; sourceTree = "<group>"; };
+		445AE490251281AF00149319 /* StandardVideoStatsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStatsRepositoryTests.swift; sourceTree = "<group>"; };
 		446BA5D924E307F0004EFA42 /* VideoListLoadingCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListLoadingCellItem.swift; sourceTree = "<group>"; };
 		446BA5DB24E30806004EFA42 /* VideoListLoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListLoadingCellView.swift; sourceTree = "<group>"; };
 		446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCDYoutubeVideoStreamingProviderTests.swift; sourceTree = "<group>"; };
-		446BA5E224E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvidiousAPIVideoListProviderTests.swift; sourceTree = "<group>"; };
 		446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoListRepositoryTests.swift; sourceTree = "<group>"; };
 		446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStreamingRepositoryTests.swift; sourceTree = "<group>"; };
 		446BA5E824E38947004EFA42 /* StandardMainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardMainViewModelTests.swift; sourceTree = "<group>"; };
@@ -195,9 +212,16 @@
 		446DBBF124FF432A00601B0D /* AudioInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioInputRepository.swift; sourceTree = "<group>"; };
 		446DBBF324FF43CE00601B0D /* CoreAudioInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioInputRepository.swift; sourceTree = "<group>"; };
 		448392CF24EDF60800D8D32F /* VideoModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModelTests.swift; sourceTree = "<group>"; };
-		448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockInvidiosAPI.json; sourceTree = "<group>"; };
+		448392D324EDFBCB00D8D32F /* MockYTokeBackendAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockYTokeBackendAPI.json; sourceTree = "<group>"; };
 		448392D524EDFEF700D8D32F /* MockVideo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockVideo.json; sourceTree = "<group>"; };
 		448392D724F5938800D8D32F /* YToke.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = YToke.entitlements; sourceTree = "<group>"; };
+		448B1504250FF3C300C9B66B /* YTokeBackendVideoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTokeBackendVideoListProvider.swift; sourceTree = "<group>"; };
+		448B1506250FF4D300C9B66B /* VideoTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTag.swift; sourceTree = "<group>"; };
+		448B1508251015F400C9B66B /* VideoStatsMutationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStatsMutationProvider.swift; sourceTree = "<group>"; };
+		448B150B2510163300C9B66B /* StandardVideoStatsMutationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStatsMutationProvider.swift; sourceTree = "<group>"; };
+		448B150E251016D900C9B66B /* VideoStatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStatsRepository.swift; sourceTree = "<group>"; };
+		448B15102510178800C9B66B /* StandardVideoStatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoStatsRepository.swift; sourceTree = "<group>"; };
+		448B151425103DAA00C9B66B /* DualChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualChoiceView.swift; sourceTree = "<group>"; };
 		449BF36D24C0B53A000A8712 /* MicrophoneProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneProvider.swift; sourceTree = "<group>"; };
 		449BF37024C21298000A8712 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
 		449BF37224C212A6000A8712 /* VideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModel.swift; sourceTree = "<group>"; };
@@ -214,7 +238,6 @@
 		449BF39324C8C689000A8712 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		449BF39524C8C6FB000A8712 /* StandardVideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardVideoViewModel.swift; sourceTree = "<group>"; };
 		449BF39C24C8C9BA000A8712 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
-		449BF3A024CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvidiousAPIVideoListProvider.swift; sourceTree = "<group>"; };
 		449BF3A624D095A0000A8712 /* MixerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerViewController.swift; sourceTree = "<group>"; };
 		449BF3A924D095C8000A8712 /* VideoQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoQueueViewController.swift; sourceTree = "<group>"; };
 		449BF3AD24D0DD25000A8712 /* Mixer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mixer.swift; sourceTree = "<group>"; };
@@ -270,6 +293,7 @@
 		44B1411A24FD9DD000A9DEDC /* AudioDevicesListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesListCellView.swift; sourceTree = "<group>"; };
 		44B1411D24FED85B00A9DEDC /* MacOSAudioDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSAudioDevice.swift; sourceTree = "<group>"; };
 		44B7A46A24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+PropertyWrapper.swift"; sourceTree = "<group>"; };
+		44BF67C925117DB900A9E71B /* TagPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPill.swift; sourceTree = "<group>"; };
 		44C774CD073BBB5A995CC0C8 /* Pods_YTokeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTokeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69330839CF10D7D46339C6CC /* Pods-MyKTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKTV.release.xcconfig"; path = "Target Support Files/Pods-MyKTV/Pods-MyKTV.release.xcconfig"; sourceTree = "<group>"; };
 		924CAA4A5FC73FA7A234B78B /* Pods-YTokeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTokeTests.debug.xcconfig"; path = "Target Support Files/Pods-YTokeTests/Pods-YTokeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -400,6 +424,32 @@
 			path = YTokeTests;
 			sourceTree = "<group>";
 		};
+		445AE4862512715F00149319 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5EF24E38C4B004EFA42 /* MockVideoListProvider.swift */,
+				446BA5F124E38C82004EFA42 /* MockVideoStreamingProvider.swift */,
+				446BA5FD24E3940F004EFA42 /* MicrophoneProvider.swift */,
+				44B1410324FB5C3400A9DEDC /* MockPopUpAlertProvider.swift */,
+				44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */,
+				44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */,
+				445AE48A2512731900149319 /* MockVideoStatsRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		445AE4872512716500149319 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */,
+				446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */,
+				44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */,
+				44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */,
+				445AE488251272B900149319 /* MockVideoStatsMutationProvider.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		446BA5D724E3078A004EFA42 /* VideoCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,7 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */,
-				446BA5E224E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift */,
+				445AE48C2512790A00149319 /* YTokeBackendVideoListProviderTests.swift */,
+				445AE48E25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -450,6 +501,7 @@
 				446BA5E424E354BB004EFA42 /* StandardVideoListRepositoryTests.swift */,
 				446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */,
 				44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */,
+				445AE490251281AF00149319 /* StandardVideoStatsRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -457,24 +509,16 @@
 		446BA5EA24E38B7C004EFA42 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				445AE4872512716500149319 /* Repository */,
+				445AE4862512715F00149319 /* Data */,
 				448392D224EDFBCB00D8D32F /* MockNetworkResponse */,
 				446BA5EB24E38B9A004EFA42 /* MockXCDYoutubeClient.swift */,
 				446BA5ED24E38C2D004EFA42 /* MockURLSession.swift */,
-				446BA5EF24E38C4B004EFA42 /* MockVideoListProvider.swift */,
-				446BA5F124E38C82004EFA42 /* MockVideoStreamingProvider.swift */,
 				446BA5F324E38D89004EFA42 /* MockAudioMixer.swift */,
-				446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */,
-				446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */,
 				446BA5F924E39060004EFA42 /* MockVideoQueue.swift */,
-				446BA5FD24E3940F004EFA42 /* MicrophoneProvider.swift */,
 				446BA5FB24E393EA004EFA42 /* MockDependencyContainer.swift */,
-				44B1410324FB5C3400A9DEDC /* MockPopUpAlertProvider.swift */,
 				44B1410524FB5C8100A9DEDC /* MockSystemNavigator.swift */,
-				44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */,
 				446BA60724E42FE3004EFA42 /* MockWindowManager.swift */,
-				44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */,
-				44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */,
-				44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -500,10 +544,37 @@
 		448392D224EDFBCB00D8D32F /* MockNetworkResponse */ = {
 			isa = PBXGroup;
 			children = (
-				448392D324EDFBCB00D8D32F /* MockInvidiosAPI.json */,
+				448392D324EDFBCB00D8D32F /* MockYTokeBackendAPI.json */,
 				448392D524EDFEF700D8D32F /* MockVideo.json */,
 			);
 			path = MockNetworkResponse;
+			sourceTree = "<group>";
+		};
+		448B150A251015FC00C9B66B /* VideoStats */ = {
+			isa = PBXGroup;
+			children = (
+				448B1508251015F400C9B66B /* VideoStatsMutationProvider.swift */,
+				448B150B2510163300C9B66B /* StandardVideoStatsMutationProvider.swift */,
+			);
+			path = VideoStats;
+			sourceTree = "<group>";
+		};
+		448B150D251016C300C9B66B /* VideoStatsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				448B150E251016D900C9B66B /* VideoStatsRepository.swift */,
+				448B15102510178800C9B66B /* StandardVideoStatsRepository.swift */,
+			);
+			path = VideoStatsRepository;
+			sourceTree = "<group>";
+		};
+		448B151325103CC000C9B66B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				440044EF24DC7F590090FDBB /* AnimatedCycleTextView.swift */,
+				448B151425103DAA00C9B66B /* DualChoiceView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		449BF36F24C21256000A8712 /* VideoList */ = {
@@ -521,6 +592,7 @@
 				449BF37424C60942000A8712 /* VideoListRepository.swift */,
 				449BF37E24C60CC2000A8712 /* StandardVideoListRepository.swift */,
 				449BF37724C60994000A8712 /* Video.swift */,
+				448B1506250FF4D300C9B66B /* VideoTag.swift */,
 			);
 			path = VideoListRepository;
 			sourceTree = "<group>";
@@ -529,7 +601,7 @@
 			isa = PBXGroup;
 			children = (
 				449BF37A24C60B38000A8712 /* VideoListProvider.swift */,
-				449BF3A024CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift */,
+				448B1504250FF3C300C9B66B /* YTokeBackendVideoListProvider.swift */,
 			);
 			path = VideoListProvider;
 			sourceTree = "<group>";
@@ -577,6 +649,8 @@
 			children = (
 				449BF38C24C79108000A8712 /* RatingView.swift */,
 				440044ED24D9FA470090FDBB /* AddButton.swift */,
+				44BF67C925117DB900A9E71B /* TagPill.swift */,
+				445AE4842511845300149319 /* TagsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -584,8 +658,8 @@
 		449BF39924C8C723000A8712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				448B151325103CC000C9B66B /* Components */,
 				441D078624BF899800071B97 /* VideoViewController.swift */,
-				440044EF24DC7F590090FDBB /* AnimatedCycleTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -675,6 +749,7 @@
 		449BF3C224D31FB7000A8712 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				448B150D251016C300C9B66B /* VideoStatsRepository */,
 				446DBBF024FF431100601B0D /* Audio */,
 				44B140F824FB488000A9DEDC /* SystemNavigator */,
 				44B140DD24FAC15000A9DEDC /* PrivacyPermission */,
@@ -687,6 +762,7 @@
 		449BF3C324D31FC1000A8712 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				448B150A251015FC00C9B66B /* VideoStats */,
 				44B140EC24FB366F00A9DEDC /* PopUpAlert */,
 				44B1410C24FD53DB00A9DEDC /* AudioDevices */,
 				449BF3C924D46730000A8712 /* MicStreamer */,
@@ -915,7 +991,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				448392D424EDFBCB00D8D32F /* MockInvidiosAPI.json in Resources */,
+				448392D424EDFBCB00D8D32F /* MockYTokeBackendAPI.json in Resources */,
 				448392D624EDFEF700D8D32F /* MockVideo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1027,15 +1103,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				449BF3CB24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift in Sources */,
-				449BF3A124CF8C68000A8712 /* InvidiousAPIVideoListProvider.swift in Sources */,
 				449BF3B424D10856000A8712 /* StandardMixerViewModel.swift in Sources */,
 				449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */,
+				448B1505250FF3C300C9B66B /* YTokeBackendVideoListProvider.swift in Sources */,
 				449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */,
 				44B140EE24FB368200A9DEDC /* PopUpAlertManager.swift in Sources */,
+				445AE4852511845300149319 /* TagsView.swift in Sources */,
 				449BF38924C78AE0000A8712 /* StandardVideoListViewModel.swift in Sources */,
 				449BF3B624D1EB58000A8712 /* VideoQueueViewModel.swift in Sources */,
 				446BA5DC24E30806004EFA42 /* VideoListLoadingCellView.swift in Sources */,
 				440044F024DC7F590090FDBB /* AnimatedCycleTextView.swift in Sources */,
+				448B151525103DAA00C9B66B /* DualChoiceView.swift in Sources */,
 				44B1411E24FED85B00A9DEDC /* MacOSAudioDevice.swift in Sources */,
 				449BF38424C61023000A8712 /* XCDYoutubeVideoStreamingProvider.swift in Sources */,
 				449BF3C824D3218F000A8712 /* StandardVideoStreamingRespository.swift in Sources */,
@@ -1048,6 +1126,7 @@
 				44B140EB24FB2F6800A9DEDC /* StandardDependencyContainer.swift in Sources */,
 				44B140E624FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift in Sources */,
 				449BF3BE24D2563A000A8712 /* VideoQueue.swift in Sources */,
+				448B150C2510163300C9B66B /* StandardVideoStatsMutationProvider.swift in Sources */,
 				44B140F324FB441A00A9DEDC /* AudioPermissionInformationView.swift in Sources */,
 				449BF38B24C78F9E000A8712 /* VideoListCellItem.swift in Sources */,
 				44B1411324FD983B00A9DEDC /* AudioDevicesListView.swift in Sources */,
@@ -1057,11 +1136,14 @@
 				449BF39D24C8C9BA000A8712 /* Notification+Extensions.swift in Sources */,
 				449BF36E24C0B53A000A8712 /* MicrophoneProvider.swift in Sources */,
 				449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */,
+				44BF67CA25117DB900A9E71B /* TagPill.swift in Sources */,
+				448B15112510178800C9B66B /* StandardVideoStatsRepository.swift in Sources */,
 				44B140DF24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift in Sources */,
 				440044E424D895DA0090FDBB /* StandardNowPlayingViewModel.swift in Sources */,
 				44AA2D2425032D120010F5B7 /* AudioDevicesProviderError.swift in Sources */,
 				44B140F524FB443B00A9DEDC /* AudioPermissionInformationViewModel.swift in Sources */,
 				44AA2D20250326910010F5B7 /* AudioDevice.swift in Sources */,
+				448B150F251016D900C9B66B /* VideoStatsRepository.swift in Sources */,
 				44B1411724FD985500A9DEDC /* StandardAudioDevicesListViewModel.swift in Sources */,
 				449BF39424C8C689000A8712 /* VideoViewModel.swift in Sources */,
 				44B140E124FAC26800A9DEDC /* StandardPrivacyPermissionRepository.swift in Sources */,
@@ -1071,6 +1153,8 @@
 				449BF37524C60942000A8712 /* VideoListRepository.swift in Sources */,
 				44B140E424FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift in Sources */,
 				440044E624D8C5F30090FDBB /* DependencyContainer.swift in Sources */,
+				448B1509251015F400C9B66B /* VideoStatsMutationProvider.swift in Sources */,
+				448B1507250FF4D300C9B66B /* VideoTag.swift in Sources */,
 				44B7A46B24DDFD730070C2F3 /* UserDefault+PropertyWrapper.swift in Sources */,
 				449BF37324C212A6000A8712 /* VideoListViewModel.swift in Sources */,
 				44B140E824FAC68300A9DEDC /* AVAuthorizationStatus+Extensions.swift in Sources */,
@@ -1112,6 +1196,7 @@
 			files = (
 				446BA60824E42FE3004EFA42 /* MockWindowManager.swift in Sources */,
 				446BA5F424E38D89004EFA42 /* MockAudioMixer.swift in Sources */,
+				445AE48D2512790A00149319 /* YTokeBackendVideoListProviderTests.swift in Sources */,
 				44B1410424FB5C3400A9DEDC /* MockPopUpAlertProvider.swift in Sources */,
 				446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */,
 				44B140FE24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift in Sources */,
@@ -1120,6 +1205,7 @@
 				44AA2D1E2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift in Sources */,
 				446BA60D24E441D7004EFA42 /* StandardMixerViewModelTests.swift in Sources */,
 				446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */,
+				445AE491251281AF00149319 /* StandardVideoStatsRepositoryTests.swift in Sources */,
 				446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */,
 				44AA2D22250328410010F5B7 /* MockAudioInputRepository.swift in Sources */,
 				446BA5EC24E38B9A004EFA42 /* MockXCDYoutubeClient.swift in Sources */,
@@ -1127,6 +1213,7 @@
 				446BA61124E44B89004EFA42 /* StandardVideoViewModelTests.swift in Sources */,
 				446BA60F24E443B8004EFA42 /* StandardVideoListViewModelTests.swift in Sources */,
 				448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */,
+				445AE48F25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift in Sources */,
 				446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */,
 				44AA2D26250332A00010F5B7 /* MockAudioDevicesProvider.swift in Sources */,
 				446BA60B24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift in Sources */,
@@ -1138,7 +1225,8 @@
 				441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */,
 				446BA5E124E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift in Sources */,
 				446BA5F824E38FFD004EFA42 /* MockVideoListRepository.swift in Sources */,
-				446BA5E324E34D75004EFA42 /* InvidiousAPIVideoListProviderTests.swift in Sources */,
+				445AE48B2512731900149319 /* MockVideoStatsRepository.swift in Sources */,
+				445AE489251272B900149319 /* MockVideoStatsMutationProvider.swift in Sources */,
 				446BA5E924E38947004EFA42 /* StandardMainViewModelTests.swift in Sources */,
 				446BA5F224E38C82004EFA42 /* MockVideoStreamingProvider.swift in Sources */,
 				446BA5E724E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift in Sources */,
@@ -1320,7 +1408,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1328,7 +1416,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.5;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";
@@ -1345,7 +1433,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1353,7 +1441,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.5;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";

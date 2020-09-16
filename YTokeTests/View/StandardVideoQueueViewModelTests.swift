@@ -31,13 +31,21 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
     }
     
     func test_onMoveToTopTap_SHOULD_moveInQueue() {
-        let video = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        let video = Video(id: "ID",
+                          title: "TITLE",
+                          thumbnail: nil,
+                          percentageFinished: 0.5,
+                          tag: [])
         viewModel.onMoveToTopTap(video: video)
         XCTAssertEqual(dependencyContainer.mockVideoQueue.numOfMoveToTopCalled, 1)
     }
     
     func test_onDeleteTap_SHOULD_deleteInQueue() {
-        let video = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        let video = Video(id: "ID",
+                          title: "TITLE",
+                          thumbnail: nil,
+                          percentageFinished: 0.5,
+                          tag: [])
         viewModel.onDeleteTap(video: video)
         XCTAssertEqual(dependencyContainer.mockVideoQueue.numOfDeleteCalled, 1)
     }
@@ -63,7 +71,11 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
     }
     
     func test_onSongMoveToTop_SHOULD_moveToTop() {
-        viewModel.videos = [Video(id: "12345", title: "TITLE", thumbnail: nil)]
+        viewModel.videos = [Video(id: "ID",
+                                  title: "TITLE",
+                                  thumbnail: nil,
+                                  percentageFinished: 0.5,
+                                  tag: [])]
         var resultIndex: Int?
         viewModel.onMoveToTop = { index in
             resultIndex = index
@@ -80,7 +92,11 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
     
     func test_onDeleteSong_SHOULD_delete() {
         var resultIndex: Int?
-        viewModel.videos = [Video(id: "12345", title: "TITLE", thumbnail: nil)]
+        viewModel.videos = [Video(id: "12345",
+                                  title: "TITLE",
+                                  thumbnail: nil,
+                                  percentageFinished: 0.5,
+                                  tag: [])]
         viewModel.onDeleteRow = { id in
             resultIndex = id
         }

@@ -321,13 +321,19 @@ extension VideoListViewController: NSCollectionViewDataSource {
     }
     
     private func configureAsVideoCell(item: VideoListCellItem, itemIndex: Int) -> NSCollectionViewItem {
+        // TODO: The ViewModel should direct supply the things an item will need.
+        // This ViewController should not know about Video
         let video = viewModel.videos[itemIndex]
-        item.configure(title: video.video.title,
-                             imageURL: video.video.thumbnail,
-                             isAdded: video.isAdded,
-                             onAddVideoTap: { [weak self] in
-                                self?.viewModel.onTapAddVideo(video.video)
-        })
+        let tags = video.video.tag?.compactMap { tag -> (text: String, backgroundColor: NSColor) in
+            (text: tag.tagText, backgroundColor: tag.presentationColor)
+        } ?? []
+        let config = VideoListCellConfig(title: video.video.title,
+                                         imageURL: video.video.thumbnail,
+                                         isAdded: video.isAdded,
+                                         onAddButtonTap: { [weak self] in self?.viewModel.onTapAddVideo(video.video) },
+                                         tags: tags,
+                                         statsText: video.video.statsTag)
+        item.configure(config)
         return item
     }
 }
@@ -339,5 +345,36 @@ extension VideoListViewController: NSSearchFieldDelegate {
             return true
         }
         return false
+    }
+}
+
+// TODO: These should be in viewModel
+private extension Video {
+    var statsTag: String? {
+        if let percentage = percentageFinished {
+            let format = NSLocalizedString("percentage_finished", comment: "%.1f%% user finished")
+            return String(format: format, percentage * 100)
+        }
+        return nil
+    }
+}
+
+private extension VideoTag {
+    var tagText: String {
+        switch self {
+        case .offVocal:
+            return NSLocalizedString("no_vocal", comment: "no vocal")
+        case .withVocal:
+            return NSLocalizedString("has_vocal", comment: "has vocal")
+        }
+    }
+    
+    var presentationColor: NSColor {
+        switch self {
+        case .offVocal:
+            return .blue
+        case .withVocal:
+            return .red
+        }
     }
 }

@@ -49,3 +49,15 @@
 "audio_permission_information" = "YToke〜はマイクにアクセスできません。 マイクストリームを使用する場合は、システムの設定メニューに移動してマイクへのアクセスを許可してください";
 
 "select_input_device" = "入力デバイスを選択";
+
+"no_vocal" = "オリジナルの歌手はいません";
+
+"has_vocal" = "オリジナル曲あり";
+
+"has_vocal_question" = "このビデオには歌手のボーカルが含まれていますか？";
+
+"yes" = "はい";
+
+"no" = "負";
+
+"percentage_finished" = "%.1f%%の人がこの歌を歌い終えました";

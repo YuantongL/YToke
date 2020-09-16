@@ -49,3 +49,15 @@
 "audio_permission_information" = "YToke~ does not have microphone access. If you want to use microphone stream, please go to system Settings menu and grant microphone access";
 
 "select_input_device" = "Select input device";
+
+"no_vocal" = "no vocal";
+
+"has_vocal" = "has vocal";
+
+"has_vocal_question" = "Does this video has singer's vocal?";
+
+"yes" = "Yes";
+
+"no" = "No";
+
+"percentage_finished" = "%.1f%% user finished";
