@@ -4,6 +4,26 @@
         <title>YToke~</title>
 
         <item>
+            <title>0.2.0</title>
+            <pubDate>Wed, 16 Sep 2020 14:39:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Switch to dedicated backend service.</li>
+                    <li>Add video tag and percentage of finish to help user select video.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.2.0/YToke.0.2.0.dmg"
+                sparkle:version="0.2.0"
+                sparkle:shortVersionString="0.2.0"
+                sparkle:edSignature="8HhZVRMnRmtgBP4OvuuYCLadt2x/nf43RYwVCO7Ky1RuB0GHgzbbTlwLPJyzWKPxkQGsvQV8GtvvfbPwfQmJCQ=="
+                length="6809671"
+                type="application/octet-stream"/>
+        </item>
+
+        <item>
             <title>0.1.5</title>
             <pubDate>Fri, 4 Sep 2020 23:21:00 -0400</pubDate>
             <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
