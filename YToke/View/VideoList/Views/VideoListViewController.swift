@@ -352,7 +352,8 @@ extension VideoListViewController: NSSearchFieldDelegate {
 private extension Video {
     var statsTag: String? {
         if let percentage = percentageFinished {
-            return "\(percentage * 100)% user finished"
+            let format = NSLocalizedString("percentage_finished", comment: "%.1f%% user finished")
+            return String(format: format, percentage * 100)
         }
         return nil
     }
