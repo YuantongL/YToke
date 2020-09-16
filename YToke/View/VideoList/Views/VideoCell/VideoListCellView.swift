@@ -9,6 +9,15 @@
 import Cocoa
 import SDWebImage
 
+struct VideoListCellConfig {
+    let title: String
+    let imageURL: URL?
+    let isAdded: Bool
+    let onAddButtonTap: (() -> Void)?
+    let tags: [(text: String, backgroundColor: NSColor)]
+    let statsText: String?
+}
+
 final class VideoListCellView: NSView {
     
     private lazy var imageView: NSImageView = {
@@ -23,7 +32,7 @@ final class VideoListCellView: NSView {
     
     private lazy var titleView: NSTextField = {
         let titleView = NSTextField(labelWithString: "")
-        titleView.maximumNumberOfLines = 2
+        titleView.maximumNumberOfLines = 1
         titleView.isSelectable = false
         titleView.isEditable = false
         titleView.cell?.truncatesLastVisibleLine = true
@@ -31,11 +40,27 @@ final class VideoListCellView: NSView {
         return titleView
     }()
     
+    private lazy var tagsView: TagsView = {
+        let tagsView = TagsView()
+        return tagsView
+    }()
+    
     private lazy var button: AddButton = {
         let button = AddButton { [weak self] in
             self?.onButtonTap()
         }
         return button
+    }()
+    
+    private lazy var statsLabel: NSTextField = {
+        let statsLabel = NSTextField(labelWithString: "")
+        statsLabel.maximumNumberOfLines = 1
+        statsLabel.isSelectable = false
+        statsLabel.isEditable = false
+        statsLabel.cell?.truncatesLastVisibleLine = true
+        statsLabel.cell?.lineBreakMode = .byWordWrapping
+        statsLabel.font = .systemFont(ofSize: 10, weight: .semibold)
+        return statsLabel
     }()
     
     private var onAddButtonTap: (() -> Void)?
@@ -61,13 +86,13 @@ final class VideoListCellView: NSView {
         
         addSubview(titleView)
         titleView.translatesAutoresizingMaskIntoConstraints = false
-        titleView.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+        titleView.setContentCompressionResistancePriority(.required, for: .vertical)
         titleView.setContentHuggingPriority(.defaultHigh, for: .vertical)
         NSLayoutConstraint.activate([
             titleView.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
             titleView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            titleView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            titleView.heightAnchor.constraint(equalToConstant: 16)
         ])
         
         imageView.addSubview(button)
@@ -78,6 +103,27 @@ final class VideoListCellView: NSView {
             button.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -8),
             button.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -8)
         ])
+        
+        addSubview(tagsView)
+        tagsView.translatesAutoresizingMaskIntoConstraints = false
+        tagsView.setContentCompressionResistancePriority(.required, for: .vertical)
+        NSLayoutConstraint.activate([
+            tagsView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tagsView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 4),
+            tagsView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            tagsView.heightAnchor.constraint(equalToConstant: 22)
+        ])
+        
+        addSubview(statsLabel)
+        statsLabel.translatesAutoresizingMaskIntoConstraints = false
+        statsLabel.setContentCompressionResistancePriority(.required, for: .vertical)
+        NSLayoutConstraint.activate([
+            statsLabel.topAnchor.constraint(equalTo: tagsView.bottomAnchor, constant: 4),
+            statsLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            statsLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            statsLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            statsLabel.heightAnchor.constraint(equalToConstant: 16)
+        ])
     }
     
     override func layout() {
@@ -85,11 +131,13 @@ final class VideoListCellView: NSView {
         button.layer?.cornerRadius = button.bounds.width / 2.0
     }
     
-    func configure(title: String, imageURL: URL?, isAdded: Bool, onAddButtonTap: (() -> Void)?) {
-        titleView.stringValue = title
-        imageView.sd_setImage(with: imageURL)
-        self.onAddButtonTap = onAddButtonTap
-        button.configure(isAdded: isAdded)
+    func configure(_ config: VideoListCellConfig) {
+        titleView.stringValue = config.title
+        imageView.sd_setImage(with: config.imageURL)
+        self.onAddButtonTap = config.onAddButtonTap
+        button.configure(isAdded: config.isAdded)
+        tagsView.configure(contents: config.tags)
+        statsLabel.stringValue = config.statsText ?? ""
     }
     
     @objc private func onButtonTap() {
@@ -101,5 +149,7 @@ final class VideoListCellView: NSView {
         super.prepareForReuse()
         imageView.sd_cancelCurrentImageLoad()
         button.prepareForReuse()
+        tagsView.prepareForReuse()
+        statsLabel.stringValue = ""
     }
 }

@@ -12,11 +12,12 @@ struct StandardDependencyContainer: DependencyContainer {
     
     let data: DataContainer = {
         DataContainer(videoStreamingProvider: XCDYoutubeVideoStreamingProvider(),
-                      videoListProvider: InvidiousAPIVideoListProvider(),
+                      videoListProvider: YTokeBackendVideoListProvider(),
                       avPrivacyPermissionProvider: MacOSAVPrivacyPermissionProvider(),
                       popUpAlertProvider: StandardPopUpAlertProvider(),
                       audioDevicesProvider: MacOSAudioDevicesProvider(),
-                      microphoneProvider: AVAudioEngineMicrophoneProvider())
+                      microphoneProvider: AVAudioEngineMicrophoneProvider(),
+                      videoStatsMutationProvider: StandardVideoStatsMutationProvider())
     }()
 
     let repo: RepositoryContainer
@@ -36,11 +37,15 @@ struct StandardDependencyContainer: DependencyContainer {
                                                             microphoneProvider: data.microphoneProvider,
                                                             alertProvider: data.popUpAlertProvider,
                                                             privacyPermissionRepository: privacyPermissionRepository)
+        
+        // swiftlint:disable:next line_length
+        let videoStatsRepository = StandardVideoStatsRepository(videoStatsMutationProvider: data.videoStatsMutationProvider)
         repo = RepositoryContainer(videoStreamingRepository: videoStreamingRepository,
                                    videoListRepository: videoListRepository,
                                    privacyPermissionRepository: privacyPermissionRepository,
                                    systemNavigator: MacOSSystemNavigator(),
-                                   audioInputRepository: audioInputRepository)
+                                   audioInputRepository: audioInputRepository,
+                                   videoStatsRepository: videoStatsRepository)
     }
     
 }

@@ -49,3 +49,14 @@
 "audio_permission_information" = "YToke〜无法访问麦克风。 如果要使用麦克风流，请进入系统设置菜单并授予麦克风访问权限";
 
 "select_input_device" = "选择输入设备";
+
+"no_vocal" = "没有原唱";
+
+"has_vocal" = "有原唱";
+
+"has_vocal_question" = "这个视频有原唱吗?";
+
+"yes" = "是";
+
+"no" = "否";
+

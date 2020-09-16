@@ -13,6 +13,8 @@ final class VideoViewController: NSViewController {
     
     private var viewModel: VideoViewModel
 
+    private var timeObserverToken: Any?
+    private var startPlayingObserverToken: NSKeyValueObservation?
     private lazy var playerView: AVPlayerView = {
         let playerView = AVPlayerView()
         playerView.showsFullScreenToggleButton = true
@@ -32,6 +34,8 @@ final class VideoViewController: NSViewController {
         })
         return textView
     }()
+    
+    private var dualChoiceView: NSView?
     
     init(viewModel: VideoViewModel) {
         self.viewModel = viewModel
@@ -72,6 +76,22 @@ final class VideoViewController: NSViewController {
                 self?.loadingSpinner.startAnimation(nil)
             }
         }
+        
+        viewModel.showDualChoiceView = { [weak self] in
+            self?.showDualChoiceView()
+        }
+        
+        viewModel.hideDualChoiceView = { [weak self] in
+            self?.hideDualChoiceView()
+        }
+        
+        viewModel.videoDuration = { [weak self] in
+            self?.playerView.player?.currentItem?.duration.seconds
+        }
+        
+        viewModel.currentTime = { [weak self] in
+            self?.playerView.player?.currentItem?.currentTime().seconds
+        }
     }
     
     private func setupLayout() {
@@ -108,11 +128,57 @@ final class VideoViewController: NSViewController {
     }
     
     func playVideo(streamURL: URL) {
+        playerView.player?.pause()
+        startPlayingObserverToken?.invalidate()
+        removeVideoTimeObserver()
         let item = AVPlayerItem(url: streamURL)
         let player = AVPlayer(playerItem: item)
         playerView.player = player
         player.volume = 1.0
         player.play()
         animatedTextView.scheduleRun()
+        startPlayingObserverToken = item.observe(\.duration, options: [.new]) { [weak self] (_, change) in
+            guard let duration = change.newValue, self?.timeObserverToken == nil else {
+                return
+            }
+            let time = CMTime(seconds: duration.seconds/2, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
+            let player = self?.playerView.player
+            self?.timeObserverToken = player?.addBoundaryTimeObserver(forTimes: [NSValue(time: time)],
+                                                                      queue: .main,
+                                                                      using: { [weak self] in
+                                                                        self?.viewModel.onVideoPlayedHalf()
+                                                                        self?.removeVideoTimeObserver()
+            })
+        }
+    }
+    
+    private func removeVideoTimeObserver() {
+        if let token = timeObserverToken {
+            playerView.player?.removeTimeObserver(token)
+            timeObserverToken = nil
+        }
+    }
+    
+    private func showDualChoiceView() {
+        let newDualChoiceView = DualChoiceView(title: viewModel.dualChoiceTitle,
+                                               contentA: .init(title: viewModel.dualChoiceTitleA,
+                                                               content: viewModel.dualChoiceContentA),
+                                               contentB: .init(title: viewModel.dualChoiceTitleB,
+                                                               content: viewModel.dualChoiceContentB),
+                                               onSelect: { [weak self] in
+                                                self?.viewModel.onDualChoiceViewSelect(tag: $0)
+        })
+        dualChoiceView = newDualChoiceView
+        view.addSubview(newDualChoiceView)
+        newDualChoiceView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            newDualChoiceView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -38),
+            newDualChoiceView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+    
+    private func hideDualChoiceView() {
+        dualChoiceView?.removeFromSuperview()
+        removeVideoTimeObserver()
     }
 }

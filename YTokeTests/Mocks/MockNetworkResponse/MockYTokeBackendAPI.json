@@ -1,0 +1,63 @@
+{
+    "q": "query",
+    "videos": [
+        {
+            "title": "Title",
+            "videoId": "VideoId",
+            "tags": [
+                "OFF_VOCAL"
+            ],
+            "percentageFinished": null,
+            "thumbnails": [
+                {
+                    "quality": "maxres",
+                    "url": "maxresURL"
+                },
+                {
+                    "quality": "maxresdefault",
+                    "url": "maxresdefaultURL"
+                },
+                {
+                    "quality": "sddefault",
+                    "url": "sddefaultURL"
+                },
+                {
+                    "quality": "high",
+                    "url": "highURL"
+                },
+                {
+                    "quality": "medium",
+                    "url": "mediumURL"
+                },
+                {
+                    "quality": "default",
+                    "url": "defailtURL"
+                },
+                {
+                    "quality": "start",
+                    "url": "startURL"
+                },
+                {
+                    "quality": "middle",
+                    "url": "middleURL"
+                },
+                {
+                    "quality": "end",
+                    "url": "endURL"
+                }
+            ]
+        },
+         {
+            "title": "Title2",
+            "videoId": "VideoId2",
+            "tags": null,
+            "percentageFinished": 0.7,
+            "thumbnails": [
+                {
+                    "quality": "high",
+                    "url": "highURL2"
+                }
+            ]
+        }
+    ]
+}

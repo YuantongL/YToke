@@ -49,3 +49,13 @@
 "audio_permission_information" = "YToke ~는 마이크 액세스 권한이 없습니다. 마이크 스트림을 사용하려면 시스템 설정 메뉴로 이동하여 마이크 액세스 권한을 부여하세요.";
 
 "select_input_device" = "입력 장치 선택";
+
+"no_vocal" = "오리지널 노래 없음";
+
+"has_vocal" = "오리지널 노래가 있습니다";
+
+"has_vocal_question" = "이 영상에 가수 보컬이 있나요?";
+
+"yes" = "예";
+
+"no" = "부정";

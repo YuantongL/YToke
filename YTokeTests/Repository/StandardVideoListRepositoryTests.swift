@@ -46,7 +46,9 @@ final class StandardVideoListRepositoryTests: XCTestCase {
     func test_fetch_SHOULD_callCompletion() {
         let videos = [Video(id: "id",
                             title: "title",
-                            thumbnail: nil)]
+                            thumbnail: nil,
+                            percentageFinished: 0.5,
+                            tag: [])]
         videoListProvider.result = .success(videos)
         repository.fetch(name: "Name", page: 8) { result in
             guard case .success(let resultVideos) = result else {

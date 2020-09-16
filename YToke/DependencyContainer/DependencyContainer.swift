@@ -15,6 +15,7 @@ struct DataContainer {
     let popUpAlertProvider: PopUpAlertProvider
     let audioDevicesProvider: AudioDevicesProvider
     let microphoneProvider: MicrophoneProvider
+    let videoStatsMutationProvider: VideoStatsMutationProvider
 }
 
 struct RepositoryContainer {
@@ -23,6 +24,7 @@ struct RepositoryContainer {
     let privacyPermissionRepository: PrivacyPermissionRepository
     let systemNavigator: SystemNavigator
     let audioInputRepository: AudioInputRepository
+    let videoStatsRepository: VideoStatsRepository
 }
 
 protocol DependencyContainer {

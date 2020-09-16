@@ -32,7 +32,11 @@ final class StandardVideoViewModelTests: XCTestCase {
     }
     
     func test_onAppear_SHOULD_playVideo() {
-        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID",
+                                                              title: "TITLE",
+                                                              thumbnail: nil,
+                                                              percentageFinished: 0.5,
+                                                              tag: [])
         viewModel.onAppear()
         XCTAssertEqual(dependencyContainer.mockVideoStreamingRepository.numOfFetchStreamURLCalled, 1)
         
@@ -42,7 +46,11 @@ final class StandardVideoViewModelTests: XCTestCase {
     }
     
     func test_onVideoFinished_SHOULD_playVideo() {
-        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID",
+                                                              title: "TITLE",
+                                                              thumbnail: nil,
+                                                              percentageFinished: 0.5,
+                                                              tag: [])
         NotificationCenter.default.post(name: .AVPlayerItemDidPlayToEndTime, object: nil)
         XCTAssertEqual(dependencyContainer.mockVideoStreamingRepository.numOfFetchStreamURLCalled, 1)
         
@@ -52,12 +60,70 @@ final class StandardVideoViewModelTests: XCTestCase {
     }
     
     func test_onSkipVideo_SHOULD_playVideo() {
-        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID", title: "TITLE", thumbnail: nil)
+        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID",
+                                                              title: "TITLE",
+                                                              thumbnail: nil,
+                                                              percentageFinished: 0.5,
+                                                              tag: [])
         NotificationCenter.default.post(name: .skipSong, object: nil)
         XCTAssertEqual(dependencyContainer.mockVideoStreamingRepository.numOfFetchStreamURLCalled, 1)
         
         dependencyContainer.mockVideoQueue.nextResult = nil
         NotificationCenter.default.post(name: .skipSong, object: nil)
         XCTAssertEqual(dependencyContainer.mockVideoStreamingRepository.numOfFetchStreamURLCalled, 1)
+    }
+    
+    func test_onVideoPlayedHalf_SHOULD_showDualChoiceView() {
+        var result = 0
+        viewModel.showDualChoiceView = {
+            result += 1
+        }
+        viewModel.onVideoPlayedHalf()
+        XCTAssertEqual(result, 1)
+    }
+    
+    func test_onVideoFinished_SHOULD_reportVideoImpression() {
+        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID",
+                                                              title: "TITLE",
+                                                              thumbnail: nil,
+                                                              percentageFinished: 0.5,
+                                                              tag: [])
+        viewModel.onAppear()
+        viewModel.videoDuration = {
+            300
+        }
+        viewModel.currentTime = {
+            150
+        }
+        NotificationCenter.default.post(name: .AVPlayerItemDidPlayToEndTime, object: nil)
+        XCTAssertEqual(dependencyContainer.mockVideoStatsRepository.numOfReportImpressionCalled, 1)
+    }
+    
+    func test_onSkipVideo_SHOULD_reportVideoImpression() {
+        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID",
+                                                              title: "TITLE",
+                                                              thumbnail: nil,
+                                                              percentageFinished: 0.5,
+                                                              tag: [])
+        viewModel.onAppear()
+        viewModel.videoDuration = {
+            300
+        }
+        viewModel.currentTime = {
+            150
+        }
+        NotificationCenter.default.post(name: .skipSong, object: nil)
+        XCTAssertEqual(dependencyContainer.mockVideoStatsRepository.numOfReportImpressionCalled, 1)
+    }
+    
+    func test_ondualChoiceViewSelect_SHOULD_reportTag() {
+        dependencyContainer.mockVideoQueue.nextResult = Video(id: "ID",
+                                                              title: "TITLE",
+                                                              thumbnail: nil,
+                                                              percentageFinished: 0.5,
+                                                              tag: [])
+        viewModel.onAppear()
+        viewModel.onDualChoiceViewSelect(tag: .offVocal)
+        XCTAssertEqual(dependencyContainer.mockVideoStatsRepository.numOfReportTagCalled, 1)
     }
 }

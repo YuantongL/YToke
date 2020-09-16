@@ -18,43 +18,43 @@ final class MockDependencyContainer: DependencyContainer {
     var audioMixer: AudioMixer = MockAudioMixer()
     var videoQueue: VideoQueue = MockVideoQueue()
     
+    // MARK: - Data
+    let mockVideoStreamingProvider = MockVideoStreamingProvider()
+    let mockVideoListProvider = MockVideoListProvider()
+    let mockMicrophoneProvider = MockMicrophoneProvider()
+    let mockAlertProvider = MockPopUpAlertProvider()
+    let mockAudioDevicesProvider = MockAudioDevicesProvider()
+    let mockVideoStatsMutationProvider = MockVideoStatsMutationProvider()
+    
+    // MARK: - Repository
+    
+    let mockVideoStreamingRepository = MockVideoStreamingRepository()
+    let mockVideoListRepository = MockVideoListRepository()
+    let mockPrivacyPermissionRepository = MockPrivacyPermissionRepository()
+    let mockVideoStatsRepository = MockVideoStatsRepository()
+    
+    // MARK: - Init
+    
     init() {
-        data = DataContainer(videoStreamingProvider: MockVideoStreamingProvider(),
-                             videoListProvider: MockVideoListProvider(),
+        data = DataContainer(videoStreamingProvider: mockVideoStreamingProvider,
+                             videoListProvider: mockVideoListProvider,
                              avPrivacyPermissionProvider: MockAVPrivacyPermissionProvider(),
-                             popUpAlertProvider: MockPopUpAlertProvider(),
-                             audioDevicesProvider: MockAudioDevicesProvider(),
-                             microphoneProvider: MockMicrophoneProvider())
+                             popUpAlertProvider: mockAlertProvider,
+                             audioDevicesProvider: mockAudioDevicesProvider,
+                             microphoneProvider: mockMicrophoneProvider,
+                             videoStatsMutationProvider: mockVideoStatsMutationProvider)
         
-        repo = RepositoryContainer(videoStreamingRepository: MockVideoStreamingRepository(),
-                                   videoListRepository: MockVideoListRepository(),
-                                   privacyPermissionRepository: MockPrivacyPermissionRepository(),
+        repo = RepositoryContainer(videoStreamingRepository: mockVideoStreamingRepository,
+                                   videoListRepository: mockVideoListRepository,
+                                   privacyPermissionRepository: mockPrivacyPermissionRepository,
                                    systemNavigator: MockSystemNavigator(),
-                                   audioInputRepository: MockAudioInputRepository())
+                                   audioInputRepository: MockAudioInputRepository(),
+                                   videoStatsRepository: mockVideoStatsRepository)
     }
 }
 
 // swiftlint:disable force_cast
 extension MockDependencyContainer {
-    var mockVideoStreamingProvider: MockVideoStreamingProvider {
-        data.videoStreamingProvider as! MockVideoStreamingProvider
-    }
-    
-    var mockVideoListProvider: MockVideoListProvider {
-        data.videoListProvider as! MockVideoListProvider
-    }
-    
-    var mockVideoStreamingRepository: MockVideoStreamingRepository {
-        repo.videoStreamingRepository as! MockVideoStreamingRepository
-    }
-    
-    var mockVideoListRepository: MockVideoListRepository {
-        repo.videoListRepository as! MockVideoListRepository
-    }
-    
-    var mockPrivacyPermissionRepository: MockPrivacyPermissionRepository {
-        repo.privacyPermissionRepository as! MockPrivacyPermissionRepository
-    }
     
     var mockAudioMixer: MockAudioMixer {
         audioMixer as! MockAudioMixer
@@ -62,13 +62,5 @@ extension MockDependencyContainer {
     
     var mockVideoQueue: MockVideoQueue {
         videoQueue as! MockVideoQueue
-    }
-    
-    var mockMicrophoneProvider: MockMicrophoneProvider {
-        data.microphoneProvider as! MockMicrophoneProvider
-    }
-    
-    var alertProvider: MockPopUpAlertProvider {
-        data.popUpAlertProvider as! MockPopUpAlertProvider
     }
 }
