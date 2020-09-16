@@ -31,7 +31,7 @@ The project uses Cocoapods for package management.
 ## How does it work
 The initial idea is to build a home karaoke system, Youtube is the world's largest video repository and there are a lot of karaoke videos, it make sense to use Youtube as the source of the videos.
 
-YToke~ uses [Invidious API](https://github.com/iv-org/invidious) instead of Youtube's official data API for searching purpose, informations along with videoId is gathered. Then the videoId is passed to [XCDYouTubeKit](https://github.com/0xced/XCDYouTubeKit) to play.
+YToke~ uses [dedicated API](https://ytokebackend.appspot.com) hosted on Google Cloud, you can checkout the [backend project](https://github.com/YuantongL/YTokeBackend) for details. The backend uses [Invidious API](https://github.com/iv-org/invidious) instead of Youtube's official data API for searching purpose, informations along with videoId is gathered. Then the videoId is passed to [XCDYouTubeKit](https://github.com/0xced/XCDYouTubeKit) to play.
 
 Meanwhile, I created a MicStreamer based on [AVAudioEngine](https://developer.apple.com/documentation/avfoundation/avaudioengine) which basically does realtime audio processing. It connects the Mac's default audio input to output with little audio effect.
 
