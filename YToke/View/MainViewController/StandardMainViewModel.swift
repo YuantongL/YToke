@@ -25,6 +25,7 @@ final class StandardMainViewModel: MainViewModel {
     
     let dependencyContainer: DependencyContainer
     var onPresentDonationView: ((DonationViewModel) -> Void)?
+    var onPresentDualChoiceView: ((DualChoiceViewModel<VideoTag>) -> Void)?
     
     private var audioMixerToken: Int?
     private lazy var audioMixer: AudioMixer = {
@@ -41,6 +42,9 @@ final class StandardMainViewModel: MainViewModel {
     private var secondDonationViewShown = false
     
     private let audioDeviceManager = MacOSAudioDevicesProvider()
+    private lazy var videoStatsRepository: VideoStatsRepository = {
+        dependencyContainer.repo.videoStatsRepository
+    }()
     
     init(dependencyContainer: DependencyContainer = StandardDependencyContainer()) {
         self.dependencyContainer = dependencyContainer
@@ -55,6 +59,10 @@ final class StandardMainViewModel: MainViewModel {
         
         NotificationCenter.default.addObserver(self, selector: #selector(onNewSongPlay), name: .queuePop, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(onAddSong), name: .addSong, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onSongPlayProgressHalf),
+                                               name: .songPlayProgressHalf,
+                                               object: nil)
     }
     
     deinit {
@@ -90,5 +98,23 @@ final class StandardMainViewModel: MainViewModel {
     private func showSecondDonationView() {
         secondDonationViewShown = true
         onPresentDonationView?(StandardDonationViewModel())
+    }
+    
+    @objc private func onSongPlayProgressHalf(notification: Notification) {
+        guard let videoId = (notification.userInfo as? [String: String])?["id"],
+              let videoName = (notification.userInfo as? [String: String])?["name"] else {
+            return
+        }
+        let viewModel = DualChoiceViewModel(question: NSLocalizedString("has_vocal_question",
+                                            comment: "Does the current video has singer's vocal?"),
+                                            subtitle: videoName,
+                                            titleA: NSLocalizedString("yes", comment: "Yes"),
+                                            contentA: VideoTag.withVocal,
+                                            titleB: NSLocalizedString("no", comment: "No"),
+                                            contentB: VideoTag.offVocal,
+                                            onSelect: { [weak self] selectedTag in
+                                                self?.videoStatsRepository.reportTag(videoId: videoId, tag: selectedTag)
+                                            })
+        onPresentDualChoiceView?(viewModel)
     }
 }

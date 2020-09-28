@@ -54,7 +54,7 @@
 
 "has_vocal" = "オリジナル曲あり";
 
-"has_vocal_question" = "このビデオには歌手のボーカルが含まれていますか？";
+"has_vocal_question" = "再生中の動画のオリジナル曲はありますか？";
 
 "yes" = "はい";
 

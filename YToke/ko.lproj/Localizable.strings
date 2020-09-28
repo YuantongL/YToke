@@ -54,7 +54,7 @@
 
 "has_vocal" = "오리지널 노래가 있습니다";
 
-"has_vocal_question" = "이 영상에 가수 보컬이 있나요?";
+"has_vocal_question" = "재생중인 동영상의 오리지널 곡이 있나요?";
 
 "yes" = "예";
 

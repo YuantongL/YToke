@@ -103,6 +103,16 @@
 		44AA2D22250328410010F5B7 /* MockAudioInputRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */; };
 		44AA2D2425032D120010F5B7 /* AudioDevicesProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D2325032D120010F5B7 /* AudioDevicesProviderError.swift */; };
 		44AA2D26250332A00010F5B7 /* MockAudioDevicesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */; };
+		44AA9E2325223A8000C837C5 /* DualChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E2225223A8000C837C5 /* DualChoiceViewModel.swift */; };
+		44AA9E2E2522512C00C837C5 /* LyricsURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E2D2522512C00C837C5 /* LyricsURLProvider.swift */; };
+		44AA9E342522547200C837C5 /* GeciMeAPILyricsURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E332522547200C837C5 /* GeciMeAPILyricsURLProvider.swift */; };
+		44AA9E3C2522584300C837C5 /* LyricsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E3B2522584300C837C5 /* LyricsDataProvider.swift */; };
+		44AA9E40252258BF00C837C5 /* GeciMeAPILyricsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E3F252258BF00C837C5 /* GeciMeAPILyricsDataProvider.swift */; };
+		44AA9E4525225CCD00C837C5 /* LyricsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E4425225CCC00C837C5 /* LyricsRepository.swift */; };
+		44AA9E4B25225D0D00C837C5 /* StandardLyricsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E4A25225D0D00C837C5 /* StandardLyricsRepository.swift */; };
+		44AA9E4F25225F8B00C837C5 /* LyricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E4E25225F8B00C837C5 /* LyricsViewController.swift */; };
+		44AA9E5625225FBF00C837C5 /* LyricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E5525225FBF00C837C5 /* LyricsViewModel.swift */; };
+		44AA9E5A25225FC900C837C5 /* StandardLyricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA9E5925225FC900C837C5 /* StandardLyricsViewModel.swift */; };
 		44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0824E1822000D00A1B /* DonationView.swift */; };
 		44AB8C0B24E1824500D00A1B /* DonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */; };
 		44AB8C0D24E1829700D00A1B /* StandardDonationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */; };
@@ -261,6 +271,16 @@
 		44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioInputRepository.swift; sourceTree = "<group>"; };
 		44AA2D2325032D120010F5B7 /* AudioDevicesProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDevicesProviderError.swift; sourceTree = "<group>"; };
 		44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioDevicesProvider.swift; sourceTree = "<group>"; };
+		44AA9E2225223A8000C837C5 /* DualChoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DualChoiceViewModel.swift; sourceTree = "<group>"; };
+		44AA9E2D2522512C00C837C5 /* LyricsURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsURLProvider.swift; sourceTree = "<group>"; };
+		44AA9E332522547200C837C5 /* GeciMeAPILyricsURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeciMeAPILyricsURLProvider.swift; sourceTree = "<group>"; };
+		44AA9E3B2522584300C837C5 /* LyricsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsDataProvider.swift; sourceTree = "<group>"; };
+		44AA9E3F252258BF00C837C5 /* GeciMeAPILyricsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeciMeAPILyricsDataProvider.swift; sourceTree = "<group>"; };
+		44AA9E4425225CCC00C837C5 /* LyricsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsRepository.swift; sourceTree = "<group>"; };
+		44AA9E4A25225D0D00C837C5 /* StandardLyricsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLyricsRepository.swift; sourceTree = "<group>"; };
+		44AA9E4E25225F8B00C837C5 /* LyricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewController.swift; sourceTree = "<group>"; };
+		44AA9E5525225FBF00C837C5 /* LyricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsViewModel.swift; sourceTree = "<group>"; };
+		44AA9E5925225FC900C837C5 /* StandardLyricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLyricsViewModel.swift; sourceTree = "<group>"; };
 		44AB8C0824E1822000D00A1B /* DonationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationView.swift; sourceTree = "<group>"; };
 		44AB8C0A24E1824500D00A1B /* DonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewModel.swift; sourceTree = "<group>"; };
 		44AB8C0C24E1829700D00A1B /* StandardDonationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardDonationViewModel.swift; sourceTree = "<group>"; };
@@ -572,7 +592,6 @@
 			isa = PBXGroup;
 			children = (
 				440044EF24DC7F590090FDBB /* AnimatedCycleTextView.swift */,
-				448B151425103DAA00C9B66B /* DualChoiceView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -736,6 +755,8 @@
 		449BF3C124D31FAF000A8712 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44AA9E5225225F8F00C837C5 /* Lyrics */,
+				44AA9E2125223A1000C837C5 /* DualChoice */,
 				44AB8C0E24E194F700D00A1B /* MainViewController */,
 				44AB8C0724E181DA00D00A1B /* Donation */,
 				440044DE24D895A10090FDBB /* BottomBar */,
@@ -749,6 +770,7 @@
 		449BF3C224D31FB7000A8712 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				44AA9E4325225BDB00C837C5 /* Lyrics */,
 				448B150D251016C300C9B66B /* VideoStatsRepository */,
 				446DBBF024FF431100601B0D /* Audio */,
 				44B140F824FB488000A9DEDC /* SystemNavigator */,
@@ -762,6 +784,7 @@
 		449BF3C324D31FC1000A8712 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				44AA9E2C252250E700C837C5 /* Lyrics */,
 				448B150A251015FC00C9B66B /* VideoStats */,
 				44B140EC24FB366F00A9DEDC /* PopUpAlert */,
 				44B1410C24FD53DB00A9DEDC /* AudioDevices */,
@@ -789,6 +812,45 @@
 				449BF3CA24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift */,
 			);
 			path = MicStreamer;
+			sourceTree = "<group>";
+		};
+		44AA9E2125223A1000C837C5 /* DualChoice */ = {
+			isa = PBXGroup;
+			children = (
+				448B151425103DAA00C9B66B /* DualChoiceView.swift */,
+				44AA9E2225223A8000C837C5 /* DualChoiceViewModel.swift */,
+			);
+			path = DualChoice;
+			sourceTree = "<group>";
+		};
+		44AA9E2C252250E700C837C5 /* Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				44AA9E2D2522512C00C837C5 /* LyricsURLProvider.swift */,
+				44AA9E332522547200C837C5 /* GeciMeAPILyricsURLProvider.swift */,
+				44AA9E3B2522584300C837C5 /* LyricsDataProvider.swift */,
+				44AA9E3F252258BF00C837C5 /* GeciMeAPILyricsDataProvider.swift */,
+			);
+			path = Lyrics;
+			sourceTree = "<group>";
+		};
+		44AA9E4325225BDB00C837C5 /* Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				44AA9E4425225CCC00C837C5 /* LyricsRepository.swift */,
+				44AA9E4A25225D0D00C837C5 /* StandardLyricsRepository.swift */,
+			);
+			path = Lyrics;
+			sourceTree = "<group>";
+		};
+		44AA9E5225225F8F00C837C5 /* Lyrics */ = {
+			isa = PBXGroup;
+			children = (
+				44AA9E4E25225F8B00C837C5 /* LyricsViewController.swift */,
+				44AA9E5525225FBF00C837C5 /* LyricsViewModel.swift */,
+				44AA9E5925225FC900C837C5 /* StandardLyricsViewModel.swift */,
+			);
+			path = Lyrics;
 			sourceTree = "<group>";
 		};
 		44AB8C0724E181DA00D00A1B /* Donation */ = {
@@ -1102,6 +1164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44AA9E5625225FBF00C837C5 /* LyricsViewModel.swift in Sources */,
 				449BF3CB24D46748000A8712 /* AVAudioEngineMicrophoneProvider.swift in Sources */,
 				449BF3B424D10856000A8712 /* StandardMixerViewModel.swift in Sources */,
 				449BF3A724D095A0000A8712 /* MixerViewController.swift in Sources */,
@@ -1109,9 +1172,11 @@
 				449BF37124C21298000A8712 /* VideoListViewController.swift in Sources */,
 				44B140EE24FB368200A9DEDC /* PopUpAlertManager.swift in Sources */,
 				445AE4852511845300149319 /* TagsView.swift in Sources */,
+				44AA9E5A25225FC900C837C5 /* StandardLyricsViewModel.swift in Sources */,
 				449BF38924C78AE0000A8712 /* StandardVideoListViewModel.swift in Sources */,
 				449BF3B624D1EB58000A8712 /* VideoQueueViewModel.swift in Sources */,
 				446BA5DC24E30806004EFA42 /* VideoListLoadingCellView.swift in Sources */,
+				44AA9E4F25225F8B00C837C5 /* LyricsViewController.swift in Sources */,
 				440044F024DC7F590090FDBB /* AnimatedCycleTextView.swift in Sources */,
 				448B151525103DAA00C9B66B /* DualChoiceView.swift in Sources */,
 				44B1411E24FED85B00A9DEDC /* MacOSAudioDevice.swift in Sources */,
@@ -1123,6 +1188,7 @@
 				44B1410E24FD53F200A9DEDC /* AudioDevicesProvider.swift in Sources */,
 				446BA60624E42F02004EFA42 /* StandardWindowManager.swift in Sources */,
 				44B140FA24FB488F00A9DEDC /* SystemNavigator.swift in Sources */,
+				44AA9E2E2522512C00C837C5 /* LyricsURLProvider.swift in Sources */,
 				44B140EB24FB2F6800A9DEDC /* StandardDependencyContainer.swift in Sources */,
 				44B140E624FAC37600A9DEDC /* MacOSAVPrivacyPermissionProvider.swift in Sources */,
 				449BF3BE24D2563A000A8712 /* VideoQueue.swift in Sources */,
@@ -1138,6 +1204,7 @@
 				449BF39624C8C6FB000A8712 /* StandardVideoViewModel.swift in Sources */,
 				44BF67CA25117DB900A9E71B /* TagPill.swift in Sources */,
 				448B15112510178800C9B66B /* StandardVideoStatsRepository.swift in Sources */,
+				44AA9E342522547200C837C5 /* GeciMeAPILyricsURLProvider.swift in Sources */,
 				44B140DF24FAC1C000A9DEDC /* PrivacyPermissionRepository.swift in Sources */,
 				440044E424D895DA0090FDBB /* StandardNowPlayingViewModel.swift in Sources */,
 				44AA2D2425032D120010F5B7 /* AudioDevicesProviderError.swift in Sources */,
@@ -1151,6 +1218,7 @@
 				449BF3AE24D0DD25000A8712 /* Mixer.swift in Sources */,
 				440044DD24D88F870090FDBB /* SideBarViewController.swift in Sources */,
 				449BF37524C60942000A8712 /* VideoListRepository.swift in Sources */,
+				44AA9E40252258BF00C837C5 /* GeciMeAPILyricsDataProvider.swift in Sources */,
 				44B140E424FAC35800A9DEDC /* AVPrivacyPermissionProvider.swift in Sources */,
 				440044E624D8C5F30090FDBB /* DependencyContainer.swift in Sources */,
 				448B1509251015F400C9B66B /* VideoStatsMutationProvider.swift in Sources */,
@@ -1163,9 +1231,11 @@
 				44B140F724FB444800A9DEDC /* StandardAudioPermissionInfoViewModel.swift in Sources */,
 				449BF38724C61C89000A8712 /* VideoListCellView.swift in Sources */,
 				449BF3BA24D1F34A000A8712 /* VideoQueueCellView.swift in Sources */,
+				44AA9E4525225CCD00C837C5 /* LyricsRepository.swift in Sources */,
 				44B140FC24FB48B300A9DEDC /* MacOSSystemNavigator.swift in Sources */,
 				449BF37B24C60B38000A8712 /* VideoListProvider.swift in Sources */,
 				441D078724BF899800071B97 /* VideoViewController.swift in Sources */,
+				44AA9E4B25225D0D00C837C5 /* StandardLyricsRepository.swift in Sources */,
 				449BF38D24C79108000A8712 /* RatingView.swift in Sources */,
 				449BF3C024D25690000A8712 /* Queue.swift in Sources */,
 				440044E824D8EB8C0090FDBB /* TabView.swift in Sources */,
@@ -1174,6 +1244,7 @@
 				44B140F024FB36C300A9DEDC /* StandardPopUpAlertProvider.swift in Sources */,
 				446DBBF224FF432A00601B0D /* AudioInputRepository.swift in Sources */,
 				44AB8C0924E1822000D00A1B /* DonationView.swift in Sources */,
+				44AA9E3C2522584300C837C5 /* LyricsDataProvider.swift in Sources */,
 				44B1411024FD540000A9DEDC /* MacOSAudioDevicesProvider.swift in Sources */,
 				449BF3B224D10765000A8712 /* MixerViewModel.swift in Sources */,
 				449BF37F24C60CC2000A8712 /* StandardVideoListRepository.swift in Sources */,
@@ -1181,6 +1252,7 @@
 				449BF37824C60994000A8712 /* Video.swift in Sources */,
 				441D076624BE5E0F00071B97 /* ViewController.swift in Sources */,
 				441D076424BE5E0F00071B97 /* AppDelegate.swift in Sources */,
+				44AA9E2325223A8000C837C5 /* DualChoiceViewModel.swift in Sources */,
 				440044EE24D9FA470090FDBB /* AddButton.swift in Sources */,
 				440044E024D895B60090FDBB /* NowPlayingViewController.swift in Sources */,
 				44AB8C0B24E1824500D00A1B /* DonationViewModel.swift in Sources */,
@@ -1408,7 +1480,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1416,7 +1488,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";
@@ -1433,7 +1505,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/YToke/Info.plist";
@@ -1441,7 +1513,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = LYT.YToke;
 				PRODUCT_MODULE_NAME = YToke;
 				PRODUCT_NAME = "YToke~";

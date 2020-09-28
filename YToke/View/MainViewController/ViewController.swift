@@ -27,6 +27,14 @@ final class ViewController: NSViewController {
             })
             self?.presentAsSheet(viewController)
         }
+        
+        viewModel.onPresentDualChoiceView = { [weak self] viewModel in
+            let viewController = NSViewController()
+            viewController.view = DualChoiceView(viewModel: viewModel, onClose: {
+                self?.dismiss(viewController)
+            })
+            self?.presentAsSheet(viewController)
+        }
     }
     
     private func setupLayout() {

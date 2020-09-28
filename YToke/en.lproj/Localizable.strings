@@ -54,7 +54,7 @@
 
 "has_vocal" = "has vocal";
 
-"has_vocal_question" = "Does this video has singer's vocal?";
+"has_vocal_question" = "Does the current video has singer's vocal?";
 
 "yes" = "Yes";
 

@@ -14,4 +14,6 @@ protocol MainViewModel {
     var dependencyContainer: DependencyContainer { get }
     
     var onPresentDonationView: ((DonationViewModel) -> Void)? { get set }
+    
+    var onPresentDualChoiceView: ((DualChoiceViewModel<VideoTag>) -> Void)? { get set }
 }

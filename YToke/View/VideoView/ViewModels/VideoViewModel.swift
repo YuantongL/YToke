@@ -18,15 +18,6 @@ protocol VideoViewModel {
     var currentTime: (() -> Double?)? { get set }
     var videoDuration: (() -> Double?)? { get set }
     
-    var dualChoiceTitle: String { get }
-    var dualChoiceTitleA: String { get }
-    var dualChoiceContentA: VideoTag { get }
-    var dualChoiceTitleB: String { get }
-    var dualChoiceContentB: VideoTag { get }
-    var showDualChoiceView: (() -> Void)? { get set }
-    var hideDualChoiceView: (() -> Void)? { get set }
-    
     func onAppear()
-    func onDualChoiceViewSelect(tag: VideoTag?)
     func onVideoPlayedHalf()
 }

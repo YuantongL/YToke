@@ -55,7 +55,7 @@ final class AVAudioEngineMicrophoneProvider: MicrophoneProvider {
     func startStreaming() throws {
         stopStreaming()
         prepareToStream()
-        try audioEngine?.start()
+//try audioEngine?.start()
     }
     
     func stopStreaming() {

@@ -27,4 +27,7 @@ extension Notification.Name {
     
     /// System's audio input devices changed
     static let audioInputDevicesChanged = Notification.Name(rawValue: "audio-input-devices-change")
+    
+    /// Video player's current song played half progress
+    static let songPlayProgressHalf = Notification.Name(rawValue: "song-play-progress-half")
 }

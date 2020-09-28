@@ -11,15 +11,6 @@ import os.log
 
 final class StandardVideoViewModel: VideoViewModel {
     
-    var showDualChoiceView: (() -> Void)?
-    var hideDualChoiceView: (() -> Void)?
-    let dualChoiceTitle = NSLocalizedString("has_vocal_question",
-                                            comment: "Does this video has singer's vocal?")
-    let dualChoiceTitleA = NSLocalizedString("yes", comment: "Yes")
-    let dualChoiceContentA: VideoTag = .withVocal
-    let dualChoiceTitleB = NSLocalizedString("no", comment: "No")
-    let dualChoiceContentB: VideoTag = .offVocal
-    
     var isLoadingSpinnerHidden: ((Bool) -> Void)?
     private var currentVideo: Video?
     var cycleText: String? {
@@ -86,7 +77,12 @@ final class StandardVideoViewModel: VideoViewModel {
     }
     
     func onVideoPlayedHalf() {
-        showDualChoiceView?()
+        guard let videoId = currentVideo?.id, let videoName = currentVideo?.title else {
+            return
+        }
+        NotificationCenter.default.post(name: .songPlayProgressHalf,
+                                        object: self,
+                                        userInfo: ["id": videoId, "name": videoName])
     }
     
     @objc private func onSongAdded() {
@@ -119,16 +115,7 @@ final class StandardVideoViewModel: VideoViewModel {
         videoStatsRepository.reportImpression(videoId: videoId, percentage: currentTime / duration)
     }
     
-    func onDualChoiceViewSelect(tag: VideoTag?) {
-        hideDualChoiceView?()
-        guard let videoId = currentVideo?.id, let tag = tag else {
-            return
-        }
-        videoStatsRepository.reportTag(videoId: videoId, tag: tag)
-    }
-    
     private func prepareAndPlayVideo() {
-        hideDualChoiceView?()
         guard let nextVideo = videoQueue.next() else {
             return
         }
