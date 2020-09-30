@@ -16,7 +16,7 @@ protocol LyricsViewModel {
     /// Just display the lyrics in the scrollable view
     var onLyricsDisplay: ((LyricsViewConfig) -> Void)? { get set }
     
-    var onSeek: ((Float) -> Void)? { get set }
+    var onSeek: ((TimeInterval) -> Void)? { get set }
     var onPause: (() -> Void)? { get set }
     
     var onLoadingSpinnerHiddenChange: ((Bool) -> Void)? { get set }

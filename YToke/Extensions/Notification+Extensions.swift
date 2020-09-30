@@ -30,4 +30,7 @@ extension Notification.Name {
     
     /// Video player's current song played half progress
     static let songPlayProgressHalf = Notification.Name(rawValue: "song-play-progress-half")
+    
+    /// Video finished streaming and the video starts to play
+    static let videoPlayerStartPlayback = Notification.Name(rawValue: "video-player-start-playback")
 }

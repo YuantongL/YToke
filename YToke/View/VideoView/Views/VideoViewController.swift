@@ -133,6 +133,7 @@ final class VideoViewController: NSViewController {
             guard let duration = change.newValue, self?.timeObserverToken == nil else {
                 return
             }
+            self?.viewModel.onVideoStartToPlay()
             let time = CMTime(seconds: duration.seconds/2, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
             let player = self?.playerView.player
             self?.timeObserverToken = player?.addBoundaryTimeObserver(forTimes: [NSValue(time: time)],

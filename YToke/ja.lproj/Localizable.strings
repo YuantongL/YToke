@@ -61,3 +61,13 @@
 "no" = "負";
 
 "percentage_finished" = "%.1f%%の人がこの歌を歌い終えました";
+
+"song_name" = "曲名";
+
+"singer_name" = "歌手";
+
+"no_lyrics" = "表示する歌詞はありません";
+
+"cant_find_lyrics" = "歌詞が見つかりませんでした";
+
+"lyrics" = "歌詞";

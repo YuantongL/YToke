@@ -85,6 +85,12 @@ final class StandardVideoViewModel: VideoViewModel {
                                         userInfo: ["id": videoId, "name": videoName])
     }
     
+    func onVideoStartToPlay() {
+        NotificationCenter.default.post(name: .videoPlayerStartPlayback,
+                                        object: self,
+                                        userInfo: nil)
+    }
+    
     @objc private func onSongAdded() {
         if !isPlaying {
             prepareAndPlayVideo()

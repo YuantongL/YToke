@@ -38,7 +38,7 @@ final class StandardVideoStatsMutationProviderTests: XCTestCase {
         XCTAssertEqual(requestURL.absoluteString, "https://ytokebackend.appspot.com/video/stats/tag")
         
         let parameters = "videoId=videoId&tag=OFF_VOCAL"
-        let expectedBody =  parameters.data(using: .utf8)
+        let expectedBody = parameters.data(using: .utf8)
         guard let httpBody = mockURLSession.httpBody else {
             XCTFail("Unable to get the http body")
             return

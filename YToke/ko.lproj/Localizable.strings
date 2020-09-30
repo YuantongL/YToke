@@ -61,3 +61,13 @@
 "no" = "부정";
 
 "percentage_finished" = "%.1f%%의 사람들이이 노래를 마쳤습니다.";
+
+"song_name" = "노래 제목";
+
+"singer_name" = "가수";
+
+"no_lyrics" = "표시 할 가사가 없습니다.";
+
+"cant_find_lyrics" = "가사를 찾을 수 없습니다";
+
+"lyrics" = "가사";

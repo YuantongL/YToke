@@ -48,7 +48,8 @@ final class StandardVideoListRepositoryTests: XCTestCase {
                             title: "title",
                             thumbnail: nil,
                             percentageFinished: 0.5,
-                            tag: [])]
+                            tag: [],
+                            searchQuery: "SearchQuery")]
         videoListProvider.result = .success(videos)
         repository.fetch(name: "Name", page: 8) { result in
             guard case .success(let resultVideos) = result else {

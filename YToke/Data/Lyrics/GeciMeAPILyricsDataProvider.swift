@@ -35,14 +35,12 @@ final class GeciMeAPILyricsDataProvider: LyricsDataProvider {
                 return
             }
             
-            do {
-                let result = try JSONDecoder().decode(String.self, from: data)
-                onCompletion(.success(result))
-            } catch {
-                os_log("ERROR PARSING JSON DATA")
+            guard let resultString = String(data: data, encoding: .utf8) else {
                 onCompletion(.failure(GeciMeAPILyricsDataProviderError.failedToParseResponse))
                 return
             }
+            
+            onCompletion(.success(resultString))
         }
         task.resume()
     }

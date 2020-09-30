@@ -102,12 +102,14 @@ final class YTokeBackendVideoListProviderTests: XCTestCase {
                 XCTAssertEqual(firstVideo.tag?.count, 1)
                 XCTAssertEqual(firstVideo.tag?.first, VideoTag.offVocal)
                 XCTAssertEqual(firstVideo.percentageFinished, nil)
+                XCTAssertEqual(firstVideo.searchQuery, "SongName")
                 
                 XCTAssertEqual(secondVideo.id, "VideoId2")
                 XCTAssertEqual(secondVideo.thumbnail, URL(string: "highURL2"))
                 XCTAssertEqual(secondVideo.title, "Title2")
                 XCTAssertEqual(secondVideo.tag, nil)
                 XCTAssertEqual(secondVideo.percentageFinished, 0.7)
+                XCTAssertEqual(secondVideo.searchQuery, "SongName")
             case .failure:
                 XCTFail("Should return valid videos")
             }

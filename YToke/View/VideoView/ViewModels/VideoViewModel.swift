@@ -20,4 +20,5 @@ protocol VideoViewModel {
     
     func onAppear()
     func onVideoPlayedHalf()
+    func onVideoStartToPlay()
 }

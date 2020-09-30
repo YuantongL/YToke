@@ -80,4 +80,14 @@ final class StandardMainViewModelTests: XCTestCase {
         XCTAssertEqual(result, 2)
     }
     
+    func test_onSongPlayedHalf_SHOULD_showDualChoiceView() {
+        var numOfPresentCalled = 0
+        viewModel.onPresentDualChoiceView = { _ in
+            numOfPresentCalled += 1
+        }
+        NotificationCenter.default.post(name: .songPlayProgressHalf,
+                                        object: self,
+                                        userInfo: ["id": "videoId", "name": "videoName"])
+        XCTAssertEqual(numOfPresentCalled, 1)
+    }
 }

@@ -35,7 +35,8 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
                           title: "TITLE",
                           thumbnail: nil,
                           percentageFinished: 0.5,
-                          tag: [])
+                          tag: [],
+                          searchQuery: "SearchQuery")
         viewModel.onMoveToTopTap(video: video)
         XCTAssertEqual(dependencyContainer.mockVideoQueue.numOfMoveToTopCalled, 1)
     }
@@ -45,7 +46,8 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
                           title: "TITLE",
                           thumbnail: nil,
                           percentageFinished: 0.5,
-                          tag: [])
+                          tag: [],
+                          searchQuery: "SearchQuery")
         viewModel.onDeleteTap(video: video)
         XCTAssertEqual(dependencyContainer.mockVideoQueue.numOfDeleteCalled, 1)
     }
@@ -75,7 +77,8 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
                                   title: "TITLE",
                                   thumbnail: nil,
                                   percentageFinished: 0.5,
-                                  tag: [])]
+                                  tag: [],
+                                  searchQuery: "SearchQuery")]
         var resultIndex: Int?
         viewModel.onMoveToTop = { index in
             resultIndex = index
@@ -96,7 +99,8 @@ final class StandardVideoQueueViewModelTests: XCTestCase {
                                   title: "TITLE",
                                   thumbnail: nil,
                                   percentageFinished: 0.5,
-                                  tag: [])]
+                                  tag: [],
+                                  searchQuery: "SearchQuery")]
         viewModel.onDeleteRow = { id in
             resultIndex = id
         }

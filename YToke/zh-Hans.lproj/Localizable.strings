@@ -61,3 +61,13 @@
 "no" = "否";
 
 "percentage_finished" = "%.1f%% 的人唱完了这首歌";
+
+"song_name" = "歌名";
+
+"singer_name" = "歌手";
+
+"no_lyrics" = "没有歌词可以显示";
+
+"cant_find_lyrics" = "无法找到歌词";
+
+"lyrics" = "歌词";

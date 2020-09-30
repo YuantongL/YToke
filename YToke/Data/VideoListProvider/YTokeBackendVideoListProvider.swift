@@ -51,7 +51,7 @@ final class YTokeBackendVideoListProvider: VideoListProvider {
             
             do {
                 let result = try JSONDecoder().decode(YTokeBackendResponse.self, from: data)
-                onCompletion(.success(result.videos.map { $0.video }))
+                onCompletion(.success(result.videos.map { $0.video(searchQuery: query) }))
             } catch {
                 os_log("ERROR PARSING JSON DATA")
                 onCompletion(.failure(YTokeBackendError.parseDataError))
@@ -82,19 +82,21 @@ private struct YTokeBackendResponse: Decodable {
 }
 
 private extension YTokeBackendResponse.Video {
-    var video: Video {
+    func video(searchQuery: String) -> Video {
         if let urlString = thumbnails.first(where: { $0.quality == "high" })?.url {
             return Video(id: self.videoId,
                          title: self.title,
                          thumbnail: URL(string: urlString),
                          percentageFinished: self.percentageFinished,
-                         tag: self.tags?.compactMap { $0.videoTag })
+                         tag: self.tags?.compactMap { $0.videoTag },
+                         searchQuery: searchQuery)
         } else {
             return Video(id: self.videoId,
                          title: self.title,
                          thumbnail: nil,
                          percentageFinished: self.percentageFinished,
-                         tag: self.tags?.compactMap { $0.videoTag })
+                         tag: self.tags?.compactMap { $0.videoTag },
+                         searchQuery: searchQuery)
         }
     }
 }

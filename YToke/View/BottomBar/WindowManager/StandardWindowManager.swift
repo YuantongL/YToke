@@ -18,7 +18,7 @@ final class StandardWindowManager: NSObject, WindowManager {
     func showWindow(with viewController: NSViewController, title: String, onClose: (() -> Void)?) {
         let window = NSWindow(contentViewController: viewController)
         window.delegate = self
-        window.title = "KTV"
+        window.title = title
         let windowController = NSWindowController(window: window)
         windowController.showWindow(nil)
         

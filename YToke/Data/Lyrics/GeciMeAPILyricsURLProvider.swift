@@ -17,7 +17,7 @@ enum GeciMeAPILyricsProviderError: Error {
 
 class GeciMeAPILyricsURLProvider: LyricsURLProvider {
     
-    private static let endpoint = "http://geci.me/api/lyric"
+    private static let endpoint = "https://geci.me/api/lyric"
     
     private let session: URLSession
     
@@ -30,7 +30,8 @@ class GeciMeAPILyricsURLProvider: LyricsURLProvider {
         if let singerName = singerName {
             urlString.append("/\(singerName)")
         }
-        guard let url = URL(string: urlString) else {
+        guard let urlEncoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+              let url = URL(string: urlEncoded) else {
             onCompletion(.failure(GeciMeAPILyricsProviderError.failedToGenerateURL))
             return
         }

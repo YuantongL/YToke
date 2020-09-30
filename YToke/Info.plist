@@ -46,5 +46,18 @@
 	<string>https://raw.githubusercontent.com/YuantongL/YToke/master/Sparkle/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>rr2aKC7YtVPybWxM4+OAWq6qelDfOg/lPlN21NsIrUM=</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>gecimi.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

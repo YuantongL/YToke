@@ -10,6 +10,7 @@ target 'YToke' do
   pod "XCDYouTubeKit", "~> 2.14.1"
   pod 'SwiftLint'
   pod 'SDWebImage', '~> 5.0'
+  pod 'SpotlightLyrics', :git => 'https://github.com/YuantongL/SpotlightLyrics.git'
 end
 
 target 'YTokeTests' do

@@ -23,6 +23,13 @@
 		441D076B24BE5E1100071B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441D076924BE5E1100071B97 /* Main.storyboard */; };
 		441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D077624BE5E1200071B97 /* MyKTVTests.swift */; };
 		441D078724BF899800071B97 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441D078624BF899800071B97 /* VideoViewController.swift */; };
+		4458B03D2524EF170000E61A /* MockLyricsURLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B03C2524EF170000E61A /* MockLyricsURLProvider.swift */; };
+		4458B0412524EF970000E61A /* MockLyricsDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B0402524EF970000E61A /* MockLyricsDataProvider.swift */; };
+		4458B0452524F02E0000E61A /* MockLyricsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B0442524F02E0000E61A /* MockLyricsRepository.swift */; };
+		4458B0492524F0930000E61A /* GeciMeAPILyricsURLProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B0482524F0930000E61A /* GeciMeAPILyricsURLProviderTests.swift */; };
+		4458B05C2524F2700000E61A /* GeciMeAPILyricsDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B05B2524F2700000E61A /* GeciMeAPILyricsDataProviderTests.swift */; };
+		4458B0602524F2DF0000E61A /* StandardLyricsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B05F2524F2DF0000E61A /* StandardLyricsRepositoryTests.swift */; };
+		4458B0642524F5120000E61A /* StandardLyricsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4458B0632524F5120000E61A /* StandardLyricsViewModelTests.swift */; };
 		445AE4852511845300149319 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE4842511845300149319 /* TagsView.swift */; };
 		445AE489251272B900149319 /* MockVideoStatsMutationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE488251272B900149319 /* MockVideoStatsMutationProvider.swift */; };
 		445AE48B2512731900149319 /* MockVideoStatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445AE48A2512731900149319 /* MockVideoStatsRepository.swift */; };
@@ -179,6 +186,13 @@
 		441D077624BE5E1200071B97 /* MyKTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKTVTests.swift; sourceTree = "<group>"; };
 		441D077824BE5E1200071B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		441D078624BF899800071B97 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		4458B03C2524EF170000E61A /* MockLyricsURLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLyricsURLProvider.swift; sourceTree = "<group>"; };
+		4458B0402524EF970000E61A /* MockLyricsDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLyricsDataProvider.swift; sourceTree = "<group>"; };
+		4458B0442524F02E0000E61A /* MockLyricsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLyricsRepository.swift; sourceTree = "<group>"; };
+		4458B0482524F0930000E61A /* GeciMeAPILyricsURLProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeciMeAPILyricsURLProviderTests.swift; sourceTree = "<group>"; };
+		4458B05B2524F2700000E61A /* GeciMeAPILyricsDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeciMeAPILyricsDataProviderTests.swift; sourceTree = "<group>"; };
+		4458B05F2524F2DF0000E61A /* StandardLyricsRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLyricsRepositoryTests.swift; sourceTree = "<group>"; };
+		4458B0632524F5120000E61A /* StandardLyricsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLyricsViewModelTests.swift; sourceTree = "<group>"; };
 		445AE4842511845300149319 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		445AE488251272B900149319 /* MockVideoStatsMutationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoStatsMutationProvider.swift; sourceTree = "<group>"; };
 		445AE48A2512731900149319 /* MockVideoStatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVideoStatsRepository.swift; sourceTree = "<group>"; };
@@ -454,6 +468,8 @@
 				44B140FF24FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift */,
 				44AA2D25250332A00010F5B7 /* MockAudioDevicesProvider.swift */,
 				445AE48A2512731900149319 /* MockVideoStatsRepository.swift */,
+				4458B03C2524EF170000E61A /* MockLyricsURLProvider.swift */,
+				4458B0402524EF970000E61A /* MockLyricsDataProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -462,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				446BA5F524E38F98004EFA42 /* MockVideoStreamingRepository.swift */,
+				4458B0442524F02E0000E61A /* MockLyricsRepository.swift */,
 				446BA5F724E38FFD004EFA42 /* MockVideoListRepository.swift */,
 				44B1410124FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift */,
 				44AA2D21250328410010F5B7 /* MockAudioInputRepository.swift */,
@@ -494,6 +511,8 @@
 				446BA5E024E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift */,
 				445AE48C2512790A00149319 /* YTokeBackendVideoListProviderTests.swift */,
 				445AE48E25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift */,
+				4458B0482524F0930000E61A /* GeciMeAPILyricsURLProviderTests.swift */,
+				4458B05B2524F2700000E61A /* GeciMeAPILyricsDataProviderTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -502,6 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				446BA5E824E38947004EFA42 /* StandardMainViewModelTests.swift */,
+				4458B0632524F5120000E61A /* StandardLyricsViewModelTests.swift */,
 				446BA5FF24E39FC3004EFA42 /* StandardDonationViewModelTests.swift */,
 				446BA60124E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift */,
 				446BA60A24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift */,
@@ -522,6 +542,7 @@
 				446BA5E624E35978004EFA42 /* StandardVideoStreamingRepositoryTests.swift */,
 				44B140FD24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift */,
 				445AE490251281AF00149319 /* StandardVideoStatsRepositoryTests.swift */,
+				4458B05F2524F2DF0000E61A /* StandardLyricsRepositoryTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1269,24 +1290,29 @@
 				446BA60824E42FE3004EFA42 /* MockWindowManager.swift in Sources */,
 				446BA5F424E38D89004EFA42 /* MockAudioMixer.swift in Sources */,
 				445AE48D2512790A00149319 /* YTokeBackendVideoListProviderTests.swift in Sources */,
+				4458B0642524F5120000E61A /* StandardLyricsViewModelTests.swift in Sources */,
 				44B1410424FB5C3400A9DEDC /* MockPopUpAlertProvider.swift in Sources */,
 				446BA5FA24E39060004EFA42 /* MockVideoQueue.swift in Sources */,
 				44B140FE24FB58AD00A9DEDC /* StandardPrivacyPermissionRepositoryTests.swift in Sources */,
 				446BA5EE24E38C2D004EFA42 /* MockURLSession.swift in Sources */,
 				44B1410224FB5B5E00A9DEDC /* MockPrivacyPermissionRepository.swift in Sources */,
 				44AA2D1E2502E9980010F5B7 /* StandardAudioDevicesListViewModelTests.swift in Sources */,
+				4458B05C2524F2700000E61A /* GeciMeAPILyricsDataProviderTests.swift in Sources */,
 				446BA60D24E441D7004EFA42 /* StandardMixerViewModelTests.swift in Sources */,
 				446BA5FC24E393EA004EFA42 /* MockDependencyContainer.swift in Sources */,
 				445AE491251281AF00149319 /* StandardVideoStatsRepositoryTests.swift in Sources */,
 				446BA5E524E354BB004EFA42 /* StandardVideoListRepositoryTests.swift in Sources */,
 				44AA2D22250328410010F5B7 /* MockAudioInputRepository.swift in Sources */,
+				4458B0602524F2DF0000E61A /* StandardLyricsRepositoryTests.swift in Sources */,
 				446BA5EC24E38B9A004EFA42 /* MockXCDYoutubeClient.swift in Sources */,
 				446BA5FE24E3940F004EFA42 /* MicrophoneProvider.swift in Sources */,
+				4458B0492524F0930000E61A /* GeciMeAPILyricsURLProviderTests.swift in Sources */,
 				446BA61124E44B89004EFA42 /* StandardVideoViewModelTests.swift in Sources */,
 				446BA60F24E443B8004EFA42 /* StandardVideoListViewModelTests.swift in Sources */,
 				448392D024EDF60800D8D32F /* VideoModelTests.swift in Sources */,
 				445AE48F25127E1400149319 /* StandardVideoStatsMutationProviderTests.swift in Sources */,
 				446BA60224E42B9E004EFA42 /* StandardNowPlayingViewModelTests.swift in Sources */,
+				4458B0452524F02E0000E61A /* MockLyricsRepository.swift in Sources */,
 				44AA2D26250332A00010F5B7 /* MockAudioDevicesProvider.swift in Sources */,
 				446BA60B24E4363E004EFA42 /* StandardVideoQueueViewModelTests.swift in Sources */,
 				44B1410024FB592C00A9DEDC /* MockAVPrivacyPermissionProvider.swift in Sources */,
@@ -1296,6 +1322,8 @@
 				446BA5F024E38C4B004EFA42 /* MockVideoListProvider.swift in Sources */,
 				441D077724BE5E1200071B97 /* MyKTVTests.swift in Sources */,
 				446BA5E124E33AC3004EFA42 /* XCDYoutubeVideoStreamingProviderTests.swift in Sources */,
+				4458B0412524EF970000E61A /* MockLyricsDataProvider.swift in Sources */,
+				4458B03D2524EF170000E61A /* MockLyricsURLProvider.swift in Sources */,
 				446BA5F824E38FFD004EFA42 /* MockVideoListRepository.swift in Sources */,
 				445AE48B2512731900149319 /* MockVideoStatsRepository.swift in Sources */,
 				445AE489251272B900149319 /* MockVideoStatsMutationProvider.swift in Sources */,
@@ -1527,6 +1555,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;
@@ -1551,6 +1580,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = XP69FP6Q2K;

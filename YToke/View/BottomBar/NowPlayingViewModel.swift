@@ -12,8 +12,10 @@ protocol NowPlayingViewModel {
     var title: ((String) -> Void)? { get set }
     var image: ((URL) -> Void)? { get set }
     var isShowVideoButtonHidden: ((Bool) -> Void)? { get set }
+    var isShowLyricsButtonHidden: ((Bool) -> Void)? { get set }
     
     func onAppear()
     func onTapNext()
     func onTapShowVideo()
+    func onTapShowLyrics()
 }

@@ -24,18 +24,22 @@ final class StandardLyricsRepository: LyricsRepository {
             case .success(let url):
                 self?.fetchData(url: url, onCompletion: onCompletion)
             case .failure(let error):
-                onCompletion(.failure(error))
+                DispatchQueue.main.async {
+                    onCompletion(.failure(error))
+                }
             }
         }
     }
     
     private func fetchData(url: URL, onCompletion: @escaping (Result<String, Error>) -> Void) {
         dataProvider.get(url: url) { result in
-            switch result {
-            case .success(let lyricsString):
-                onCompletion(.success(lyricsString))
-            case .failure(let error):
-                onCompletion(.failure(error))
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let lyricsString):
+                    onCompletion(.success(lyricsString))
+                case .failure(let error):
+                    onCompletion(.failure(error))
+                }
             }
         }
     }
