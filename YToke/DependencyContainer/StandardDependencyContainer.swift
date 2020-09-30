@@ -17,7 +17,9 @@ struct StandardDependencyContainer: DependencyContainer {
                       popUpAlertProvider: StandardPopUpAlertProvider(),
                       audioDevicesProvider: MacOSAudioDevicesProvider(),
                       microphoneProvider: AVAudioEngineMicrophoneProvider(),
-                      videoStatsMutationProvider: StandardVideoStatsMutationProvider())
+                      videoStatsMutationProvider: StandardVideoStatsMutationProvider(),
+                      lyricsURLProvider: GeciMeAPILyricsURLProvider(),
+                      lyricsDataProvider: GeciMeAPILyricsDataProvider())
     }()
 
     let repo: RepositoryContainer
@@ -40,12 +42,15 @@ struct StandardDependencyContainer: DependencyContainer {
         
         // swiftlint:disable:next line_length
         let videoStatsRepository = StandardVideoStatsRepository(videoStatsMutationProvider: data.videoStatsMutationProvider)
+        let lyricsRepository = StandardLyricsRepository(urlProvider: data.lyricsURLProvider,
+                                                        dataProvider: data.lyricsDataProvider)
         repo = RepositoryContainer(videoStreamingRepository: videoStreamingRepository,
                                    videoListRepository: videoListRepository,
                                    privacyPermissionRepository: privacyPermissionRepository,
                                    systemNavigator: MacOSSystemNavigator(),
                                    audioInputRepository: audioInputRepository,
-                                   videoStatsRepository: videoStatsRepository)
+                                   videoStatsRepository: videoStatsRepository,
+                                   lyricsRepository: lyricsRepository)
     }
     
 }

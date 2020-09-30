@@ -54,10 +54,20 @@
 
 "has_vocal" = "오리지널 노래가 있습니다";
 
-"has_vocal_question" = "이 영상에 가수 보컬이 있나요?";
+"has_vocal_question" = "재생중인 동영상의 오리지널 곡이 있나요?";
 
 "yes" = "예";
 
 "no" = "부정";
 
 "percentage_finished" = "%.1f%%의 사람들이이 노래를 마쳤습니다.";
+
+"song_name" = "노래 제목";
+
+"singer_name" = "가수";
+
+"no_lyrics" = "표시 할 가사가 없습니다.";
+
+"cant_find_lyrics" = "가사를 찾을 수 없습니다";
+
+"lyrics" = "가사";

@@ -77,14 +77,6 @@ final class VideoViewController: NSViewController {
             }
         }
         
-        viewModel.showDualChoiceView = { [weak self] in
-            self?.showDualChoiceView()
-        }
-        
-        viewModel.hideDualChoiceView = { [weak self] in
-            self?.hideDualChoiceView()
-        }
-        
         viewModel.videoDuration = { [weak self] in
             self?.playerView.player?.currentItem?.duration.seconds
         }
@@ -141,6 +133,7 @@ final class VideoViewController: NSViewController {
             guard let duration = change.newValue, self?.timeObserverToken == nil else {
                 return
             }
+            self?.viewModel.onVideoStartToPlay()
             let time = CMTime(seconds: duration.seconds/2, preferredTimescale: CMTimeScale(NSEC_PER_SEC))
             let player = self?.playerView.player
             self?.timeObserverToken = player?.addBoundaryTimeObserver(forTimes: [NSValue(time: time)],
@@ -157,28 +150,5 @@ final class VideoViewController: NSViewController {
             playerView.player?.removeTimeObserver(token)
             timeObserverToken = nil
         }
-    }
-    
-    private func showDualChoiceView() {
-        let newDualChoiceView = DualChoiceView(title: viewModel.dualChoiceTitle,
-                                               contentA: .init(title: viewModel.dualChoiceTitleA,
-                                                               content: viewModel.dualChoiceContentA),
-                                               contentB: .init(title: viewModel.dualChoiceTitleB,
-                                                               content: viewModel.dualChoiceContentB),
-                                               onSelect: { [weak self] in
-                                                self?.viewModel.onDualChoiceViewSelect(tag: $0)
-        })
-        dualChoiceView = newDualChoiceView
-        view.addSubview(newDualChoiceView)
-        newDualChoiceView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            newDualChoiceView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -38),
-            newDualChoiceView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-    }
-    
-    private func hideDualChoiceView() {
-        dualChoiceView?.removeFromSuperview()
-        removeVideoTimeObserver()
     }
 }

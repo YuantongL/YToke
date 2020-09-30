@@ -25,6 +25,8 @@ final class MockDependencyContainer: DependencyContainer {
     let mockAlertProvider = MockPopUpAlertProvider()
     let mockAudioDevicesProvider = MockAudioDevicesProvider()
     let mockVideoStatsMutationProvider = MockVideoStatsMutationProvider()
+    let mockLyricsURLProvider = MockLyricsURLProvider()
+    let mockLyricsDataProvider = MockLyricsDataProvider()
     
     // MARK: - Repository
     
@@ -32,6 +34,7 @@ final class MockDependencyContainer: DependencyContainer {
     let mockVideoListRepository = MockVideoListRepository()
     let mockPrivacyPermissionRepository = MockPrivacyPermissionRepository()
     let mockVideoStatsRepository = MockVideoStatsRepository()
+    let mockLyricsRepository = MockLyricsRepository()
     
     // MARK: - Init
     
@@ -42,14 +45,17 @@ final class MockDependencyContainer: DependencyContainer {
                              popUpAlertProvider: mockAlertProvider,
                              audioDevicesProvider: mockAudioDevicesProvider,
                              microphoneProvider: mockMicrophoneProvider,
-                             videoStatsMutationProvider: mockVideoStatsMutationProvider)
+                             videoStatsMutationProvider: mockVideoStatsMutationProvider,
+                             lyricsURLProvider: mockLyricsURLProvider,
+                             lyricsDataProvider: mockLyricsDataProvider)
         
         repo = RepositoryContainer(videoStreamingRepository: mockVideoStreamingRepository,
                                    videoListRepository: mockVideoListRepository,
                                    privacyPermissionRepository: mockPrivacyPermissionRepository,
                                    systemNavigator: MockSystemNavigator(),
                                    audioInputRepository: MockAudioInputRepository(),
-                                   videoStatsRepository: mockVideoStatsRepository)
+                                   videoStatsRepository: mockVideoStatsRepository,
+                                   lyricsRepository: mockLyricsRepository)
     }
 }
 

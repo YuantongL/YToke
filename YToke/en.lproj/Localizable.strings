@@ -54,10 +54,20 @@
 
 "has_vocal" = "has vocal";
 
-"has_vocal_question" = "Does this video has singer's vocal?";
+"has_vocal_question" = "Does the current video has singer's vocal?";
 
 "yes" = "Yes";
 
 "no" = "No";
 
 "percentage_finished" = "%.1f%% user finished";
+
+"song_name" = "Song name";
+
+"singer_name" = "Singer name";
+
+"no_lyrics" = "No lyrics to display";
+
+"cant_find_lyrics" = "Can not find lyrics for this song";
+
+"lyrics" = "Lyrics";

@@ -16,6 +16,8 @@ struct DataContainer {
     let audioDevicesProvider: AudioDevicesProvider
     let microphoneProvider: MicrophoneProvider
     let videoStatsMutationProvider: VideoStatsMutationProvider
+    let lyricsURLProvider: LyricsURLProvider
+    let lyricsDataProvider: LyricsDataProvider
 }
 
 struct RepositoryContainer {
@@ -25,6 +27,7 @@ struct RepositoryContainer {
     let systemNavigator: SystemNavigator
     let audioInputRepository: AudioInputRepository
     let videoStatsRepository: VideoStatsRepository
+    let lyricsRepository: LyricsRepository
 }
 
 protocol DependencyContainer {

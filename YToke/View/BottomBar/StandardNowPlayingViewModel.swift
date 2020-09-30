@@ -14,11 +14,17 @@ final class StandardNowPlayingViewModel: NowPlayingViewModel {
     var title: ((String) -> Void)?
     var image: ((URL) -> Void)?
     var isShowVideoButtonHidden: ((Bool) -> Void)?
+    var isShowLyricsButtonHidden: ((Bool) -> Void)?
     
     private let dependencyContainer: DependencyContainer
     private var isVideoViewOnScreen = false {
         didSet {
             isShowVideoButtonHidden?(isVideoViewOnScreen)
+        }
+    }
+    private var isLyricsViewOnScreen = false {
+        didSet {
+            isShowLyricsButtonHidden?(isLyricsViewOnScreen)
         }
     }
     
@@ -47,7 +53,15 @@ final class StandardNowPlayingViewModel: NowPlayingViewModel {
     }
     
     func onTapShowVideo() {
-        showVideoView()
+        if !isVideoViewOnScreen {
+            showVideoView()
+        }
+    }
+    
+    func onTapShowLyrics() {
+        if !isLyricsViewOnScreen {
+            showLyricsView()
+        }
     }
     
     @objc private func onSongStartToPlay(notification: Notification) {
@@ -62,14 +76,21 @@ final class StandardNowPlayingViewModel: NowPlayingViewModel {
     }
     
     private func showVideoView() {
-        guard !isVideoViewOnScreen else {
-            return
-        }
         let videoViewModel = StandardVideoViewModel(dependencyContainer: dependencyContainer)
         let videoViewController = VideoViewController(viewModel: videoViewModel)
         windowManager.showWindow(with: videoViewController, title: "KTV") { [weak self] in
             self?.isVideoViewOnScreen = false
         }
         isVideoViewOnScreen = true
+    }
+    
+    private func showLyricsView() {
+        let viewModel = StandardLyricsViewModel(lyricsRepository: dependencyContainer.repo.lyricsRepository)
+        let lyricsViewController = LyricsViewController(viewModel: viewModel)
+        windowManager.showWindow(with: lyricsViewController,
+                                 title: NSLocalizedString("lyrics", comment: "Lyrics")) { [weak self] in
+            self?.isLyricsViewOnScreen = false
+        }
+        isLyricsViewOnScreen = true
     }
 }

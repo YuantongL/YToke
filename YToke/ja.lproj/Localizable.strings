@@ -54,10 +54,20 @@
 
 "has_vocal" = "オリジナル曲あり";
 
-"has_vocal_question" = "このビデオには歌手のボーカルが含まれていますか？";
+"has_vocal_question" = "再生中の動画のオリジナル曲はありますか？";
 
 "yes" = "はい";
 
 "no" = "負";
 
 "percentage_finished" = "%.1f%%の人がこの歌を歌い終えました";
+
+"song_name" = "曲名";
+
+"singer_name" = "歌手";
+
+"no_lyrics" = "表示する歌詞はありません";
+
+"cant_find_lyrics" = "歌詞が見つかりませんでした";
+
+"lyrics" = "歌詞";

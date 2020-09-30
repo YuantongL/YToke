@@ -35,8 +35,24 @@ final class StandaredNowPlayingViewModelTests: XCTestCase {
     }
     
     func test_onAppear_SHOULD_showVideoView() {
+        var isVideoButtonHidden: Bool?
+        var isLyricsButtonHidden: Bool?
+        viewModel.isShowVideoButtonHidden = { isHidden in
+            isVideoButtonHidden = isHidden
+        }
+        viewModel.isShowLyricsButtonHidden = { isHidden in
+            isLyricsButtonHidden = isHidden
+        }
         viewModel.onAppear()
         XCTAssertEqual(windowManager.numOfShowWindowCalled, 1)
+        XCTAssertEqual(isLyricsButtonHidden, nil)
+        
+        guard let isVideoButtonHiddenUnwarp = isVideoButtonHidden else {
+            XCTFail("Video button hidden should be called once")
+            return
+        }
+        
+        XCTAssertTrue(isVideoButtonHiddenUnwarp)
     }
     
     func test_onTapShowVideo_SHOULD_showVideoView() {
@@ -47,6 +63,17 @@ final class StandaredNowPlayingViewModelTests: XCTestCase {
     func test_onTapShowVideo_SHOULD_NOT_showVideoView_IF_windowPresent() {
         viewModel.onAppear()
         viewModel.onTapShowVideo()
+        XCTAssertEqual(windowManager.numOfShowWindowCalled, 1)
+    }
+    
+    func test_onTapShowlyrics_SHOULD_showLyricsView() {
+        viewModel.onTapShowLyrics()
+        XCTAssertEqual(windowManager.numOfShowWindowCalled, 1)
+    }
+    
+    func test_onTapShowlyrics_SHOULD_NOT_showLyricsView_IF_windowPresent() {
+        viewModel.onTapShowLyrics()
+        viewModel.onTapShowLyrics()
         XCTAssertEqual(windowManager.numOfShowWindowCalled, 1)
     }
     
@@ -65,7 +92,8 @@ final class StandaredNowPlayingViewModelTests: XCTestCase {
                                         title: expectedTitle,
                                         thumbnail: expectedURL,
                                         percentageFinished: 0.5,
-                                        tag: [])]
+                                        tag: [],
+                                        searchQuery: "SearchQuery")]
         NotificationCenter.default.post(name: .queuePop, object: nil, userInfo: info)
         
         guard let titleResultUnwarp = titleResult, let imageResultUnwarp = imageResult else {

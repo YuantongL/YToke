@@ -37,6 +37,14 @@ final class NowPlayingViewController: NSViewController {
         return textField
     }()
     
+    private lazy var showLyricsViewButton: NSButton = {
+        let button = NSButton(title: NSLocalizedString("lyrics", comment: "Lyrics"),
+                              target: self,
+                              action: #selector(onShowLyricsViewButtonTap))
+        button.bezelStyle = .regularSquare
+        return button
+    }()
+    
     private lazy var showVideoViewButton: NSButton = {
         let button = NSButton(title: "KTV",
                               target: self,
@@ -90,8 +98,13 @@ final class NowPlayingViewController: NSViewController {
         viewModel.isShowVideoButtonHidden = { [weak self] isHidden in
             self?.showVideoViewButton.isHidden = isHidden
         }
+        
+        viewModel.isShowLyricsButtonHidden = { [weak self] isHidden in
+            self?.showLyricsViewButton.isHidden = isHidden
+        }
     }
     
+    // swiftlint:disable:next function_body_length
     private func setupLayout() {
         view.addSubview(leftImageView)
         leftImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -120,10 +133,21 @@ final class NowPlayingViewController: NSViewController {
             titleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 350)
         ])
         
+        view.addSubview(showLyricsViewButton)
+        showLyricsViewButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            showLyricsViewButton.leadingAnchor.constraint(greaterThanOrEqualTo: titleLabel.trailingAnchor,
+                                                         constant: 8),
+            showLyricsViewButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+            showLyricsViewButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
+            showLyricsViewButton.widthAnchor.constraint(equalToConstant: 80),
+            showLyricsViewButton.heightAnchor.constraint(equalToConstant: 60)
+        ])
+        
         view.addSubview(showVideoViewButton)
         showVideoViewButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            showVideoViewButton.leadingAnchor.constraint(greaterThanOrEqualTo: titleLabel.trailingAnchor,
+            showVideoViewButton.leadingAnchor.constraint(equalTo: showLyricsViewButton.trailingAnchor,
                                                          constant: 8),
             showVideoViewButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
             showVideoViewButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
@@ -150,5 +174,9 @@ final class NowPlayingViewController: NSViewController {
     
     @objc private func onShowVideoViewButtonTap() {
         viewModel.onTapShowVideo()
+    }
+    
+    @objc private func onShowLyricsViewButtonTap() {
+        viewModel.onTapShowLyrics()
     }
 }

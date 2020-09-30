@@ -49,7 +49,8 @@ final class StandardVideoListViewModelTests: XCTestCase {
                           title: "TITLE",
                           thumbnail: nil,
                           percentageFinished: 0.5,
-                          tag: [])
+                          tag: [],
+                          searchQuery: "SearchQuery")
         viewModel.onTapAddVideo(video)
         XCTAssertEqual(dependencyContainer.mockVideoQueue.numOfAddCalled, 1)
     }
@@ -59,7 +60,8 @@ final class StandardVideoListViewModelTests: XCTestCase {
                           title: "TITLE",
                           thumbnail: nil,
                           percentageFinished: 0.5,
-                          tag: [])
+                          tag: [],
+                          searchQuery: "SearchQuery")
         var numOfOnUpdateCalled = 0
         viewModel.onUpdate = {
             numOfOnUpdateCalled += 1
