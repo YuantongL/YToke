@@ -4,6 +4,26 @@
         <title>YToke~</title>
 
         <item>
+            <title>0.2.1</title>
+            <pubDate>Wed, 30 Sep 2020 14:16:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>A lyrics view is added to the app.</li>
+                    <li>Some UI tweaks.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.2.1/YToke.0.2.1.dmg"
+                sparkle:version="0.2.1"
+                sparkle:shortVersionString="0.2.1"
+                sparkle:edSignature="FL7ayJCfO+SzFbks6ACiDc78A2lfTGtthzF/I3oskH75Pj+KjjCQf/y47SrddkV2l9thVCUqIAbMviPR4KkkAw=="
+                length="6984213"
+                type="application/octet-stream"/>
+        </item>
+
+        <item>
             <title>0.2.0</title>
             <pubDate>Wed, 16 Sep 2020 14:39:00 -0400</pubDate>
             <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
