@@ -15,7 +15,7 @@ enum GeciMeAPILyricsProviderError: Error {
     case failedToParseResponse
 }
 
-class GeciMeAPILyricsURLProvider: LyricsURLProvider {
+final class GeciMeAPILyricsURLProvider: LyricsURLProvider {
     
     private static let endpoint = "https://geci.me/api/lyric"
     
