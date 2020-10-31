@@ -43,10 +43,6 @@ final class StandardVideoQueueViewModel: VideoQueueViewModel {
                                                object: nil)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     func onMoveToTopTap(video: Video) {
         videoQueue.moveToTop(video)
     }

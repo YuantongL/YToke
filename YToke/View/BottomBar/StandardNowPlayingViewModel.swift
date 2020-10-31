@@ -40,10 +40,6 @@ final class StandardNowPlayingViewModel: NowPlayingViewModel {
                                                object: nil)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     func onAppear() {
         showVideoView()
     }

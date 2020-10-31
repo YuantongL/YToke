@@ -98,11 +98,7 @@ final class VideoListViewController: NSViewController {
                                                name: NSView.boundsDidChangeNotification,
                                                object: nil)
     }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -234,6 +230,11 @@ final class VideoListViewController: NSViewController {
     }
     
     @objc private func scrollViewBoundDidChange() {
+        // If the collectionview is not in a static state, then don't trigger this
+        guard noItemLabel.isHidden, errorLabel.isHidden, loadingSpinner.isHidden else {
+            return
+        }
+
         // If scrollView has a distance of < 50 to the bottom, fetch the next page
         guard let documentHeight = scrollView.documentView?.bounds.height else {
             return

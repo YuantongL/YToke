@@ -34,10 +34,6 @@ final class StandardLyricsViewModel: LyricsViewModel {
                                                object: nil)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     @objc private func onSongStartToPlay(notification: Notification) {
         guard let videoInfo = (notification.userInfo as? [String: Video])?["PopedVideo"],
               let songName = videoInfo.searchQuery else {

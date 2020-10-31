@@ -31,10 +31,6 @@ final class StandardAudioDevicesListViewModel: AudioDevicesListViewModel {
                                                object: nil)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: .audioInputDevicesChanged, object: nil)
-    }
-    
     private func resetDevicesList() {
         let updatedList = audioInputRepository.devices()
         var result: [AudioDevice] = []

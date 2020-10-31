@@ -69,7 +69,6 @@ final class StandardVideoViewModel: VideoViewModel {
     
     deinit {
         mixer.unsubscribe(token: mixerToken)
-        NotificationCenter.default.removeObserver(self)
     }
     
     func onAppear() {

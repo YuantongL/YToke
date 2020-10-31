@@ -1,21 +1,21 @@
 PODS:
-  - SDWebImage (5.8.4):
-    - SDWebImage/Core (= 5.8.4)
-  - SDWebImage/Core (5.8.4)
+  - SDWebImage (5.9.4):
+    - SDWebImage/Core (= 5.9.4)
+  - SDWebImage/Core (5.9.4)
   - Sparkle (1.23.0)
   - SpotlightLyrics (0.1.5):
     - SpotlightLyrics/iOS (= 0.1.5)
     - SpotlightLyrics/Mac (= 0.1.5)
   - SpotlightLyrics/Mac (0.1.5)
-  - SwiftLint (0.39.2)
-  - XCDYouTubeKit (2.14.1)
+  - SwiftLint (0.40.3)
+  - XCDYouTubeKit (2.15.0)
 
 DEPENDENCIES:
   - SDWebImage (~> 5.0)
   - Sparkle
   - SpotlightLyrics (from `https://github.com/YuantongL/SpotlightLyrics.git`)
   - SwiftLint
-  - XCDYouTubeKit (~> 2.14.1)
+  - XCDYouTubeKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -30,16 +30,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SpotlightLyrics:
-    :commit: 9cad9aeef763d9109dfa8981c01ff97488df27ee
+    :commit: 9d1b445f631d236ecda53c35d2391d8e14046fb3
     :git: https://github.com/YuantongL/SpotlightLyrics.git
 
 SPEC CHECKSUMS:
-  SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
+  SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
   Sparkle: 55b1a87ba69d56913375a281546b7c82dec95bb0
   SpotlightLyrics: 3c38a2320ac70306f8df71b7b31d1bf7181ff6d6
-  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
-  XCDYouTubeKit: 5d50bbacdd9fedf26fb578bab901d946ff3d064c
+  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  XCDYouTubeKit: c6747c622dd0b52c9e668c028f68097eeffaea39
 
-PODFILE CHECKSUM: b3f952136adca834c40be1ab18850d1f3f797195
+PODFILE CHECKSUM: 6e4fd0e0a73d4c1ff204b6ffc42045aa9845a4ae
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0
