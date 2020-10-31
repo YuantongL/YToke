@@ -7,14 +7,14 @@ use_frameworks!
 
 target 'YToke' do
   pod 'Sparkle'
-  pod "XCDYouTubeKit", "~> 2.14.1"
+  pod "XCDYouTubeKit"
   pod 'SwiftLint'
   pod 'SDWebImage', '~> 5.0'
   pod 'SpotlightLyrics', :git => 'https://github.com/YuantongL/SpotlightLyrics.git'
 end
 
 target 'YTokeTests' do
-    pod "XCDYouTubeKit", "~> 2.14.1"
+    pod "XCDYouTubeKit"
     pod 'SDWebImage', '~> 5.0'
 end
 
