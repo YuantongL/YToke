@@ -4,6 +4,28 @@
         <title>YToke~</title>
 
         <item>
+            <title>0.2.2</title>
+            <pubDate>Sat, 31 Oct 2020 02:11:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Rebuild the project with Pods with latest version.</li>
+                    <li>Fixed the bug that most videos can't be loaded.</li>
+                    <li>Fixed the bug that Lyrics can crash sometimes.</li>
+                    <li>Fixed the bug that video view can be blank sometimes.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.2.2/YToke.0.2.2.dmg"
+                sparkle:version="0.2.2"
+                sparkle:shortVersionString="0.2.2"
+                sparkle:edSignature="XUa0dZuiuYx0qFlchi8KMBGfwKbIniw9HWP2HU1nPiHOoyfwA7NJ/YIeFHe8v1ICLvuCA3H0KHzxo/MiDHlGDA=="
+                length="6987501"
+                type="application/octet-stream"/>
+        </item>
+
+        <item>
             <title>0.2.1</title>
             <pubDate>Wed, 30 Sep 2020 14:16:00 -0400</pubDate>
             <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
