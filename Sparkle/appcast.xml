@@ -2,6 +2,25 @@
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>YToke~</title>
+        
+        <item>
+            <title>0.2.3</title>
+            <pubDate>Sun, 08 Nov 2020 12:50:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Fixed some bug in AutoUpdate feature.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.2.3/YToke.0.2.3.dmg"
+                sparkle:version="10"
+                sparkle:shortVersionString="0.2.3"
+                sparkle:edSignature="6OPmNqfswFsQWSAWGon6Dj8BkIePzlnc99qDSd3AgvOfSRhvqRCUXe4YHFM02VfVlZlRIlVkHs8r/fr6r8JaAw=="
+                length="6988376"
+                type="application/octet-stream"/>
+        </item>
 
         <item>
             <title>0.2.2</title>
