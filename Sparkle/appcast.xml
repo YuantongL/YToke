@@ -2,7 +2,26 @@
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
         <title>YToke~</title>
-        
+
+        <item>
+            <title>0.2.4</title>
+            <pubDate>Tue, 24 Nov 2020 13:24:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Bump Version and Rebuild.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.2.4/YToke.0.2.4.dmg"
+                sparkle:version="11"
+                sparkle:shortVersionString="0.2.4"
+                sparkle:edSignature="ld/4/15YLnJ3UCUWehCdZog2RnW28z9gW1pUHnbvMtE2jeBVfoOtdZKaUwWefuK2V+IVLGFj9QabSlcsOMZdCg=="
+                length="7498384"
+                type="application/octet-stream"/>
+        </item>
+
         <item>
             <title>0.2.3</title>
             <pubDate>Sun, 08 Nov 2020 12:50:00 -0400</pubDate>
