@@ -5,6 +5,25 @@
 
         <item>
             <title>0.2.4</title>
+            <pubDate>Thu, 26 Nov 2020 16:06:00 -0400</pubDate>
+            <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <ul>
+                    <li>Bump Version and Rebuild.</li>
+                </ul>
+                ]]>
+            </description>
+            <enclosure
+                url="https://github.com/YuantongL/YToke/releases/download/0.2.5/YToke.0.2.5.dmg"
+                sparkle:version="12"
+                sparkle:shortVersionString="0.2.5"
+                sparkle:edSignature="1aVYg7QB1mpB655iryK/q659Ovfa2oFhyfig/2dV7V24hnf/nFC8ZN+fl28GrAu+mBAoahVR3jUgfmA9o8lOAg=="
+                length="7762507"
+                type="application/octet-stream"/>
+        </item>
+
+        <item>
+            <title>0.2.4</title>
             <pubDate>Tue, 24 Nov 2020 13:24:00 -0400</pubDate>
             <sparkle:minimumSystemVersion>10.14</sparkle:minimumSystemVersion>
             <description><![CDATA[
